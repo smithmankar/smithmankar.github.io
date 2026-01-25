@@ -1,0 +1,412 @@
+/* ============================================
+   Mobile-First Responsive Styles
+   ============================================ */
+
+/* ============================================
+   Small Screens (Default - Mobile)
+   ============================================ */
+
+/* Reduce section padding on mobile */
+.section {
+    padding: var(--space-2xl) 0;
+    min-height: auto;
+}
+
+/* Hero section stays full height */
+.hero-section {
+    min-height: 100vh;
+}
+
+/* Stats grid: 2 columns on mobile */
+.stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.stat-card {
+    padding: var(--space-lg);
+}
+
+.stat-number {
+    font-size: 2rem;
+}
+
+/* Charts scale down */
+.chart-container {
+    padding: var(--space-md);
+}
+
+#word-cloud {
+    height: 300px;
+}
+
+/* Milestones: left-aligned on mobile */
+.milestones-timeline {
+    padding-left: 0;
+}
+
+.milestone-line {
+    left: 20px;
+}
+
+.milestone-item {
+    padding-left: 50px;
+}
+
+/* Gallery: 1-2 columns on mobile */
+.photo-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+/* Envelope stays compact */
+.envelope {
+    width: min(240px, 65vw);
+    height: min(150px, 40vw);
+}
+
+/* Letter modal mobile adjustments */
+.letter-modal {
+    padding: var(--space-md);
+}
+
+.letter-inner {
+    padding: var(--space-xl) var(--space-md);
+}
+
+.letter-greeting {
+    font-size: 1.5rem;
+}
+
+.letter-body {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.letter-signature {
+    font-size: 1.75rem;
+}
+
+/* Time insights stack on mobile */
+.time-insights {
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.time-card {
+    min-width: auto;
+    width: 100%;
+}
+
+/* ============================================
+   Tablet (600px+)
+   ============================================ */
+
+@media (min-width: 600px) {
+    :root {
+        --container-padding: var(--space-xl);
+    }
+
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
+    /* Stats: larger cards */
+    .stat-card {
+        padding: var(--space-xl);
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    /* Charts larger */
+    .chart-container {
+        padding: var(--space-xl);
+    }
+
+    #word-cloud {
+        height: 350px;
+    }
+
+    /* Gallery: more columns */
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--space-lg);
+    }
+
+    /* Envelope - tablet size */
+    .envelope {
+        width: min(280px, 70vw);
+        height: min(180px, 45vw);
+    }
+
+    /* Letter modal - tablet */
+    .letter-inner {
+        padding: var(--space-2xl) var(--space-xl);
+    }
+
+    .letter-greeting {
+        font-size: 1.75rem;
+    }
+
+    .letter-body {
+        font-size: 1rem;
+    }
+
+    /* Time insights side by side */
+    .time-insights {
+        flex-direction: row;
+        gap: var(--space-xl);
+    }
+
+    .time-card {
+        min-width: 150px;
+        width: auto;
+    }
+}
+
+/* ============================================
+   Desktop (768px+)
+   ============================================ */
+
+@media (min-width: 768px) {
+    .section {
+        padding: var(--space-4xl) 0;
+        min-height: 100vh;
+    }
+
+    /* Stats: all 4 in a row, highlight spans 2 */
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .stat-card.highlight {
+        grid-column: span 2;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    /* Word cloud larger */
+    #word-cloud {
+        height: 400px;
+    }
+
+    /* Milestones: alternating layout */
+    .milestones-timeline {
+        max-width: 700px;
+    }
+
+    .milestone-line {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .milestone-item {
+        width: 50%;
+        padding-left: 0;
+        padding-right: var(--space-xl);
+    }
+
+    .milestone-item:nth-child(even) {
+        margin-left: 50%;
+        padding-left: var(--space-xl);
+        padding-right: 0;
+    }
+
+    .milestone-dot {
+        left: auto;
+        right: calc(-9px - var(--space-xl));
+    }
+
+    .milestone-item:nth-child(even) .milestone-dot {
+        right: auto;
+        left: calc(-9px - var(--space-xl));
+    }
+
+    /* Gallery: 3 columns */
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Envelope - desktop size */
+    .envelope {
+        width: 300px;
+        height: 190px;
+    }
+
+    /* Letter modal - desktop */
+    .letter-greeting {
+        font-size: 2rem;
+    }
+
+    .letter-body {
+        font-size: 1.05rem;
+    }
+
+    .letter-signature {
+        font-size: 2.25rem;
+    }
+}
+
+/* ============================================
+   Large Desktop (1024px+)
+   ============================================ */
+
+@media (min-width: 1024px) {
+    :root {
+        --container-max: 1100px;
+    }
+
+    .stats-grid {
+        gap: var(--space-xl);
+    }
+
+    .stat-card {
+        padding: var(--space-2xl);
+    }
+
+    .stat-number {
+        font-size: 3.5rem;
+    }
+
+    /* Milestones: more spacing */
+    .milestone-item {
+        padding-right: var(--space-2xl);
+    }
+
+    .milestone-item:nth-child(even) {
+        padding-left: var(--space-2xl);
+    }
+}
+
+/* ============================================
+   Touch Device Optimizations
+   ============================================ */
+
+@media (hover: none) {
+    /* Disable hover effects on touch devices */
+    .stat-card:hover,
+    .time-card:hover,
+    .milestone-content:hover,
+    .gallery-item:hover {
+        transform: none;
+    }
+
+    .gallery-item:hover img {
+        transform: none;
+    }
+
+    /* Show captions by default on touch */
+    .gallery-caption {
+        transform: translateY(0);
+        background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    }
+
+    /* Make tap targets larger */
+    .btn-unlock {
+        min-height: 52px;
+        padding: var(--space-md) var(--space-xl);
+    }
+
+    .password-input {
+        min-height: 52px;
+        font-size: 1.25rem;
+    }
+}
+
+/* ============================================
+   Safe Area (Notched Phones)
+   ============================================ */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+    .password-overlay {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .finale-section {
+        padding-bottom: calc(var(--space-4xl) + env(safe-area-inset-bottom));
+    }
+
+    .footer {
+        padding-bottom: calc(var(--space-2xl) + env(safe-area-inset-bottom));
+    }
+}
+
+/* ============================================
+   Landscape Phone Adjustments
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: var(--space-2xl) 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .scroll-indicator {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: var(--space-xl);
+    }
+
+    .password-container {
+        padding: var(--space-lg);
+    }
+
+    .password-heart {
+        width: 50px;
+        height: 50px;
+        margin-bottom: var(--space-md);
+    }
+
+    .envelope {
+        width: min(260px, 50vw);
+        height: min(165px, 32vw);
+    }
+
+    /* Letter modal in landscape */
+    .letter-modal-content {
+        max-height: 85vh;
+    }
+
+    .letter-paper {
+        max-height: calc(85vh - 50px);
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    .password-overlay,
+    .scroll-indicator,
+    .envelope-instruction,
+    .lightbox,
+    .letter-modal {
+        display: none !important;
+    }
+
+    .main-content {
+        display: block !important;
+    }
+
+    .section {
+        min-height: auto;
+        page-break-inside: avoid;
+    }
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

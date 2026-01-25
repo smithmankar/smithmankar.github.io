@@ -1,0 +1,1100 @@
+{
+  "generated": "2026-01-25T18:49:40.113Z",
+  "yourName": "Smith Mankar",
+  "partnerName": "Cariño",
+  "basic": {
+    "daysTogether": 888,
+    "totalMessages": 143711,
+    "yourMessages": 63477,
+    "partnerMessages": 80234,
+    "totalWords": 1321358,
+    "yourWords": 595107,
+    "partnerWords": 726251,
+    "averageMessagesPerDay": 161,
+    "chatStartDate": "16/08/23",
+    "chatEndDate": "25/01/26"
+  },
+  "monthly": {
+    "labels": [
+      "Aug 23",
+      "Sep 23",
+      "Oct 23",
+      "Nov 23",
+      "Dec 23",
+      "Jan 24",
+      "Feb 24",
+      "Mar 24",
+      "Apr 24",
+      "May 24",
+      "Jun 24",
+      "Jul 24",
+      "Aug 24",
+      "Sep 24",
+      "Oct 24",
+      "Nov 24",
+      "Dec 24",
+      "Jan 25",
+      "Feb 25",
+      "Mar 25",
+      "Apr 25",
+      "May 25",
+      "Jun 25",
+      "Jul 25",
+      "Aug 25",
+      "Sep 25",
+      "Oct 25",
+      "Nov 25",
+      "Dec 25",
+      "Jan 26"
+    ],
+    "total": [
+      104,
+      658,
+      468,
+      1596,
+      7802,
+      7180,
+      9581,
+      8864,
+      9163,
+      14790,
+      9076,
+      6800,
+      9863,
+      3944,
+      4349,
+      2233,
+      3100,
+      1972,
+      3496,
+      2977,
+      3228,
+      3792,
+      2383,
+      2897,
+      3289,
+      2791,
+      4316,
+      4072,
+      4955,
+      3972
+    ],
+    "you": [
+      53,
+      319,
+      208,
+      699,
+      3240,
+      2891,
+      4591,
+      4294,
+      4347,
+      7534,
+      4402,
+      3209,
+      4391,
+      1724,
+      1575,
+      867,
+      1285,
+      865,
+      1454,
+      1269,
+      1492,
+      1571,
+      855,
+      952,
+      1391,
+      1271,
+      1770,
+      1677,
+      2016,
+      1265
+    ],
+    "partner": [
+      51,
+      339,
+      260,
+      897,
+      4562,
+      4289,
+      4990,
+      4570,
+      4816,
+      7256,
+      4674,
+      3591,
+      5472,
+      2220,
+      2774,
+      1366,
+      1815,
+      1107,
+      2042,
+      1708,
+      1736,
+      2221,
+      1528,
+      1945,
+      1898,
+      1520,
+      2546,
+      2395,
+      2939,
+      2707
+    ],
+    "raw": {
+      "2023-08": 104,
+      "2023-09": 658,
+      "2023-10": 468,
+      "2023-11": 1596,
+      "2023-12": 7802,
+      "2024-01": 7180,
+      "2024-02": 9581,
+      "2024-03": 8864,
+      "2024-04": 9163,
+      "2024-05": 14790,
+      "2024-06": 9076,
+      "2024-07": 6800,
+      "2024-09": 3944,
+      "2024-08": 9863,
+      "2024-10": 4349,
+      "2024-11": 2233,
+      "2024-12": 3100,
+      "2025-01": 1972,
+      "2025-02": 3496,
+      "2025-03": 2977,
+      "2025-04": 3228,
+      "2025-05": 3792,
+      "2025-06": 2383,
+      "2025-07": 2897,
+      "2025-08": 3289,
+      "2025-09": 2791,
+      "2025-10": 4316,
+      "2025-11": 4072,
+      "2025-12": 4955,
+      "2026-01": 3972
+    }
+  },
+  "hourly": {
+    "labels": [
+      "12 AM",
+      "1 AM",
+      "2 AM",
+      "3 AM",
+      "4 AM",
+      "5 AM",
+      "6 AM",
+      "7 AM",
+      "8 AM",
+      "9 AM",
+      "10 AM",
+      "11 AM",
+      "12 PM",
+      "1 PM",
+      "2 PM",
+      "3 PM",
+      "4 PM",
+      "5 PM",
+      "6 PM",
+      "7 PM",
+      "8 PM",
+      "9 PM",
+      "10 PM",
+      "11 PM"
+    ],
+    "total": [
+      14173,
+      3473,
+      865,
+      278,
+      183,
+      450,
+      690,
+      1639,
+      2254,
+      3738,
+      3713,
+      4729,
+      5221,
+      5049,
+      6571,
+      6834,
+      6926,
+      6686,
+      6057,
+      7079,
+      9684,
+      12879,
+      15097,
+      19443
+    ],
+    "you": [
+      6493,
+      1529,
+      400,
+      131,
+      89,
+      211,
+      311,
+      698,
+      969,
+      1774,
+      1698,
+      2002,
+      2330,
+      2138,
+      2665,
+      2833,
+      2970,
+      3001,
+      2594,
+      3055,
+      4330,
+      5746,
+      6855,
+      8655
+    ],
+    "partner": [
+      7680,
+      1944,
+      465,
+      147,
+      94,
+      239,
+      379,
+      941,
+      1285,
+      1964,
+      2015,
+      2727,
+      2891,
+      2911,
+      3906,
+      4001,
+      3956,
+      3685,
+      3463,
+      4024,
+      5354,
+      7133,
+      8242,
+      10788
+    ],
+    "peakHour": 23,
+    "yourPeakHour": 23,
+    "partnerPeakHour": 23
+  },
+  "dayOfWeek": {
+    "labels": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "values": [
+      19578,
+      20311,
+      20991,
+      19518,
+      22054,
+      20673,
+      20586
+    ],
+    "mostActiveDay": "Thursday"
+  },
+  "words": {
+    "words": [
+      {
+        "text": "good",
+        "value": 3187
+      },
+      {
+        "text": "one",
+        "value": 2694
+      },
+      {
+        "text": "wanna",
+        "value": 2520
+      },
+      {
+        "text": "much",
+        "value": 2066
+      },
+      {
+        "text": "mean",
+        "value": 2016
+      },
+      {
+        "text": "shit",
+        "value": 1902
+      },
+      {
+        "text": "eat",
+        "value": 1881
+      },
+      {
+        "text": "fucking",
+        "value": 1847
+      },
+      {
+        "text": "maybe",
+        "value": 1706
+      },
+      {
+        "text": "fuck",
+        "value": 1670
+      },
+      {
+        "text": "wait",
+        "value": 1641
+      },
+      {
+        "text": "time",
+        "value": 1618
+      },
+      {
+        "text": "idk",
+        "value": 1560
+      },
+      {
+        "text": "something",
+        "value": 1410
+      },
+      {
+        "text": "let",
+        "value": 1402
+      },
+      {
+        "text": "fine",
+        "value": 1338
+      },
+      {
+        "text": "really",
+        "value": 1287
+      },
+      {
+        "text": "morning",
+        "value": 1279
+      },
+      {
+        "text": "tho",
+        "value": 1192
+      },
+      {
+        "text": "dad",
+        "value": 1160
+      },
+      {
+        "text": "home",
+        "value": 1147
+      },
+      {
+        "text": "gonna",
+        "value": 1140
+      },
+      {
+        "text": "ig",
+        "value": 1127
+      },
+      {
+        "text": "tbf",
+        "value": 1092
+      },
+      {
+        "text": "money",
+        "value": 1088
+      },
+      {
+        "text": "night",
+        "value": 1084
+      },
+      {
+        "text": "people",
+        "value": 1071
+      },
+      {
+        "text": "sleep",
+        "value": 1070
+      },
+      {
+        "text": "buy",
+        "value": 1018
+      },
+      {
+        "text": "love",
+        "value": 1017
+      },
+      {
+        "text": "cuz",
+        "value": 1000
+      },
+      {
+        "text": "okie",
+        "value": 996
+      },
+      {
+        "text": "today",
+        "value": 958
+      },
+      {
+        "text": "day",
+        "value": 928
+      },
+      {
+        "text": "feel",
+        "value": 911
+      },
+      {
+        "text": "tomorrow",
+        "value": 893
+      },
+      {
+        "text": "sure",
+        "value": 875
+      },
+      {
+        "text": "anything",
+        "value": 821
+      },
+      {
+        "text": "mom",
+        "value": 804
+      },
+      {
+        "text": "kinda",
+        "value": 803
+      },
+      {
+        "text": "bad",
+        "value": 802
+      },
+      {
+        "text": "rn",
+        "value": 783
+      },
+      {
+        "text": "never",
+        "value": 772
+      },
+      {
+        "text": "baby",
+        "value": 768
+      },
+      {
+        "text": "least",
+        "value": 765
+      },
+      {
+        "text": "college",
+        "value": 765
+      },
+      {
+        "text": "any",
+        "value": 758
+      },
+      {
+        "text": "water",
+        "value": 748
+      },
+      {
+        "text": "better",
+        "value": 747
+      },
+      {
+        "text": "enough",
+        "value": 732
+      },
+      {
+        "text": "pretty",
+        "value": 726
+      },
+      {
+        "text": "coz",
+        "value": 708
+      },
+      {
+        "text": "chicken",
+        "value": 702
+      },
+      {
+        "text": "everything",
+        "value": 701
+      },
+      {
+        "text": "new",
+        "value": 696
+      },
+      {
+        "text": "eep",
+        "value": 672
+      },
+      {
+        "text": "work",
+        "value": 668
+      },
+      {
+        "text": "lemme",
+        "value": 664
+      },
+      {
+        "text": "try",
+        "value": 657
+      },
+      {
+        "text": "lmao",
+        "value": 646
+      },
+      {
+        "text": "always",
+        "value": 634
+      },
+      {
+        "text": "ass",
+        "value": 624
+      },
+      {
+        "text": "done",
+        "value": 618
+      },
+      {
+        "text": "around",
+        "value": 605
+      },
+      {
+        "text": "look",
+        "value": 602
+      },
+      {
+        "text": "bit",
+        "value": 597
+      },
+      {
+        "text": "hate",
+        "value": 596
+      },
+      {
+        "text": "find",
+        "value": 595
+      },
+      {
+        "text": "literally",
+        "value": 577
+      },
+      {
+        "text": "goodnight",
+        "value": 572
+      },
+      {
+        "text": "bed",
+        "value": 563
+      },
+      {
+        "text": "rice",
+        "value": 557
+      },
+      {
+        "text": "life",
+        "value": 556
+      },
+      {
+        "text": "imma",
+        "value": 552
+      },
+      {
+        "text": "yet",
+        "value": 551
+      },
+      {
+        "text": "damn",
+        "value": 545
+      },
+      {
+        "text": "keep",
+        "value": 541
+      },
+      {
+        "text": "phone",
+        "value": 538
+      },
+      {
+        "text": "already",
+        "value": 536
+      },
+      {
+        "text": "send",
+        "value": 535
+      },
+      {
+        "text": "asleep",
+        "value": 530
+      },
+      {
+        "text": "whole",
+        "value": 526
+      },
+      {
+        "text": "food",
+        "value": 523
+      },
+      {
+        "text": "bro",
+        "value": 518
+      },
+      {
+        "text": "year",
+        "value": 507
+      },
+      {
+        "text": "either",
+        "value": 505
+      },
+      {
+        "text": "everyone",
+        "value": 504
+      },
+      {
+        "text": "nah",
+        "value": 503
+      },
+      {
+        "text": "away",
+        "value": 503
+      },
+      {
+        "text": "hope",
+        "value": 503
+      },
+      {
+        "text": "days",
+        "value": 502
+      },
+      {
+        "text": "myself",
+        "value": 502
+      },
+      {
+        "text": "yayy",
+        "value": 500
+      },
+      {
+        "text": "nothing",
+        "value": 488
+      },
+      {
+        "text": "family",
+        "value": 486
+      },
+      {
+        "text": "dinner",
+        "value": 482
+      },
+      {
+        "text": "check",
+        "value": 481
+      },
+      {
+        "text": "two",
+        "value": 467
+      },
+      {
+        "text": "remember",
+        "value": 462
+      },
+      {
+        "text": "pay",
+        "value": 455
+      },
+      {
+        "text": "god",
+        "value": 452
+      },
+      {
+        "text": "wanted",
+        "value": 445
+      },
+      {
+        "text": "making",
+        "value": 445
+      },
+      {
+        "text": "saying",
+        "value": 441
+      },
+      {
+        "text": "guess",
+        "value": 439
+      },
+      {
+        "text": "face",
+        "value": 437
+      },
+      {
+        "text": "doing",
+        "value": 434
+      },
+      {
+        "text": "huh",
+        "value": 433
+      },
+      {
+        "text": "rs",
+        "value": 433
+      },
+      {
+        "text": "left",
+        "value": 431
+      },
+      {
+        "text": "hard",
+        "value": 422
+      },
+      {
+        "text": "start",
+        "value": 418
+      },
+      {
+        "text": "another",
+        "value": 417
+      },
+      {
+        "text": "man",
+        "value": 414
+      },
+      {
+        "text": "ate",
+        "value": 411
+      },
+      {
+        "text": "actually",
+        "value": 408
+      },
+      {
+        "text": "trying",
+        "value": 403
+      },
+      {
+        "text": "someone",
+        "value": 400
+      },
+      {
+        "text": "head",
+        "value": 397
+      },
+      {
+        "text": "found",
+        "value": 396
+      },
+      {
+        "text": "else",
+        "value": 391
+      },
+      {
+        "text": "ones",
+        "value": 391
+      },
+      {
+        "text": "help",
+        "value": 388
+      },
+      {
+        "text": "kitten",
+        "value": 386
+      },
+      {
+        "text": "tired",
+        "value": 383
+      },
+      {
+        "text": "account",
+        "value": 375
+      },
+      {
+        "text": "daddy",
+        "value": 374
+      },
+      {
+        "text": "many",
+        "value": 372
+      },
+      {
+        "text": "honestly",
+        "value": 372
+      },
+      {
+        "text": "talking",
+        "value": 371
+      },
+      {
+        "text": "worry",
+        "value": 367
+      },
+      {
+        "text": "eh",
+        "value": 366
+      },
+      {
+        "text": "place",
+        "value": 363
+      },
+      {
+        "text": "eating",
+        "value": 361
+      },
+      {
+        "text": "ever",
+        "value": 359
+      },
+      {
+        "text": "looks",
+        "value": 354
+      },
+      {
+        "text": "gotta",
+        "value": 352
+      },
+      {
+        "text": "anyway",
+        "value": 349
+      },
+      {
+        "text": "live",
+        "value": 348
+      },
+      {
+        "text": "edited",
+        "value": 348
+      },
+      {
+        "text": "later",
+        "value": 346
+      },
+      {
+        "text": "per",
+        "value": 345
+      },
+      {
+        "text": "soon",
+        "value": 341
+      },
+      {
+        "text": "wash",
+        "value": 341
+      },
+      {
+        "text": "nope",
+        "value": 340
+      },
+      {
+        "text": "wtf",
+        "value": 340
+      },
+      {
+        "text": "hurts",
+        "value": 335
+      },
+      {
+        "text": "watch",
+        "value": 334
+      },
+      {
+        "text": "bought",
+        "value": 334
+      },
+      {
+        "text": "lot",
+        "value": 333
+      }
+    ],
+    "emojis": [
+      {
+        "emoji": "😭",
+        "count": 3427
+      },
+      {
+        "emoji": "💀",
+        "count": 787
+      },
+      {
+        "emoji": "🏻",
+        "count": 737
+      },
+      {
+        "emoji": "🥲",
+        "count": 536
+      },
+      {
+        "emoji": "♀",
+        "count": 375
+      },
+      {
+        "emoji": "🤌",
+        "count": 369
+      },
+      {
+        "emoji": "😔",
+        "count": 274
+      },
+      {
+        "emoji": "🚶",
+        "count": 240
+      },
+      {
+        "emoji": "💔",
+        "count": 179
+      },
+      {
+        "emoji": "👀",
+        "count": 106
+      },
+      {
+        "emoji": "😂",
+        "count": 79
+      },
+      {
+        "emoji": "🤷",
+        "count": 77
+      },
+      {
+        "emoji": "🥹",
+        "count": 63
+      },
+      {
+        "emoji": "🙂",
+        "count": 52
+      },
+      {
+        "emoji": "🤩",
+        "count": 46
+      },
+      {
+        "emoji": "🤡",
+        "count": 42
+      },
+      {
+        "emoji": "🥺",
+        "count": 42
+      },
+      {
+        "emoji": "👁",
+        "count": 40
+      },
+      {
+        "emoji": "💃",
+        "count": 39
+      },
+      {
+        "emoji": "🤧",
+        "count": 39
+      },
+      {
+        "emoji": "🙏",
+        "count": 34
+      },
+      {
+        "emoji": "🤨",
+        "count": 32
+      },
+      {
+        "emoji": "🤤",
+        "count": 30
+      },
+      {
+        "emoji": "😫",
+        "count": 30
+      },
+      {
+        "emoji": "😀",
+        "count": 29
+      },
+      {
+        "emoji": "💎",
+        "count": 29
+      },
+      {
+        "emoji": "😃",
+        "count": 28
+      },
+      {
+        "emoji": "☝",
+        "count": 28
+      },
+      {
+        "emoji": "💁",
+        "count": 28
+      },
+      {
+        "emoji": "🤣",
+        "count": 25
+      }
+    ],
+    "topWord": "good",
+    "topEmoji": "😭"
+  },
+  "milestones": [
+    {
+      "type": "first_message",
+      "label": "First Message",
+      "date": "16/08/23",
+      "timestamp": "2023-08-16T04:26:18.000Z",
+      "text": "‎Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share..."
+    },
+    {
+      "type": "first_love",
+      "label": "First \"I Love You\"",
+      "date": "08/01/24",
+      "timestamp": "2024-01-07T19:05:21.000Z",
+      "sender": "you",
+      "text": "For private use? I want original pics always... Cuz I don't like edited pics for that stuff... I lov..."
+    },
+    {
+      "type": "longest_streak",
+      "label": "Longest Conversation Streak",
+      "days": 5,
+      "startDate": "14/11/23",
+      "endDate": "11/01/24"
+    },
+    {
+      "type": "most_messages_day",
+      "label": "Most Messages in One Day",
+      "date": "2024-05-24",
+      "count": 1132
+    },
+    {
+      "type": "latest_message",
+      "label": "Most Recent Message",
+      "date": "25/01/26",
+      "timestamp": "2026-01-25T12:03:32.000Z"
+    }
+  ],
+  "responseTimes": {
+    "yourAvgResponseMinutes": 8,
+    "partnerAvgResponseMinutes": 12
+  },
+  "visitStats": {
+    "startDate": "2025-11-27",
+    "endDate": "2025-12-16",
+    "daily": {
+      "2025-11-27": 757,
+      "2025-11-28": 13,
+      "2025-11-29": 3,
+      "2025-11-30": 5,
+      "2025-12-01": 8,
+      "2025-12-02": 166,
+      "2025-12-03": 43,
+      "2025-12-04": 33,
+      "2025-12-05": 41,
+      "2025-12-06": 177,
+      "2025-12-07": 66,
+      "2025-12-08": 49,
+      "2025-12-11": 121,
+      "2025-12-12": 33,
+      "2025-12-13": 46,
+      "2025-12-14": 35,
+      "2025-12-15": 122
+    }
+  }
+}

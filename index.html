@@ -3,37 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Our love story in data and memories">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>Our Story</title>
 </head>
-<body>
-    <div id="login-overlay">
-        <div class="login-box">
-            <h2>Enter the Code</h2>
-            <input type="password" id="password-input" placeholder="Hint: Our anniversary (MMDD)">
-            <button onclick="checkPassword()">Unlock</button>
-            <p id="error-msg"></p>
+<body class="no-js">
+
+    <!-- ============================================
+         PASSWORD OVERLAY
+         ============================================ -->
+    <div id="password-overlay" class="password-overlay">
+        <div class="password-container">
+            <div class="password-heart">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
+            <h2 class="password-title">Enter Our Code</h2>
+            <p class="password-hint">Hint: The day we became us (DDMM)</p>
+            <input
+                type="password"
+                id="password-input"
+                class="password-input"
+                placeholder="****"
+                maxlength="8"
+                autocomplete="off"
+            >
+            <button id="password-submit" class="btn-unlock">
+                Unlock Our Story
+            </button>
+            <p id="password-error" class="error-message" hidden>
+                That's not quite right... try again
+            </p>
         </div>
     </div>
 
-    <div id="main-content" style="display:none;">
-        <header>
-            <h1>Us, Through Time.</h1> <p>A few moments that matter.</p> </header>
+    <!-- ============================================
+         MAIN CONTENT (Hidden until unlocked)
+         ============================================ -->
+    <main id="main-content" class="main-content">
 
-        <div class="timeline">
-            <div class="container left">
-                <div class="content">
-                    <h2>Feb 14, 2024</h2> <p>The day we met at the coffee shop.</p> </div>
-            </div>
-            <div class="container right">
-                <div class="content">
-                    <h2>Aug 20, 2024</h2>
-                    <p>Our first road trip to the mountains.</p>
+        <!-- HERO SECTION -->
+        <section id="hero" class="section hero-section">
+            <div class="container">
+                <h1 class="hero-title" data-aos="fade">Our Story</h1>
+                <p class="hero-subtitle" data-aos="fade" data-aos-delay="200">In Data & Memories</p>
+                <p class="hero-date" data-aos="fade" data-aos-delay="400">Since August 22, 2023</p>
+                <div class="scroll-indicator" data-aos="fade" data-aos-delay="600">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-arrow"></div>
                 </div>
             </div>
+        </section>
+
+        <!-- SECTION 1: THE NUMBERS -->
+        <section id="numbers" class="section numbers-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">The Numbers</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Our love, quantified</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="stat-number" data-count="0" id="stat-days">0</span>
+                        <span class="stat-label">Days Together</span>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <span class="stat-number" data-count="0" id="stat-messages">0</span>
+                        <span class="stat-label">Messages Exchanged</span>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                        <span class="stat-number" data-count="0" id="stat-words">0</span>
+                        <span class="stat-label">Words Written</span>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="500">
+                        <span class="stat-number" data-count="0" id="stat-avg">0</span>
+                        <span class="stat-label">Messages Per Day</span>
+                    </div>
+                    <div class="stat-card highlight" data-aos="fade-up" data-aos-delay="600">
+                        <span class="stat-number" data-count="21" id="stat-visit">21</span>
+                        <span class="stat-label">Days You Were Here</span>
+                        <span class="stat-detail">Nov 27 - Dec 16, 2025</span>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- SECTION 2: OUR CHAT STORY (Message Frequency Chart) -->
+        <section id="chat-story" class="section chart-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Chat Story</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Every peak, every valley - our conversations over time</p>
+
+                <div class="chart-container" data-aos="fade-up" data-aos-delay="200">
+                    <canvas id="frequency-chart"></canvas>
+                </div>
+
+                <div class="chart-insights" data-aos="fade-up" data-aos-delay="300">
+                    <p class="insight" id="insight-peak"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WHEN WE TALK -->
+        <section id="when-we-talk" class="section chart-section alt-bg">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">When We Talk</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Our conversations by hour of day</p>
+
+                <div class="chart-container chart-small" data-aos="fade-up" data-aos-delay="200">
+                    <canvas id="hourly-chart"></canvas>
+                </div>
+
+                <div class="time-insights" data-aos="fade-up" data-aos-delay="300">
+                    <div class="time-card">
+                        <span class="time-label">My Peak Hour</span>
+                        <span class="time-value" id="your-peak-hour">--</span>
+                    </div>
+                    <div class="time-card">
+                        <span class="time-label">Your Peak Hour</span>
+                        <span class="time-value" id="partner-peak-hour">--</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: OUR WORDS -->
+        <section id="our-words" class="section wordcloud-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Words</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">The words we use most</p>
+
+                <div class="wordcloud-container" data-aos="zoom-in" data-aos-delay="200">
+                    <canvas id="word-cloud"></canvas>
+                </div>
+
+                <div class="emoji-row" data-aos="fade-up" data-aos-delay="300">
+                    <span class="emoji-title">Our Top Emojis:</span>
+                    <div class="emoji-list" id="top-emojis"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MILESTONES -->
+        <section id="milestones" class="section milestones-section alt-bg">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Milestones</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">The moments that matter</p>
+
+                <div class="milestones-timeline">
+                    <div class="milestone-line"></div>
+
+                    <div class="milestone-item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="milestone-dot"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date">June 2020</span>
+                            <h3 class="milestone-title">First Contact</h3>
+                            <p class="milestone-text">SKZ Stay GC - where strangers became friends</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item" data-aos="fade-left" data-aos-delay="300">
+                        <div class="milestone-dot"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date">August 22, 2023</span>
+                            <h3 class="milestone-title">We Became Official</h3>
+                            <p class="milestone-text">The day our story truly began</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item" data-aos="fade-right" data-aos-delay="400">
+                        <div class="milestone-dot heart"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date" id="milestone-love-date">Loading...</span>
+                            <h3 class="milestone-title">First "I Love You"</h3>
+                            <p class="milestone-text" id="milestone-love-text"></p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item" data-aos="fade-left" data-aos-delay="500">
+                        <div class="milestone-dot"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date" id="milestone-streak-date">Loading...</span>
+                            <h3 class="milestone-title">Longest Streak</h3>
+                            <p class="milestone-text" id="milestone-streak-text"></p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item highlight" data-aos="fade-right" data-aos-delay="600">
+                        <div class="milestone-dot star"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date">November 27, 2025</span>
+                            <h3 class="milestone-title">You Came to Mumbai</h3>
+                            <p class="milestone-text">21 days of finally being together. From Imphal to Mumbai - 2,800 km of love.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: THE VISIT (Photo Gallery) -->
+        <section id="the-visit" class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">The Visit</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">November - December 2025</p>
+                <p class="section-description" data-aos="fade-up" data-aos-delay="150">21 days of making memories together</p>
+
+                <div class="photo-gallery" id="photo-gallery">
+                    <!-- Photos will be added here -->
+                    <!-- Placeholder structure: -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="gallery-placeholder">
+                            <span>Add your photos</span>
+                            <p>Place images in images/photos/ folder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: FINALE - The Letter -->
+        <section id="finale" class="section finale-section">
+            <div class="container">
+                <div class="envelope-wrapper" data-aos="fade-up">
+                    <p class="envelope-instruction">
+                        <span class="tap-hint">Tap to open</span>
+                    </p>
+
+                    <div class="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="letter-preview"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating hearts container -->
+                <div class="hearts-container" id="floating-hearts"></div>
+            </div>
+        </section>
+
+        <!-- Full-screen Letter Modal -->
+        <div class="letter-modal" id="letter-modal" hidden>
+            <div class="letter-modal-backdrop"></div>
+            <div class="letter-modal-content">
+                <button class="letter-close" aria-label="Close letter">&times;</button>
+                <div class="letter-paper">
+                    <div class="letter-fold-top"></div>
+                    <div class="letter-inner">
+                        <p class="letter-greeting">My dearest,</p>
+                        <p class="letter-body">
+                            From strangers in 2020 to this moment - I never imagined
+                            that our paths crossing would lead to you being here with me.
+                        </p>
+                        <p class="letter-body">
+                            Every one of those messages mattered. Every late-night
+                            conversation, every "good morning," every random thought
+                            I wanted to share - they all led here.
+                        </p>
+                        <p class="letter-body">
+                            Those 21 days in November and December were everything.
+                            Having you here, finally, after all the screens and
+                            the 2,800 kilometers between us...
+                        </p>
+                        <p class="letter-body">
+                            This is just the beginning of our data. Here's to
+                            many more messages, more visits, more us.
+                        </p>
+                        <p class="letter-closing">Forever yours,</p>
+                        <p class="letter-signature">Smith</p>
+                        <div class="letter-heart">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with love, for you</p>
+            <p class="footer-date">Valentine's Day 2026</p>
+        </footer>
+
+    </main>
+
+    <!-- Lightbox for photos -->
+    <div id="lightbox" class="lightbox" hidden>
+        <button class="lightbox-close">&times;</button>
+        <img class="lightbox-image" src="" alt="">
+        <p class="lightbox-caption"></p>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="js/password.js"></script>
+    <script src="js/scroll-observer.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/wordcloud.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Remove no-js class -->
+    <script>document.body.classList.remove('no-js');</script>
 </body>
 </html>
