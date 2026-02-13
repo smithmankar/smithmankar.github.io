@@ -142,9 +142,30 @@ class LoveStoryApp {
         // Format: { src: 'images/photos/filename.webp', caption: 'Description' }
         const photos = [
             // Example entries (replace with your actual photos):
-            // { src: 'images/photos/arrival.webp', caption: 'The day she arrived' },
-            // { src: 'images/photos/gateway.webp', caption: 'Gateway of India' },
-            // { src: 'images/photos/dinner.webp', caption: 'Our favorite restaurant' },
+            { src: 'images/photos/prem (21).webp', caption: 'lake hangout' },
+            { src: 'images/photos/prem (22).webp', caption: 'First picture together' },
+            { src: 'images/photos/prem (19).webp', caption: 'Your shake my queen' },
+            { src: 'images/photos/prem (20).webp', caption: 'Dosa Date (hated the resins tho)' },
+            { src: 'images/photos/prem (24).webp', caption: 'Momos Please!' },
+            { src: 'images/photos/prem (25).webp', caption: 'Taste of home with chowmein' },
+            { src: 'images/photos/prem (23).webp', caption: 'A visit to marine drive' },
+            { src: 'images/photos/prem (2).webp', caption: 'First look at the ocean' },
+            { src: 'images/photos/prem (1).webp', caption: 'followed by disgust' },
+            { src: 'images/photos/prem (3).webp', caption: 'First sunset together at the beach' },
+            { src: 'images/photos/prem (7).webp', caption: 'kalina chronicles' },
+            { src: 'images/photos/prem (8).webp', caption: 'and the hateful bus wait' },
+            { src: 'images/photos/prem (9).webp', caption: 'you marked your territory' },
+            { src: 'images/photos/prem (10).webp', caption: 'and i shall always be yours' },
+            { src: 'images/photos/prem (4).webp', caption: 'mandir visit' },
+            { src: 'images/photos/prem (5).webp', caption: 'mom me and you' },
+            { src: 'images/photos/prem (6).webp', caption: 'Future daughter and mother in law' },
+            { src: 'images/photos/prem (11).webp', caption: 'your favourite prawns biryani' },
+            { src: 'images/photos/prem (12).webp', caption: 'shwarma date' },
+            { src: 'images/photos/prem (14).webp', caption: 'birthday celebration' },
+            { src: 'images/photos/prem (15).webp', caption: 'one big happy family' },
+            { src: 'images/photos/prem (16).webp', caption: 'matka biryani time' },
+            { src: 'images/photos/prem (18).webp', caption: 'and until next time when we meet again' },
+
         ];
 
         if (photos.length === 0) {
