@@ -29,9 +29,9 @@
 
 ## Shopify storefronts
 
-- [Verte India storefront](https://smithmankar.co.in/projects/verte-india/): Verte's Indian store, built and run end to end: a heavily customised Dawn theme built around a freeform layout system and a 3D product stage for the Project Karbon launch. (Live, 2026; Verte)
+- [Verte India storefront](https://smithmankar.co.in/projects/verte-india/): Verte's Indian store, rebuilt almost from scratch and run end to end: every page on a freeform layout system, the Project Karbon and URBN launches, 3D, checkout and payments, SEO and the Meta ads. (Live, 2026; Verte)
 - [Project Karbon and URBN launch pages](https://smithmankar.co.in/projects/verte-launch-pages/): The bespoke launch pages for Verte's Project Karbon, Karbon Speciale and URBN watches, built end to end on the Shopify store and ported to the global storefront. (Live, 2026; Verte)
-- [Alexandre Christie storefront](https://smithmankar.co.in/projects/alexandre-christie/): Alexandre Christie's Indian store, built and run end to end: a heavily customised premium theme with bespoke sections, launch pages, tracking and SEO. (Live, 2026; Alexandre Christie)
+- [Alexandre Christie storefront](https://smithmankar.co.in/projects/alexandre-christie/): Alexandre Christie's Indian store, rebuilt almost from scratch and run end to end: a new home page, every product page, a store locator with maps, launch pages, tracking, SEO and the Meta ads. (Live, 2026; Alexandre Christie)
 - [Cosmic launch pages](https://smithmankar.co.in/projects/ac-cosmic/): A pre-launch registration page and a bespoke, scroll-driven product page for Alexandre Christie's Cosmic watch, built from separate desktop and phone comps. (Live, 2026; Alexandre Christie)
 - [Black Forge product page](https://smithmankar.co.in/projects/ac-black-forge/): A scroll-choreographed product page for the Black Forge watch: hero, specs, reveal, materials and motion, with a fixed edition bar. (Live, 2026; Alexandre Christie)
 - [Reviews migration](https://smithmankar.co.in/projects/ac-reviews-import/): Moved Alexandre Christie's customer reviews, photos and videos into Judge.me. (Delivered, 2026; Alexandre Christie)

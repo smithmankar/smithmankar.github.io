@@ -21,13 +21,59 @@ What was built:
 - Daily pipelines from Meta Ads, Google Ads, GA4, Shopify, Microsoft Clarity and Google Trends feeding per-brand revenue, traffic, conversion and ad dashboards
 - Ad evaluation engine that sorts every ad into test, kill, optimise, breakeven or scale
 - Six-tier roles, TOTP-gated impersonation, web push with retries and batching, and a WebSocket build id that reloads clients after a deploy
-- Plain-English and voice commands across 47 tools, with an undo log and single-use plan tokens
+- Plain-English and voice commands across 49 actions, with an undo log and single-use plan tokens
 
 Results:
-- In daily use at os.sagesparrows.in: on 2 Sep 2026 it held 9 brands, 56 campaigns, about 110 assets and 120 open tasks
+- In daily use: on 2 Sep 2026 it held 9 brands, 56 campaigns, about 110 assets and 120 open tasks
 - Replaced Google Sheets and WhatsApp as the way the team runs work, with productivity and progress tracking up by about 70%
 
 Stack: React, Vite, Tailwind CSS, Radix UI, Node.js, Fastify, MySQL, WebSocket, Google APIs, Meta Graph API, Web Push
+
+Case study:
+The operations platform a marketing agency runs on: tasks, chat, KPIs, analytics, mail and drive in one place, on the web and as a native Mac app.
+Role: Sole developer, end to end: product, backend, web app, Mac app and data pipelines. Period: March to October 2026.
+- ~70%: more productivity and progress tracking once it replaced Sheets and WhatsApp
+- ~15: people run their day on it across the agency
+- 16: native Mac app releases, shipped through its own updater
+- 49: actions the voice and typed assistant can take
+
+### The brief
+
+Sage Sparrows runs marketing for D2C, real estate and EV brands with a team of about 15. The work was spread across Google Sheets and WhatsApp threads, and every brand's numbers sat in a different place: Meta, Google Ads, GA4, Shopify, Clarity.
+With no in-house performance marketer, the agency needed one place to run its work and one dashboard every brand's ads could be run from. When a campaign stopped spending for days, nobody caught it. That was the kind of gap it had to close.
+
+### What I built
+
+- Tasks with a reviewer-driven stage flow: every task starts at Briefing, and after each review the reviewer picks the next stage, department and people. Work can be sent back, and Shipped (published) is separate from Done.
+- Google Calendar sync for work blocks and deadlines, and a scheduler that respects priority, deadlines and working hours.
+- Real-time chat: channels, DMs, threads, mentions, reactions, read receipts, file sharing and deep links to any message.
+- A KPI calculator with weighted department scoring, MD scores and profit sharing, with achievements computed automatically from platform data.
+- Data pipelines from Meta Ads, Google Ads, GA4, Shopify, Google Trends and Microsoft Clarity, synced daily, plus an ad engine that classifies every ad as TEST, KILL, OPTIMIZE, BREAKEVEN or SCALE.
+- Company mail, calendars and file storage on a self-hosted Stalwart server, used from inside the app.
+- Push notifications, 6-tier role-based access, Ctrl+K global search, notes with share links and a daily standup board.
+- A native SwiftUI Mac app with every page rebuilt, an encrypted local cache, and a system-wide command bar (Option+Space).
+- An MCP server so Claude can query the analytics directly.
+
+### How I built it
+
+- March 2026: First flight on the hosting the agency already had. A Fastify and MySQL backend, a React and Tailwind web app, Google sign-in with MySQL-backed sessions, and WebSockets for chat and live updates. It runs on the agency's existing cPanel host, so it shipped without new infrastructure.
+- June and July 2026: Fix what the team felt first, then make the numbers right. Notifications and login refresh on iPhones and Macs came first. Then analytics became the top priority: I audited all 21 analytics pages, found 19 defects in 4 recurring classes (rates added together, snapshots summed across days, platforms storing the same metric differently, and dates bucketed in the wrong timezone), fixed every one, and folded the 21 pages into one dashboard. A Google Ads sync that had been dead for 13 months, because the API version it used was retired, came back with 25 new fields.
+- July 2026: A native Mac app, built from scratch. A webview wrapper was tried and thrown out in favour of real SwiftUI. Native sign-in uses an additive, per-device token that is hashed at rest and can be revoked, so the web's cookie flow stayed untouched. Every page was rebuilt natively, including all 16 analytics dashboards, then audited line by line against the web app.
+- July and August 2026: Make it hard to break. The Mac app gained an encrypted SQLCipher cache, so a hosting hiccup shows slightly stale data instead of an error screen. GA4 turned out to be silently cutting every large report at 10,000 rows; the sync now pages through everything.
+- September 2026: Talk to it. An assistant layer, now 49 actions. The model only names an action and quotes the words; code resolves them, checks permissions, asks for confirmation and executes, with real undo. An audit before release caught 27 of the then 47 tools calling their routes wrongly. Atlas 1.0, a model I fine-tuned, runs it on each person's Mac.
+- October 2026: Keep it healthy. A dependency security pass took every audit to zero, and abandoned carts from Shiprocket Checkout now land in Verte's and Alexandre Christie's sales sheets automatically.
+Decision: native, not wrapped. Web push was unreliable on Macs and Google blocks sign-in inside embedded webviews. A native app holds the WebSocket and fires real system notifications. The server stays the single authority, so the planned Windows, iOS and Android clients inherit the same logic instead of re-implementing it.
+Decision: Shopify decides revenue. Income always comes from Shopify, never an ad platform's attributed revenue, and traffic from GA4 and Clarity together. Anything a platform attributes to itself is labelled that way on screen.
+Decision: glass on chrome, flat content. Translucency is used only for navigation and controls. Tables, charts and chat stay flat and high-contrast, because glass over dense data hurts legibility and slows down the machines the team actually uses.
+
+### What it changed
+
+- ~70%: productivity and progress tracking gain after replacing Sheets and WhatsApp
+- 1 page: of analytics instead of 21 separate dashboards
+- 9 brands: 56 campaigns, about 110 assets and 120 open tasks in the system on 2 Sep 2026
+- >30x: the error in one average order value widget before the aggregation fixes
+The team runs its work from SparrowOS instead of Sheets and WhatsApp. Management reviews every brand from one analytics page, and campaigns that are switched on but not spending now raise an alarm instead of going unnoticed for days.
+Next: moving off shared hosting to a VPS, then Windows, iOS and Android clients on the same server.
 
 ## SparrowOS for Mac
 
@@ -128,6 +174,43 @@ What was built:
 
 Stack: Next.js 16, React 19, TypeScript, PostgreSQL, Drizzle ORM, Stripe, Docker
 
+Case study:
+A commerce platform built so Verte can leave Shopify: a merchant admin and a storefront API in one Next.js app, with its own checkout, GST invoicing and profit analytics.
+Role: Sole developer: architecture, data model, admin, storefront API, payments and deployment. Period: May to October 2026.
+- ~25,000: lines of TypeScript across the admin and storefront API
+- 1 file: to move a storefront onto it, by design
+- 4: paid Shopify apps it replaces: profit, promotions, GST and reviews
+- 96: USD orders through vertewatches.com's own checkout, the first piece of the move
+
+### The brief
+
+Verte sells in India and worldwide, but Shopify can't take payment in anything except rupees for an Indian merchant, and the brand was paying for four separate apps to cover profit analytics, bundle promotions, GST compliance and reviews.
+The goal was a commerce platform Verte owns: its own admin, its own checkout in each market's currency, GST built in, and profit numbers it can trust, without stopping sales while the move happens.
+
+### What I built
+
+- A merchant admin for products, collections, inventory, price lists, subscriptions, orders, carts, customers, discounts, reviews, GST, analytics, reports, content, email and team.
+- A token-authenticated storefront API for catalog, search, cart, checkout, customer accounts, discounts, inventory, reviews, content and event tracking.
+- Stripe Checkout with webhooks that turn a completed payment into an order.
+- GST invoicing with GSTR-1 export, a promotions engine, a reviews module with moderation, and profit analytics.
+- A Shopify sync that imports the catalogue and orders, so the move happens on real data.
+- A Docker review stack (admin, a demo storefront, seeded Postgres and Caddy behind basic auth) so the client can click through everything safely before it goes live.
+
+### How I did it
+
+- May 2026: Prove the checkout first. The most urgent gap was charging in USD. While the platform was being built, the global store vertewatches.com went live on 19 May on its own Stripe checkout, with orders written back into Shopify. That proved the payment flow in production while sales carried on.
+- May and June 2026: Design for the swap. The storefront calls commerce through one file, so moving a store from Shopify to Sparrow Commerce changes that file and nothing else. The platform is one Next.js app on PostgreSQL with Drizzle, with the admin and the storefront API as its two surfaces.
+- June to August 2026: Build the admin the client actually uses. Every area of the admin was built against the apps it replaces, then the whole codebase was read end to end twice, in June and August, with the design, the reasoning and a setup runbook written down as it went.
+- October 2026: A readiness review, point by point. Measured against the go-live checklist: 11 of 13 areas are built, including checkout, pricing and profit analytics, which are already live. Four built areas (customers, reviews, products and discounts) are waiting to go live with the move, and 2 are still being finished. The global store moves first. India follows, on Indian payment gateways.
+Decision: keep selling while moving. Nothing switches off until its replacement has run in production. Orders kept flowing through Shopify while the new checkout proved itself, and each store moves on its own, with a one-change rollback.
+
+### Where it stands
+
+- 11 of 13: go-live areas built, with checkout, pricing and profit analytics already live
+- 4: built and waiting to go live with the move: customers, reviews, products and discounts
+- 2: areas still being built
+When both stores have moved, Verte runs on a platform it owns, charges each market in its own currency, files GST from its own admin and drops four app subscriptions.
+
 ## Verte global storefront
 
 Client apps & platforms · Verte · 2026 · Live
@@ -166,7 +249,7 @@ What was built:
 - Built and verified against live data in about four days
 
 Results:
-- Live at pa.vertewatches.com; the checkout alert has watched the India checkout since 8 Oct 2026
+- Live, and the checkout alert has watched the India checkout since 8 Oct 2026
 
 Stack: Next.js, React, PostgreSQL, Nodemailer, Playwright
 
@@ -234,9 +317,10 @@ Shopify storefronts · Verte · 2026 · Live
 URL: https://smithmankar.co.in/projects/verte-india/
 Live: https://verte.co.in
 
-Verte's Indian store, built and run end to end: a heavily customised Dawn theme built around a freeform layout system and a 3D product stage for the Project Karbon launch.
+Verte's Indian store, rebuilt almost from scratch and run end to end: every page on a freeform layout system, the Project Karbon and URBN launches, 3D, checkout and payments, SEO and the Meta ads.
 
 What was built:
+- Rebuilt almost from scratch on 33 sections of our own: the home page, the Karbon, Speciale and URBN pages, the blog, the watch FAQ, warranty claims and launch forms
 - Urban Canvas: place text, images and video at exact coordinates with parallax, in desktop, mobile and hero variants
 - Moved checkout from Shopflo to Shiprocket with our own buy buttons after the vendor's theme hid them
 - Diwali registration page posting to Google Sheets through Apps Script, with a consent line and a Meta registration event
@@ -248,6 +332,57 @@ Results:
 - About 150 Diwali sign-ups in the page's first three days, at roughly ₹15 of ad spend each
 
 Stack: Shopify, Liquid, JavaScript, three.js, Apps Script, Shiprocket Checkout
+
+Case study:
+An Indian watch brand's whole digital side, rebuilt almost from scratch and run as one system: two storefronts, every page and launch, the 3D and the modelling, the checkout, the tracking and the Meta ads. Monthly orders went from about 30 to over 300.
+Role: Rebuilt and ran both stores: every page, the launches, 3D and modelling, checkout, tracking, profit analytics and the Meta ads. Period: January to October 2026.
+- 30 → 300+: orders a month: February to May, then August and September
+- 10 to 12x: Shopify sales against Meta spend, June to August
+- 96: orders through the global store's own USD checkout, 19 May to 23 Oct (team orders included)
+- 41%: of the India store's purchases now come from Google search, on 16% of its sessions
+
+### The brief
+
+Verte makes watches: URBN, the everyday line, and Project Karbon, carbon-fibre pieces on a Miyota 9015 (the Series) or a Sellita SW200-1 (the Speciale). It sells in India on verte.co.in and to the rest of the world on vertewatches.com. From February to May 2026 the brand averaged about 30 orders a month.
+We rebuilt the site almost from scratch. The old theme's basic code and designs were thrown out, and every page a shopper sees was built again around the brand's launches. From there the job was the whole digital side: both stores, every page and launch, the 3D, the checkout, the tracking, the ads, and the numbers to prove what worked, measured on Shopify orders rather than on what an ad platform says it sold.
+
+### What I built
+
+- Every page of verte.co.in on the rebuilt theme: the home page, the Project Karbon, Karbon Speciale and URBN pages, the blog, the watch FAQ, the warranty claim flow, the launch waitlist and the Diwali registration page, on 33 sections of our own.
+- Urban Canvas, the layout system under all of it: text, images and video placed at exact coordinates with parallax, in desktop, phone, hero, day-and-night and card variants, so every launch looks exactly as designed.
+- Launch pages for Project Karbon, Karbon Speciale (where the hero's watch flies into the product gallery as you scroll) and URBN's batch pre-booking and last-restock launch, with a campaign bar for each.
+- 3D and modelling: a scroll-driven three.js stage whose scenes blend into each other, an orbiting two-layer globe inside a wall of real customer reviews, and a real-time Karbon whose movement works, prepared part by part in Blender.
+- A new watch for Verte, the Titanium 38, designed from the brief to factory CAD over eight rounds, with an offline 3D configurator.
+- vertewatches.com: a headless Next.js port of the theme that renders the theme's own templates in React, prices in USD and takes payment through its own Stripe checkout. Indian visitors are routed to verte.co.in, and both sites stay indexable.
+- Checkout and payments: our own buy buttons, a theme switch between three checkout providers, pay-later and card EMI amounts worked out from the gateways' own rates, a side cart in Verte's style, and a nudge that moves Instagram shoppers to their real browser.
+- Tracking that matches reality: GA4 and Meta events across both stores, and fixes wherever the numbers disagreed with Shopify.
+- A profit app where every cost carries its source, and a checkout monitor that runs a test checkout every 15 minutes, emails an alert and can pause the India ads in one click.
+- Meta ads for both markets: account structure, launches, budget proposals and kill or keep reviews, market tests in the UAE and Canada, and a monthly analytics report.
+- SEO on both sites, the Karbon launch emails, a colour grade for a brand spot, a US landed-cost model, and planning and lighting for the product shoots behind the ads.
+- 33: sections of our own on verte.co.in, from the home page to the Diwali page
+- ~43,000: lines of TypeScript in the global store
+- 93: parts split out of the Karbon's fused 3D model so its movement can run
+- 8: design rounds for a new 38 mm titanium watch, from the brief to factory CAD
+
+### How I did it
+
+- January to April 2026: Start again, then build for launches. We threw out the old theme's basic code and designs and rebuilt the store. The launches needed exact, art-directed layouts, so I built Urban Canvas first and used it for the home page and the Karbon, Speciale and URBN pages. On the Speciale page the hero's watch travels into the product gallery as you scroll and lands on the matching photo, following whichever colour is selected.
+- April to July 2026: 3D, from the model to the page. The 3D stage paints every scene into one shared canvas and blends them as you scroll, so the team can arrange 3D moments in the theme editor. A second engine spins two models around one centre with real HDR reflections, inside a fisheye wall of customer reviews that scrolls forever and opens any review on a tap.
+- 19 May 2026: A global store with its own checkout. Shopify Payments isn't available to Indian merchants, and without it Shopify can't charge in any currency but rupees. So the global store got its own checkout: a Stripe session in USD, then a webhook that writes the order back into Shopify as paid, so inventory and fulfilment carry on as before. It went live on 19 May, with a one-line DNS rollback.
+- June to August 2026: Run the ads like a system. One ad set per product per market, location as a hard rule, and no verdict on an ad before days live and spend give enough evidence. Orders rose from 175 in June to 275 in July and 309 in August, with Shopify sales running at 10 to 12 times Meta spend.
+- July 2026: A Karbon that tells the time. The Karbon's 3D model came with its movement fused into one 113,000-vertex mesh. In Blender I split it into 93 parts, named the gears by size and built the missing balance wheel. In the browser the second hand steps 8 times a second like the Miyota 9015, the balance wheel swings at 4 Hz, the rotor spins when you drag it, and the hands show the viewer's own time.
+- 26 and 27 September 2026: Catch the numbers lying. Meta showed 12 global purchases over two days when Shopify had 3 orders. The thank-you page was firing a purchase for cancelled and declined redirect payments, and again on every reload. I fixed it the same day: the page now checks the payment's real status, fires once per order, and tells a customer whose payment failed exactly that.
+- Late September to October 2026: Explain the "alternate day" orders. Orders started dropping on some days. I checked Meta, GA4, Shopify, the checkout's own logs and Clarity: the ads and traffic were normal. On 5 of 14 days, the checkout provider's payment step stopped completing for hours. Shoppers who chose a payment method paid 30% of the time on those days against 63% on others, which cost 18 to 25 orders. The test-checkout monitor came out of this, along with a second checkout provider that uses our own buy buttons.
+- October 2026: Checkout and payments, made switchable. The India checkout moved from Shopflo to Shiprocket with our own buy buttons, then became a theme setting, so the provider can change without code. Pay-later and card EMI amounts are worked out in Liquid from each gateway's own rates and match the checkout on all 94 plans checked. Instagram's and Facebook's in-app browsers completed payment 31% of the time against Chrome's 61%, so those shoppers now get a card to reopen the store in their browser with the cart carried over, run as a 50/50 test.
+- October 2026: Search and the festive season. Google search brings 16% of the India store's sessions but 41% of its purchases, so an SEO pass went live on both sites on 7 October: brand-first titles, meta descriptions, Product structured data with shipping and returns, hreflang between the two stores and one H1 per page. For Diwali, a registration page I built from the team's design, with a sparkler that follows the cursor, collected about 150 sign-ups in its first three days at roughly ₹15 of ad spend each.
+- October 2026: A new watch, from brief to CAD. Verte's next watch is ours to design: a 38 mm titanium piece around a Ronda quartz movement. Dial directions, case styles, a 20-finish dial library and straps were decided one step at a time over eight rounds. The case is factory CAD written in Python, a STEP assembly of six named parts, and a one-file offline configurator shows each round in 3D.
+Decision: Shopify is the source of truth. Every result here is a Shopify order. Ad platforms are used for attribution only, and when Meta and Shopify disagree, the job is to find out why rather than report the bigger number.
+
+### What it changed
+
+Verte orders a month (Shopify): Feb to May ~31, June 175, July 275, August 309, September 307.
+February to May is the average of 126 orders between 27 January and 31 May 2026. Counts include both stores.
+Verte now runs on a store rebuilt around its launches, sells worldwide in its own currency through a checkout it owns, shows its watches in live 3D, and judges its ads on real orders. When something breaks, a monitor says so within 15 minutes instead of a slow week saying it later.
 
 ## Project Karbon and URBN launch pages
 
@@ -271,15 +406,72 @@ Shopify storefronts · Alexandre Christie · 2026 · Live
 URL: https://smithmankar.co.in/projects/alexandre-christie/
 Live: https://alexandrechristie.in
 
-Alexandre Christie's Indian store, built and run end to end: a heavily customised premium theme with bespoke sections, launch pages, tracking and SEO.
+Alexandre Christie's Indian store, rebuilt almost from scratch and run end to end: a new home page, every product page, a store locator with maps, launch pages, tracking, SEO and the Meta ads.
 
 What was built:
-- Editorial home sections: free-canvas hero, curtain slideshow, editions carousel, mosaic gallery and a reviews carousel fed from Judge.me metafields
-- Home page that scales uniformly from one design width
+- Rebuilt almost from scratch, with the old store's basic code and designs thrown out; the new store went live on 8 June 2026
+- Home page designed at 1920 pixels and scaled as one piece: free-canvas hero, curtain slideshow, editions carousel, mosaic gallery and a reviews carousel fed from Judge.me metafields
+- Every product page built by hand: colourways on one page with their own photos, specs and names, plus templates for single watches, straps, winders and accessories
+- Store locator with maps: 143 stores on OpenStreetMap, searchable by pincode, city or your location, with directions to each
 - Warranty banner with an endless watch strip, and an airport locator where a plane takes off through fog and lands on the next airport's map
-- Store-locator geocoding, GA4 and Meta custom pixels, and an SEO pass for crawlable product data
+- SEO across 800+ product pages, GA4 and Meta custom pixels, and the Meta ads
 
-Stack: Shopify, Liquid, JavaScript, Python, Apps Script
+Stack: Shopify, Liquid, JavaScript, Leaflet, Python, Apps Script
+
+Case study:
+Alexandre Christie's Indian store, rebuilt almost from scratch and run end to end: a new home page, every product page, a store locator with maps, launch pages for Black Forge and Cosmic, live 3D, SEO across 800+ products and the Meta ads.
+Role: Rebuilt and ran the whole store: home page, product pages, store locator, launches, 3D, video, tracking, SEO and the Meta ads. Period: May to October 2026.
+- 143: stores on a map-based locator, searchable by pincode, city or your location
+- 30+: sections built for the store, from the home page to every product page
+- 800+: product pages given a meta description and Product structured data, where none had either
+- 154: pre-launch registrations for the Cosmic watch
+
+### The brief
+
+Alexandre Christie sells watches in India online and through more than 140 stores, including shops at seven airports. Most of its watches are bought in a store, so the website has two jobs: feel like a premium watch brand, and send people to a store near them.
+We rebuilt the site almost from scratch, throwing out the old store's basic code and designs. The team designs in Figma, often with separate desktop and phone comps, and I turned every design into working code, then kept building: the home page, every product page, the store locator, the launches, the tracking, SEO and the ads.
+
+### What I built
+
+- The home page, designed at 1920 pixels and scaled as one piece to any desktop: a free-canvas hero, a curtain slideshow, editions and horology slideshows, a video hero, a mosaic gallery, a reviews carousel, and warranty and airport banners.
+- Every product page, built by hand for each kind of product: watches with every colourway on one page (each with its own photos, specs and name), single watches, straps, winders and accessories, with a zoomable gallery, live stock on limited editions, EMI options, warranty and manufacturer details, and a Find a store link.
+- Bespoke launch pages: Black Forge, a scroll-choreographed page with a fixed edition bar, and Cosmic, from a pre-launch registration page to a scroll-driven product page with live 3D crystals and a moon.
+- A store locator with maps: every store on one OpenStreetMap map, searchable by pincode, city or name, sorted nearest-first from your location, with directions to each.
+- An airport locator where a plane flies through fog to the next airport's map, a warranty banner with an endless strip of watches, and a warranty extension form.
+- Reviews: 121 reviews and 26 review videos moved into Judge.me, shown in a home carousel and on each product page with the rating, a star breakdown and customer photos.
+- SEO across the whole site: crawlable product information, a meta description and Product structured data on every product page, one H1 per page, canonical links, breadcrumbs with structured data, crawlable pagination and collection introductions.
+- Speed: the home page's weight on load cut by more than half, with self-hosted fonts, subset icon fonts, and video and scripts that wait until they are needed.
+- Tracking: GA4 and Meta events for store-locator clicks, registrations and purchases, with browser and server events matched so nothing counts twice.
+- The Meta ads: launch campaigns for Black Forge and Cosmic, a purchase campaign with audiences built from site visitors, shoppers and buyers, winder ads, a product catalogue, one tracking template on every ad, and the reports behind them.
+- 3D and video: six crystals and a moon modelled in Blender for Cosmic, a 4K studio roto and a graded unboxing montage.
+- 7: product page templates, one for each kind of product, plus bespoke pages for Black Forge and Cosmic
+- 54%: lighter home page on load: 18.09 MB down to 8.25 MB
+- 121: customer reviews moved over, with 26 review videos converted for the web
+- 368: changes logged in the store's technical record since 31 May
+
+### How I did it
+
+- May and June 2026: Start again, not patch. The catalogue was exported in full first, including the per-colour data Shopify's own export silently drops, so colour siblings can be combined into one product page without losing their specs. The new theme was built on sections of our own, and the rebuilt store went live on 8 June.
+- A home page drawn once, shown everywhere. The home page is designed at 1920 pixels. Instead of reflowing it at every width, the whole page scales with CSS zoom above tablet size, so every desktop sees the layout the designer drew, and phones get each section's own layout. Background video was the heaviest thing on it, so it now loads only as it scrolls into view: 18.09 MB on load became 8.25 MB.
+- June 2026: Product pages, built by hand. Each watch page shows the chosen colour's own photos (its main image plus that colour's gallery) with a full-screen zoom, swipe on phones, live stock on limited editions, EMI from both payment partners, and the warranty and manufacturer details. Single watches, straps, winders and accessories each have a template of their own, so every product reads the way it should.
+- July 2026: A store locator people can use. The old locator stacked 25 city sections, and searching for Delhi only filtered the first one. I replaced it with one map: 124 stores geocoded from their pincodes and localities, since none had coordinates, clustered on OpenStreetMap with no API bill, a list that filters as you type, nearest-first from your location, and directions for each store. It now lists 143 stores, and a Find a store link on every product page is tracked as its own event.
+- August 2026: Black Forge: timing derived, not copied. Its sections hand off to each other in a choreographed scroll. When that timing was kept in step by hand it drifted five times, so now each section publishes its exit length and the next one reads it at runtime. Every change to the page is logged in a technical record that runs past 230 rows.
+- Reviews that actually load. 121 reviews were cleaned into Judge.me's import format, and 26 review videos were converted for the web and hosted on Cloudinary, with a QA page to check each one. The storefront can't call Judge.me's API directly, so the home carousel reads the review data Judge.me keeps on each product instead.
+- September 2026: Cosmic, from waiting list to launch. The pre-buzz page is generated from a static prototype by a build script, so markup and Liquid never drift. The product page was built from the desktop comp, then every section got a phone layout from its own comp while desktop was checked pixel for pixel: zero difference. Crystals have per-vertex thickness baked in so light passes through them like glass, and the moon comes from NASA's lunar topography, cut from a 299 MB source to web sizes. It went live on 25 September.
+- September 2026: The studio roto. 1,216 frames of 4K, 60 fps footage, with only the model kept. BiRefNet HR matting ran in half precision on Apple silicon, about 5 times faster than full precision. The director was removed with tracked masks, a screen-colour key caps the matte, and flicker was measured as pixels that move and move back, then cut to about a fifth of the first version over several client review rounds.
+- October 2026: Warranty and airports, from the Figma file. The warranty banner's watches were cut out of their white packshots with BiRefNet, with strap reflections removed so they float cleanly. The airport locator runs a camera flight: push in, a fog that closes and reopens, then the plane lands on the next airport's runway line. Its timing is a setting the team can tune, and the locator covers all seven airport stores.
+- October 2026: SEO, item by item. An SEO checklist was worked through one item at a time, each checked against the raw HTML Google fetches. No product page had a meta description or Product structured data, so all 800+ now carry both, merged with the review rating Judge.me adds. Every page got one H1, canonical links, breadcrumbs with structured data, crawlable pagination and, on collections, an introduction that links to the buying guides. Mobile Lighthouse scores of 28 to 48 led to self-hosted fonts, subset icon fonts and deferred scripts.
+- Ads that follow the shop. Most watches are bought in a store, so the Meta account was built around that: launch campaigns for Black Forge and Cosmic, a purchase campaign with audiences from site visitors, shoppers and buyers, winder ads, a catalogue, and one tracking template on every ad. Reports count Find a store clicks next to online orders, and the Cosmic pre-launch campaign brought in 154 registrations before it went on sale.
+- Grade in code. For the unboxing montage, SAM 2 tracks each dial through every shot so only the dial gets a softer black point, with a per-cut lift so darker sections match the accepted close-ups and the audio copied bit for bit.
+Decision: render it before calling it fixed. Theme changes are checked in a local copy of the store in a real browser, against the design and against the live page, before they ship. On a store this custom, a fix that looks right in code often isn't on screen.
+
+### What it changed
+
+- 143: stores on one searchable map, where 25 city sections had a search that only worked on the first
+- 54%: lighter home page on load, after video was made to wait until it scrolls into view
+- 800+: product pages that search engines can read in full, with Product structured data
+- 154: people registered for Cosmic before it went on sale
+Alexandre Christie now has a store that looks like the brand: every product on a page built for it, launches on pages of their own, a map that sends shoppers to the nearest of 143 stores, real reviews and videos, and product data search engines can read, on a theme the team can keep tuning from the editor.
 
 ## Cosmic launch pages
 
@@ -511,6 +703,43 @@ Results:
 
 Stack: Python, MLX, LoRA, Qwen3.5, Swift, Google Colab
 
+Case study:
+A small language model I fine-tuned so SparrowOS understands plain-English and Hinglish commands, running privately on each person's Mac.
+Role: Sole developer: benchmark, training data, fine-tuning, evaluation and the Mac integration. Period: September 2026.
+- 88.6%: correct on a frozen set of 297 held-out commands
+- ~50%: for the best of 34 open models before fine-tuning
+- 33 / 38: standup commands right, up from 12 with the previous model
+- ~330 ms: per command in testing on a Mac, with nothing sent to the cloud
+
+### The brief
+
+SparrowOS has 49 actions: create and move tasks, post in chat, log time, pull a brand's analytics, find a file, send mail and more. The team wanted to drive them by voice or a typed sentence, in English or Hinglish, without sending their work to a cloud model.
+So the model's job is deliberately narrow. It reads a request and returns which action to take plus the exact words that matter, like the task, the person or the date. Code does everything else: it resolves names, checks permissions, asks for confirmation, executes and keeps an undo.
+
+### What I did
+
+- Benchmarked 34 open models on calling these exact tools. The best managed about half, and models built specifically for function calling lost decisively, so fine-tuning was required, not optional.
+- Built a training set of about 3,500 labelled commands against the real tool catalogue, in English and Hinglish, and checked it for overlap with the test set.
+- Fine-tuned Qwen3.5 2B (4-bit) with LoRA on Apple MLX, then averaged checkpoints from within the run.
+- Measured it on a frozen 297-case test set that was read once, at the end.
+- Shipped it inside the SparrowOS Mac app behind Option+Space, with on-device dictation that refuses to fall back to the cloud.
+
+### How I did it
+
+- Benchmark before building. Every candidate got the same prompts and was scored on choosing the right tool and filling its arguments. Qwen3.5 and Gemma led at roughly 48 to 54 percent. Function-calling specialists (xLAM, Hammer, ToolACE) came last.
+- Train small, on the machine it runs on. A 2B model in 4-bit fits comfortably beside everything else on a work Mac. LoRA on Apple MLX kept training local; bigger experiments later ran on cloud GPUs. Averaging checkpoints within one run helped. Averaging across separate runs did not, because each run settles somewhere different, so that idea was dropped.
+- Make the number honest. I found that earlier averaged models had been picked using the same 297 cases they were then scored on, which inflated results by about 4 points. Selection moved to a separate 200-case validation set, and the test set is now read once, at the end. A power check showed 297 cases can only separate differences of about 5 points, so anything smaller is reported as not distinguishable.
+- Say no to things that looked good. A vote between three models added 1 point that wasn't statistically significant, at 3.5 times the latency. DoRA took 798 ms per command against LoRA's 330 ms. A later experiment that put the whole tool catalogue in the prompt scored 12.1 points lower and was not shipped. One corrupted run, where padding in the prompt leaked the length of the answer, was caught and quarantined. A corpus validator and 36 regression tests, each one a bug that really happened, now guard against repeats.
+- Ship it where people work. Atlas lives in the Mac app. Hold Option+Space in any app, speak or type, see what it will do, confirm. It is the first model in SparrowOS Intelligence, the family name for models trained in-house.
+Decision: the model names, code acts. The model never touches data. It returns an action name and quoted words, and the server decides whether the person may do that, asks once before a change and twice before anything client-visible or hard to undo, and can undo it. Decoding is held to a grammar generated from the action catalogue, so the model cannot name an action that does not exist. A wrong guess costs a confirmation tap, not a deleted task.
+Decision: private by default. Dictation runs with on-device recognition required, and the model runs on the Mac itself. Nothing a person says to SparrowOS leaves their machine to be understood.
+
+### What it changed
+
+- 88.6%: on 297 held-out commands, against about 50% for the best model off the shelf
+- 33 / 38: standup commands right, against 12 for the model that had been shipping
+The team can run SparrowOS by voice or a sentence, in the way they actually talk, on their own machines. And the numbers quoted for it hold up: they come from a test set that was never used to make a choice.
+
 ## AI product shoot pipeline
 
 AI & ML · Sage Sparrows clients · 2026 · In use
@@ -703,6 +932,47 @@ Results:
 - THS: 1,603 Meta leads from April to October 2026 at about ₹183 each
 
 Stack: Meta Ads Manager, Meta Marketing API, GA4
+
+Case study:
+Meta ads for watch, apparel, real estate and EV brands, and the measurement behind them: reports that check their own numbers, leads that reach sales in seconds, and audits that follow the money past the click.
+Role: Ran the ad accounts with the team and owned the numbers: structure, launches, reviews, reporting, pipelines and audits. Period: 2026.
+- 1,603: Meta leads for a real estate developer, April to October, at about ₹183 each
+- 10 to 12x: Verte's Shopify sales against Meta spend, June to August
+- 627: leads delivered straight into sales sheets since 22 July
+- 36: analytics reports delivered, each as HTML and a one-page PDF
+
+### The brief
+
+The agency runs Meta ads for Verte and Alexandre Christie (watches), Season Earth (linen menswear), THS (real estate) and HarboCharge (EV charging), with no in-house performance marketer.
+The job: run the accounts, and know what is really working. That means Shopify orders, leads the sales team can call and site visits they can book, not the purchases an ad platform claims for itself.
+
+### What I did
+
+- Account structure, launches, budget proposals and kill or keep reviews for every brand.
+- A reporting standard, and 36 reports built on it for Verte, Alexandre Christie, Season Earth, THS and prospects.
+- Lead and abandoned-cart pipelines that put every lead in front of the sales team within seconds.
+- Audits that follow results past the click: leads to site visits, failing funnels, and our own change logs.
+- Rebuilt the customer lists behind four brands' lookalike audiences.
+- Market research: a repeatable way to size competitors from the ad libraries, and a festive-season brief on the Indian ad market.
+- Tools: SparrowOS analytics, MCP servers that let Claude query SparrowOS and Reddit Ads, and AdPilot, an assistant where the engine proposes, a person confirms and code executes.
+
+### How I did it
+
+- A standard before a verdict. Ads are judged on the funnel the platform actually measures (reach, frequency, CTR, CPM, clicks, spend and days live), benchmarked per market, since US CPMs ran about 13 times India's. Attributed ROAS can confirm a call but never leads one. Ads are judged at the ad-set level, because an ad with no sales is often the first touch that makes the next one sell.
+- Structure that keeps learning. One ad set per product per market, with location as a hard rule. No verdict until days live and spend give enough evidence. Market tests are built as paused drafts for approval, so nothing goes live by accident.
+- Reports that check themselves. Orders come from Shopify, never from an ad platform. A script re-derives every figure in a report and checks it against the document before it ships, and every report goes out as HTML plus a single-page PDF.
+- Leads in seconds, not days. Meta lead ads arrive through a webhook whose signature is checked, get answered fast, then are written to the brand's sheet from a queue with retries. A daily sweep reconciles anything missed. 627 leads have gone through it since 22 July.
+- Follow the money past the click. For THS, 90 days of leads were traced to site visits campaign by campaign. For Season Earth, a one-click checkout widget skipped the cart entirely, so add-to-cart was the wrong thing to measure; most people saw an ad only once, and broken tracking had starved the retargeting pool. For Verte's US Reddit test, three weeks of spend had produced no sales by Shopify's count or Reddit's own, and the rebuild got pass marks set in advance.
+- Fix the audiences under everything. Every brand's lookalikes turned out to be built from one shared list that was almost entirely one brand's customers. I rebuilt each brand's seed list with a spend value for value-based lookalikes, plus a deduplicated pool of 16,919 people across brands.
+Decision: check our own edits first. When results drop, the first suspect is our own change log: budget moves, rebuilds and audience edits, each lined up against the day-by-day numbers. Only then do we look at the platform or the market.
+
+### What it changed
+
+- 30 → 300+: Verte orders a month, February to May against August and September
+- ~₹183: per lead across 1,603 THS leads, April to October
+- ~₹126: per lead for Beyond Horizon's launch campaign, across 91 leads
+- 154: pre-launch registrations for Alexandre Christie's Cosmic watch
+Each brand's decisions now rest on numbers that reconcile with its own sales: Shopify orders for the stores, sheet rows and site visits for real estate. When the ads aren't the problem, the reports say so and point at what is.
 
 ## AdPilot
 
@@ -1082,9 +1352,41 @@ What was built:
 - Tutor prompt tuned with an eval hill-climb against a baseline
 
 Results:
-- Tutor server live at neet.smithmankar.co.in
+- Tutor server live, and the app is on the student's tablet
 
 Stack: Kotlin, Jetpack Compose, Room, Python, FastAPI, Claude API, Docker
+
+Case study:
+An all-in-one Android study app for one NEET-UG 2027 student: every past paper question by question, mocks on an NTA-style screen, a whole-day planner, and a Claude tutor chosen by experiment.
+Role: Designed and built it alone: the question pipeline, the app, the tutor server and the evaluation. Period: October 2026.
+- 2,420: past-paper questions cut as images from 13 papers, each tagged by chapter
+- 29 / 30: questions solved with valid working by the tutor model that won the test
+- $1.73: spent testing four models before choosing one
+- $15: monthly cap on live tutor calls, because explanations are pre-written
+
+### The brief
+
+A student preparing full time for NEET-UG 2027, with no coaching, needed one app for everything: real past papers, the syllabus, a plan for the whole day and someone to ask when stuck. It runs on a 10-inch Android tablet, offline first.
+
+### What I built
+
+- A question bank of 2,420 questions cut as images from 13 past papers, so diagrams and structures stay exact, each tagged by chapter, with answer keys checked against NTA.
+- Chapter practice, timed mocks on an NTA-style test screen with real negative marking, and a review queue of wrong answers.
+- A syllabus checklist, spaced revision, an NCERT reader with pens and highlights, and public lectures picked per chapter.
+- A planner for the whole day, not just study: sleep, meals, helping at home and free time.
+- A Claude tutor that runs through my home server, so the API key never sits on the tablet.
+
+### How I did it
+
+- Cut questions, not pages. A pipeline finds each question number by its ink signature in the margin and cuts the question out as an image. Coaching PDFs with a text layer are cut by their text instead. Answer keys were checked against NTA's; one bank agrees with NTA on 177 of 177 printed answers. Used booklets with pencil working were left out rather than half-cleaned.
+- Pick the tutor by experiment. Four Claude models solved and explained the same 30 questions from a 2025 paper without seeing the key. Answers were checked against NTA's key automatically and the working was graded by hand, blind for three of the four. The finding that mattered: the right letter is not a valid explanation. One model got 29 of 30 right but only 26 with valid working. The winner got 29 of 30 on both. The whole test cost $1.73.
+- Write explanations once. Every explanation is written ahead of time and checked against the original question image, then shipped with the app. The live model only answers follow-up questions, which keeps the monthly bill under a $15 cap. The student's own feedback set the format: the formula or key NCERT fact first, then numbered working, then the trap to avoid.
+- Built for her tablet. Native Kotlin with Jetpack Compose and Room, landscape-first for a 10-inch tablet, with the scoring rules (marking, Section B's choose-ten rule, dropped questions) in a pure Kotlin module with tests.
+Decision: explanations are content, not calls. Generating an explanation live for every question would cost money on every tap and could differ each time. Writing them once, checking each against the paper and shipping them made them free to read, reviewable and the same every time.
+
+### Where it stands
+
+The tutor server is live and the app is on the student's tablet, with newer builds adding the NCERT reader, the lectures and practice navigation. Explanations are being written paper by paper, newest first, Physics first.
 
 ## IITM Companion
 
@@ -1104,6 +1406,39 @@ Results:
 - In daily use since 28 Sep 2026; the sync server has been live since 12 Oct
 
 Stack: Swift, SwiftUI, SwiftData, AlarmKit, ActivityKit, EventKit, Hummingbird, SQLite
+
+Case study:
+A personal iOS app that runs an online degree's study plan: tap to start a block, a countdown on the lock screen, real hours logged, and a small Swift server that keeps it in sync.
+Role: Designed and built it alone: the iOS app, its widget, the sync server and the deployment. Period: September and October 2026.
+- Daily: use since 28 September 2026
+- 1 core: of Swift shared by the app, the widget and the server
+- 85: records matched exactly on the first sync with the live server
+- 0: ports opened on the home network to put the server online
+
+### The brief
+
+I study for the IIT Madras online BS alongside a full-time job, and the study plan lived in a calendar file. I wanted a phone app that starts each block for me, records what actually happened against the plan, and plans around what is due.
+It had to work on a free Apple developer account, which rules out push notifications and iCloud and makes every install expire after seven days.
+
+### What I built
+
+- Tap to start: a notification starts a block, an AlarmKit timer runs it, a Live Activity counts down on the lock screen, and the real start, pause and stop times are logged.
+- A wake-up alarm through AlarmKit, which breaks through silent mode and Focus, and a wind-down reminder.
+- Planned against actual hours per course every week, plus deadlines and a syllabus progress map.
+- Its own calendar, rewritten from the plan whenever the plan changes, and the course's live session feeds read by an iCal parser I wrote.
+- A sync server in Swift (Hummingbird and SQLite) on my home server, published through a Cloudflare Tunnel.
+
+### How I did it
+
+- 28 September 2026: Design first, then build. Layout studies came before code. The first version was about 2,600 lines of SwiftUI and SwiftData with zero warnings, and it went onto the phone the same night.
+- Work within the free account. No push and no iCloud meant offline-first from day one. Every record carries an ID, an updated time and a soft delete, so syncing could be added later without a migration. Local notifications refill a rolling window each time the app opens, because iOS caps how many can be pending.
+- 12 October 2026: One brain, three places. The plan logic lives in a Foundation-only Swift core compiled into the app, the widget and the server, so all three compute the same plan. The server keeps SQLite inside a single actor so transactions can't interleave. It went live on 12 October, and the phone's first sync sent 85 records that matched its own data file exactly.
+- Safe to expose. The server runs in Docker on my home server behind a Cloudflare Tunnel, so nothing is opened on the home network. Separate tokens cover the phone, my Mac work log and admin.
+- 12 October 2026: Make it feel designed. When the app felt bare, two rounds of layout studies picked a new Home countdown, a full-screen focus ring and a syllabus progress map, then the screens were rebuilt to match.
+
+### What it changed
+
+Study blocks start on time and the hours are real, not remembered. Each week's review reads actual numbers, and the plan adjusts to what is due next, on the phone and the server alike.
 
 ## Minutes
 
