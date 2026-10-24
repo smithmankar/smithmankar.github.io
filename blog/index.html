@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- The SM monogram. Google Search shows the favicon beside results and wants a multiple of 48px. -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#08080a" />
     <!-- Google tag (gtag.js). It loads only on the live site, so local previews don't count as visits. -->
@@ -18,10 +21,35 @@
       gtag('js', new Date());
       gtag('config', 'G-PHP8HTEBHX');
     </script>
+    <!-- Meta Pixel, also live site only. It sends a PageView on every in-site navigation by itself. -->
+    <script>
+      if (/^(www\.)?smithmankar\.co\.in$/.test(location.hostname)) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1145105788200207');
+        fbq('track', 'PageView');
+      }
+    </script>
+    <!-- Microsoft Clarity: session recordings and heatmaps. Live site only, like the tags above. -->
+    <script>
+      if (/^(www\.)?smithmankar\.co\.in$/.test(location.hostname)) {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "z2ve82r1im");
+      }
+    </script>
     <!-- scripts/prerender.mjs replaces this block with each page's title, meta and schema.org data -->
     <title>Blog | Smith Mankar</title>
     <meta name="description" content="Notes from Smith Mankar on building, shipping, and automating things." />
-    <link rel="canonical" href="https://smithmankar.co.in/blog/" />
+    <meta name="robots" content="noindex" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Smith Mankar" />
     <meta property="og:title" content="Blog | Smith Mankar" />
@@ -37,10 +65,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <!-- Without JavaScript, entrance animations never run: show their content anyway. -->
     <noscript><style>[style*=opacity\:0],.rv{opacity:1!important;transform:none!important}</style></noscript>
-    <script type="module" crossorigin src="/assets/index-D8rVySrM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Cx-MO_75.css">
+    <script type="module" crossorigin src="/assets/index-DtESKxVm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-EifP5MTV.css">
   </head>
   <body class="bg-[#08080a]">
-    <div id="root"><header class="fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color] duration-300 border-transparent bg-[linear-gradient(180deg,rgba(8,8,10,0.94),rgba(8,8,10,0.65)_60%,rgba(8,8,10,0))]"><div class="wrap flex h-[76px] items-center justify-between gap-6"><a class="display text-[17px] tracking-[0.02em]" href="/" data-discover="true">Smith Mankar</a><nav aria-label="Main" class="hidden items-center gap-[30px] text-[14.5px] md:flex"><span class="kicker text-text-faint" title="My time in India">IST <!-- -->--:--</span><a class="transition-colors hover:text-white text-[#d6d6d2]" href="/" data-discover="true">Work</a><a class="transition-colors hover:text-white text-[#d6d6d2]" href="/projects/" data-discover="true">Index</a><a class="transition-colors hover:text-white text-[#d6d6d2]" href="/" data-discover="true">About</a><a class="transition-colors hover:text-white text-white" href="/blog/" data-discover="true">Blog</a><a class="transition-colors hover:text-white text-[#d6d6d2]" href="/" data-discover="true">Contact</a></nav><button type="button" aria-expanded="false" aria-label="Open menu" class="rounded-full border border-white/20 p-2.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></header><main><div class="mx-auto min-h-screen max-w-[960px] px-5 pb-24 pt-32 sm:px-12"><div style="opacity:0;transform:translateY(16px)"><a class="mb-8 inline-flex items-center gap-1.5 text-[12px] text-text-dim transition-colors hover:text-text" href="/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>Back</a><h1 class="display mb-5 text-[clamp(44px,7vw,120px)] leading-[0.88]">Blog</h1><p class="mb-12 text-[18px] text-body">Thoughts on building, shipping, and automating things.</p></div><div class="flex flex-col items-center justify-center rounded-2xl border border-border bg-surface py-20 text-center" style="opacity:0"><div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-bg text-text-faint"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></div><h2 class="mb-2 text-lg font-bold">Coming soon</h2><p class="max-w-xs text-[13px] text-text-dim">I&#x27;m working on some posts about building production tools, automation, and AI pipelines. Stay tuned.</p></div></div></main><footer class="border-t border-border py-8"><div class="wrap flex flex-wrap items-center justify-between gap-4 text-[13px] text-text-faint"><span>© <!-- -->2026<!-- --> <!-- -->Smith Mankar</span><div class="flex gap-6"><a href="https://github.com/smithmankar" target="_blank" rel="noopener noreferrer" class="hover:text-text">GitHub</a><a href="https://www.linkedin.com/in/smith-mankar-334049229/" target="_blank" rel="noopener noreferrer" class="hover:text-text">LinkedIn</a><a href="mailto:smithmankar712@gmail.com" class="hover:text-text">Email</a></div></div></footer></div>
+    <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1145105788200207&ev=PageView&noscript=1" /></noscript>
+    <div id="root"><header data-track-area="header" class="fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color] duration-300 border-transparent bg-[linear-gradient(180deg,rgba(8,8,10,0.94),rgba(8,8,10,0.65)_60%,rgba(8,8,10,0))]"><div class="wrap flex h-[76px] items-center justify-between gap-6"><a class="display text-[17px] tracking-[0.02em]" href="/" data-discover="true">Smith Mankar</a><nav aria-label="Main" class="hidden items-center gap-[30px] text-[14.5px] md:flex"><span class="kicker text-text-faint" title="My time in India">IST <!-- -->--:--</span><a class="transition-colors hover:text-white text-[#d6d6d2]" href="/projects/" data-discover="true">Work</a><a class="transition-colors hover:text-white text-[#d6d6d2]" href="/about/" data-discover="true">About</a><a class="transition-colors hover:text-white text-white" href="/blog/" data-discover="true">Blog</a><a class="transition-colors hover:text-white text-[#d6d6d2]" href="/" data-discover="true">Contact</a></nav><button type="button" aria-expanded="false" aria-label="Open menu" class="rounded-full border border-white/20 p-2.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></header><main><div class="mx-auto min-h-screen max-w-[960px] px-5 pb-24 pt-32 sm:px-12"><div style="opacity:0;transform:translateY(16px)"><a class="mb-8 inline-flex items-center gap-1.5 text-[12px] text-text-dim transition-colors hover:text-text" href="/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>Back</a><h1 class="display mb-5 text-[clamp(44px,7vw,120px)] leading-[0.88]">Blog</h1><p class="mb-12 text-[18px] text-body">Thoughts on building, shipping, and automating things.</p></div><div class="flex flex-col items-center justify-center rounded-2xl border border-border bg-surface py-20 text-center" style="opacity:0"><div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-bg text-text-faint"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></div><h2 class="mb-2 text-lg font-bold">Coming soon</h2><p class="max-w-xs text-[13px] text-text-dim">I&#x27;m working on some posts about building production tools, automation, and AI pipelines. Stay tuned.</p></div></div></main><footer data-track-area="footer" class="border-t border-border py-8"><div class="wrap flex flex-wrap items-center justify-between gap-4 text-[13px] text-text-faint"><span>© <!-- -->2026<!-- --> <!-- -->Smith Mankar</span><div class="flex gap-6"><a href="https://github.com/smithmankar" target="_blank" rel="noopener noreferrer" class="hover:text-text">GitHub</a><a href="https://www.linkedin.com/in/smith-mankar-334049229/" target="_blank" rel="noopener noreferrer" class="hover:text-text">LinkedIn</a><a href="mailto:smithmankar712@gmail.com" class="hover:text-text">Email</a></div></div></footer></div>
   </body>
 </html>

@@ -1,124 +1,152 @@
 # Smith Mankar
 
-> Head of Development & Analytics at Sage Sparrows (https://sagesparrows.in). Builds operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work. 82 projects are listed below, grouped by discipline.
+> Head of Development & Analytics at Sage Sparrows (https://sagesparrows.in). Builds operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work. The work is grouped below by brand or product, with every project inside each.
 
 - Email: smithmankar712@gmail.com
 - GitHub: https://github.com/smithmankar
 - LinkedIn: https://www.linkedin.com/in/smith-mankar-334049229/
 - Portfolio: https://smithmankar.co.in/
+- About: https://smithmankar.co.in/about/
 - Full detail for every project: https://smithmankar.co.in/llms-full.txt
 
-## Platforms & internal tools
+## [SparrowOS](https://smithmankar.co.in/projects/sparrowos/)
+
+The operations platform a 15-person agency runs on, on the web and as a native Mac app.
 
 - [SparrowOS](https://smithmankar.co.in/projects/sparrowos/): The operations platform Sage Sparrows runs on. It replaced scattered Google Sheets and WhatsApp threads with one place for tasks, chat, KPIs and analytics across every brand the agency manages. (In use, 2026; Sage Sparrows)
-- [SparrowOS for Mac](https://smithmankar.co.in/projects/sparrowos-mac/): A native SwiftUI client for SparrowOS, built from scratch rather than wrapped around the web app, so the team gets a real dock app and notifications that actually arrive. (In use, 2026; Sage Sparrows)
-- [SparrowOS for Windows](https://smithmankar.co.in/projects/sparrowos-windows/): The Windows sibling of the Mac app: a native WinUI 3 client with the same layouts and navigation, in Fluent Design instead of Liquid Glass. (Planned, 2026; Sage Sparrows)
-- [SparrowCrypto](https://smithmankar.co.in/projects/sparrowcrypto/): One owned encryption format for company data across every SparrowOS client and the backend: a versioned envelope over standard AES-256-GCM. (Built, 2026; Sage Sparrows)
-- [Sparrow Git](https://smithmankar.co.in/projects/sparrow-git/): A private VS Code extension that gives the team a visual Git workflow in the sidebar, so nobody has to fight the terminal. (In use, 2026; Sage Sparrows)
-- [Sparrow Mail & Drive](https://smithmankar.co.in/projects/sparrow-mail/): The company's own workspace instead of a Google Workspace subscription: email, calendars and file storage self-hosted on Stalwart, with SparrowOS as the interface. (In use, 2026; Sage Sparrows)
+- [SparrowOS for Mac](https://smithmankar.co.in/projects/sparrowos/#sparrowos-mac): A native SwiftUI client for SparrowOS, built from scratch rather than wrapped around the web app, so the team gets a real dock app and notifications that actually arrive. (In use, 2026; Sage Sparrows)
+- [SparrowOS for Windows](https://smithmankar.co.in/projects/sparrowos/#sparrowos-windows): The Windows sibling of the Mac app: a native WinUI 3 client with the same layouts and navigation, in Fluent Design instead of Liquid Glass. (Planned, 2026; Sage Sparrows)
+- [SparrowCrypto](https://smithmankar.co.in/projects/sparrowos/#sparrowcrypto): One owned encryption format for company data across every SparrowOS client and the backend: a versioned envelope over standard AES-256-GCM. (Built, 2026; Sage Sparrows)
+- [Sparrow Mail & Drive](https://smithmankar.co.in/projects/sparrowos/#sparrow-mail): The company's own workspace instead of a Google Workspace subscription: email, calendars and file storage self-hosted on Stalwart, with SparrowOS as the interface. (In use, 2026; Sage Sparrows)
+- [AdPilot](https://smithmankar.co.in/projects/sparrowos/#adpilot): A Claude-powered ad-ops assistant inside SparrowOS. The ad engine decides, a person confirms, and our code executes; Claude never fires anything itself. (Built, 2026; Sage Sparrows)
+- [SparrowOS MCP server](https://smithmankar.co.in/projects/sparrowos/#sparrowos-mcp): Lets Claude Code ask the live SparrowOS server analytics questions directly, instead of exporting a 3.5 GB database dump every time. (In use, 2026; Sage Sparrows)
+- [Lead and cart pipelines](https://smithmankar.co.in/projects/sparrowos/#lead-cart-sync): In-house replacements for Zapier-style tools: Meta lead ads and Shiprocket abandoned carts land straight in the sales teams' Google Sheets. (Live, 2026; THS, Verte, Alexandre Christie)
+- [Warranty claims](https://smithmankar.co.in/projects/sparrowos/#warranty-claims): A customer-facing warranty claim flow for watch brands, served from SparrowOS into each Shopify store through the App Proxy. (Live, 2026; Verte)
 
-## Client apps & platforms
+## [Atlas 1.0](https://smithmankar.co.in/projects/atlas/)
 
-- [Sparrow Commerce](https://smithmankar.co.in/projects/sparrow-commerce/): A commerce backend and merchant admin built to take Verte off Shopify: one Next.js app with the admin dashboard and a token-authenticated storefront API. (In progress, 2026; Verte)
-- [Verte global storefront](https://smithmankar.co.in/projects/verte-web/): vertewatches.com: a headless Next.js port of Verte's Shopify theme that sells worldwide in USD through its own Stripe checkout. (Live, 2026; Verte)
-- [Verte profit analytics](https://smithmankar.co.in/projects/verte-profit/): A single-purpose profit app for Verte, because revenue minus product cost leaves out ad spend, shipping, gateway fees, returns and packaging. (Live, 2026; Verte)
-- [Verte checkout extension](https://smithmankar.co.in/projects/verte-checkout-extension/): A Shopify Checkout UI extension that shows international shoppers an exact USD reference price, and a note on the INR charge, on Shopify's own checkout page. (Built, 2026; Verte)
-- [Warranty claims](https://smithmankar.co.in/projects/warranty-claims/): A customer-facing warranty claim flow for watch brands, served from SparrowOS into each Shopify store through the App Proxy. (Live, 2026; Verte)
-- [Lead and cart pipelines](https://smithmankar.co.in/projects/lead-cart-sync/): In-house replacements for Zapier-style tools: Meta lead ads and Shiprocket abandoned carts land straight in the sales teams' Google Sheets. (Live, 2026; THS, Verte, Alexandre Christie)
-- [Proposals as code](https://smithmankar.co.in/projects/proposal-docs/): Platform proposals, capability and cost roadmaps and a product readiness answer, each generated from a script so every figure has one source. (Delivered, 2026; Verte)
-
-## Shopify storefronts
-
-- [Verte India storefront](https://smithmankar.co.in/projects/verte-india/): Verte's Indian store, rebuilt almost from scratch and run end to end: every page on a freeform layout system, the Project Karbon and URBN launches, 3D, checkout and payments, SEO and the Meta ads. (Live, 2026; Verte)
-- [Project Karbon and URBN launch pages](https://smithmankar.co.in/projects/verte-launch-pages/): The bespoke launch pages for Verte's Project Karbon, Karbon Speciale and URBN watches, built end to end on the Shopify store and ported to the global storefront. (Live, 2026; Verte)
-- [Alexandre Christie storefront](https://smithmankar.co.in/projects/alexandre-christie/): Alexandre Christie's Indian store, rebuilt almost from scratch and run end to end: a new home page, every product page, a store locator with maps, launch pages, tracking, SEO and the Meta ads. (Live, 2026; Alexandre Christie)
-- [Cosmic launch pages](https://smithmankar.co.in/projects/ac-cosmic/): A pre-launch registration page and a bespoke, scroll-driven product page for Alexandre Christie's Cosmic watch, built from separate desktop and phone comps. (Live, 2026; Alexandre Christie)
-- [Black Forge product page](https://smithmankar.co.in/projects/ac-black-forge/): A scroll-choreographed product page for the Black Forge watch: hero, specs, reveal, materials and motion, with a fixed edition bar. (Live, 2026; Alexandre Christie)
-- [Reviews migration](https://smithmankar.co.in/projects/ac-reviews-import/): Moved Alexandre Christie's customer reviews, photos and videos into Judge.me. (Delivered, 2026; Alexandre Christie)
-- [Helios storefront](https://smithmankar.co.in/projects/helios/): A Dawn fork for a wellness brand selling supplement patches. It had a strong sales record until the brand chose to stop selling online. (Retired, 2026; Helios)
-- [Wayo storefront](https://smithmankar.co.in/projects/wayo/): A furniture store on Shopify's Origin theme: dimension sheets, a scroll-reveal hero, an interactive sofa-modes section and an About page built from Figma. The store is now offline. (Retired, 2026; Wayo)
-- [Season Earth storefront](https://smithmankar.co.in/projects/season-earth/): Season Earth's store, built and run end to end for a made-to-order linen menswear label: a customised Dawn theme with its own product page, size chart, coupon banner and full-set offers. (Live, 2026; Season Earth)
-- [Somedays store setup](https://smithmankar.co.in/projects/somedays/): A food brand's Shopify catalogue built as code: products, metafields and collections created through the Admin GraphQL API from one JSON source of truth. (Built, 2026; Somedays)
-
-## Websites & email
-
-- [Sage Sparrows website](https://smithmankar.co.in/projects/sage-site/): The agency's own site: service modules, case studies for Verte, Muskurahat and THS, a works showcase and a demo booking form. (Live, 2026; Sage Sparrows)
-- [Beyond Horizon](https://smithmankar.co.in/projects/beyond-horizon/): A one-page scroll story for a real estate development, with a lead form and a side tab that is always in reach. (Live, 2026; THS Projects)
-- [Ramee BlueNeck](https://smithmankar.co.in/projects/bn-site/): An 11-section scroll-story site for a hospitality asset investment in Karjat, built from a mobile-first design deck. (Live, 2026; THS Projects)
-- [THS legal pages](https://smithmankar.co.in/projects/ths-sites/): Privacy policy and terms of service sites for a real estate developer's lead campaigns. (Delivered, 2026; THS Projects)
-- [WatchQube](https://smithmankar.co.in/projects/watchqube/): A marketing site built from Figma with no breakpoints: every size interpolates linearly between the 402 px and 1920 px artboards, so both reproduce exactly. (Live, 2026; WatchQube)
-- [Abundantia Entertainment](https://smithmankar.co.in/projects/abundantia/): Content updates to a film production company's site: the year-by-year movie timeline, originals, trending and contact pages. (Live, 2026; Abundantia Entertainment)
-- [Project Karbon launch emails](https://smithmankar.co.in/projects/verte-emails/): HTML emails for the Karbon launch, with every heading rendered to a transparent image so the typography holds in Outlook, Gmail and Apple Mail. (Delivered, 2026; Verte)
-
-## AI & ML
+A 2B model fine-tuned on Apple MLX, so SparrowOS understands plain English on each Mac.
 
 - [Atlas 1.0](https://smithmankar.co.in/projects/atlas/): The first model in SparrowOS Intelligence: a small model fine-tuned to turn plain-English requests into SparrowOS actions, running on each person's own Mac. (In use, 2026; Sage Sparrows)
-- [AI product shoot pipeline](https://smithmankar.co.in/projects/ai-product-shoot/): A Python suite that takes a product from raw photos to a live Shopify listing: AI model shots, AI descriptions, upscaling, resizing and upload. (In use, 2026; Sage Sparrows clients)
-- [Local LLM evaluation](https://smithmankar.co.in/projects/local-llm-eval/): A harness that measures what moving coding and analytics work to a local model on a 24 GB MacBook would really cost in quality. (Delivered, 2026; Personal)
-- [Novel knowledge graph](https://smithmankar.co.in/projects/booktheory/): An LLM extraction pipeline that read all 1,431 chapters of a web novel and built a queryable record of who knows what, and when. (Delivered, 2026; Personal)
-- [Hinglish transcription](https://smithmankar.co.in/projects/hinglish-transcription/): Fully local transcription of Hindi and English interviews for testimonial reels: 24 minutes of audio in about 2.3 minutes on a MacBook. (Delivered, 2026; Sage Sparrows client)
-- [Watch cutouts](https://smithmankar.co.in/projects/product-cutouts/): Background removal for watch packshots on white that handles what one-click tools get wrong: floor reflections, crown-guard gaps and polished highlights. (Delivered, 2026; Alexandre Christie)
-- [Employee attrition predictor](https://smithmankar.co.in/projects/attrition-predictor/): Classification models that predict which employees will leave, trained on IBM's 35-attribute HR dataset. (Delivered, 2025; College)
-- [Top 250 movie dataset](https://smithmankar.co.in/projects/movie-dataset/): A dataset of IMDb's Top 250 films, scraped from the chart and enriched with OMDb metadata. (Delivered, 2025; College)
+- [Local LLM evaluation](https://smithmankar.co.in/projects/atlas/#local-llm-eval): A harness that measures what moving coding and analytics work to a local model on a 24 GB MacBook would really cost in quality. (Delivered, 2026; Personal)
 
-## Claude skills & MCP
+## [Verte](https://smithmankar.co.in/projects/verte/)
 
-- [Analytics skills for Claude](https://smithmankar.co.in/projects/claude-analytics-skills/): Eight house skills that make Claude analyse like a careful analyst: context first, evidence before claims, bias checks before conclusions. (In use, 2026; Sage Sparrows)
-- [Analytics Toolkit](https://smithmankar.co.in/projects/analytics-toolkit/): An on-demand library Claude searches instead of loading everything: the house skills, three outside skill libraries, a Python statistics stack and DuckDB. (In use, 2026; Sage Sparrows)
-- [SparrowOS MCP server](https://smithmankar.co.in/projects/sparrowos-mcp/): Lets Claude Code ask the live SparrowOS server analytics questions directly, instead of exporting a 3.5 GB database dump every time. (In use, 2026; Sage Sparrows)
-- [Reddit Ads MCP server](https://smithmankar.co.in/projects/reddit-ads-mcp/): Reads Reddit's own ad reporting from Claude Code so its claims can be checked against GA4 and Shopify. (In use, 2026; Sage Sparrows)
+Two stores rebuilt and run end to end, launches in 3D, and Meta ads judged on Shopify orders.
 
-## Meta ads & analytics
+- [Verte India storefront](https://smithmankar.co.in/projects/verte/#verte-india): Verte's Indian store, rebuilt almost from scratch and run end to end: every page on a freeform layout system, the Project Karbon and URBN launches, 3D, checkout and payments, SEO and the Meta ads. (Live, 2026; Verte)
+- [Verte global storefront](https://smithmankar.co.in/projects/verte/#verte-web): vertewatches.com: a headless Next.js port of Verte's Shopify theme that sells worldwide in USD through its own Stripe checkout. (Live, 2026; Verte)
+- [Project Karbon and URBN launch pages](https://smithmankar.co.in/projects/verte/#verte-launch-pages): The bespoke launch pages for Verte's Project Karbon, Karbon Speciale and URBN watches, built end to end on the Shopify store and ported to the global storefront. (Live, 2026; Verte)
+- [Project Karbon 3D viewer](https://smithmankar.co.in/projects/verte/#karbon-3d): A real-time 3D Karbon for Verte's product pages, with a working movement behind the exhibition caseback and hands that tell the viewer's own time. (Built, 2026; Verte)
+- [Verte Titanium 38](https://smithmankar.co.in/projects/verte/#verte-38): A new 38 mm titanium watch for Verte, taken from brief to factory CAD: dial directions, case styles, finishes and straps, decided one step at a time. (In progress, 2026; Verte)
+- [Scroll-driven 3D stage](https://smithmankar.co.in/projects/verte/#verte-3d-stage): A fixed full-screen three.js canvas whose scenes blend as you scroll, written for the Shopify theme and ported to React for the global store. (Built, 2026; Verte)
+- [Verte profit analytics](https://smithmankar.co.in/projects/verte/#verte-profit): A single-purpose profit app for Verte, because revenue minus product cost leaves out ad spend, shipping, gateway fees, returns and packaging. (Live, 2026; Verte)
+- [Verte checkout extension](https://smithmankar.co.in/projects/verte/#verte-checkout-extension): A Shopify Checkout UI extension that shows international shoppers an exact USD reference price, and a note on the INR charge, on Shopify's own checkout page. (Built, 2026; Verte)
+- [Project Karbon launch emails](https://smithmankar.co.in/projects/verte/#verte-emails): HTML emails for the Karbon launch, with every heading rendered to a transparent image so the typography holds in Outlook, Gmail and Apple Mail. (Delivered, 2026; Verte)
+- [Verte jogging spot grade](https://smithmankar.co.in/projects/verte/#verte-jog-grade): A soft morning-warmth colour grade for a Verte watch spot, designed as a custom LUT outside the editor so it could be iterated quickly. (Delivered, 2026; Verte)
+- [Verte Global landed cost](https://smithmankar.co.in/projects/verte/#landed-cost): A per-model margin model for shipping watches to the US, built against the US tariff schedule itself. (Delivered, 2026; Verte)
+- [Reddit ads review](https://smithmankar.co.in/projects/verte/#reddit-ads-review): A three-week review of Verte's US Reddit campaign against Meta, ending in a rebuild plan with pass marks set in advance. (Delivered, 2026; Verte)
+- [Proposals as code](https://smithmankar.co.in/projects/verte/#proposal-docs): Platform proposals, capability and cost roadmaps and a product readiness answer, each generated from a script so every figure has one source. (Delivered, 2026; Verte)
 
-- [Brand performance reports](https://smithmankar.co.in/projects/brand-reports/): Recurring analytics reports for the agency's brands, built from Shopify, Meta, Google Ads, GA4 and Clarity, each shipped as an HTML report and a one-page PDF. (Ongoing, 2026; Verte, Alexandre Christie, Season Earth, THS)
-- [Meta ads management](https://smithmankar.co.in/projects/meta-ads/): Running and auditing Meta ads for watch, apparel, real estate and EV brands: structure, launches, kill or keep reviews and budget proposals. (Ongoing, 2026; Verte, Alexandre Christie, Season Earth, THS, HarboCharge)
-- [AdPilot](https://smithmankar.co.in/projects/adpilot/): A Claude-powered ad-ops assistant inside SparrowOS. The ad engine decides, a person confirms, and our code executes; Claude never fires anything itself. (Built, 2026; Sage Sparrows)
-- [Customer audiences](https://smithmankar.co.in/projects/brand-audiences/): Rebuilt the customer seed lists behind four brands' lookalike audiences after finding they were all effectively targeting one brand's buyers. (Delivered, 2026; Verte, Alexandre Christie, Season Earth, THS)
-- [Season Earth deep analysis](https://smithmankar.co.in/projects/season-earth-analysis/): Why a linen label's ads weren't turning into sales, rebuilt to a full audit standard after the first pass. (Delivered, 2026; Season Earth)
-- [Reddit ads review](https://smithmankar.co.in/projects/reddit-ads-review/): A three-week review of Verte's US Reddit campaign against Meta, ending in a rebuild plan with pass marks set in advance. (Delivered, 2026; Verte)
-- [Competitor research method](https://smithmankar.co.in/projects/competitor-research/): A repeatable, evidence-only way to size the competition: Meta's Ad Library for auction size and share of voice, and Google's Ads Transparency Center through its internal RPC. (In use, 2026; Sage Sparrows)
-- [Temple-town stays demand](https://smithmankar.co.in/projects/ranjangaon-stays/): Search demand for stays near the Ranjangaon Mahaganpati temple, for a prospective stay operator, with the religious-tourism calendar behind it. (Delivered, 2026; Pre-engagement research)
-- [Alternative investments search demand](https://smithmankar.co.in/projects/alternative-investments-demand/): A search demand study for alternative investment funds, PMS, private credit and GIFT City funds in India. (Delivered, 2026; Neo (pre-engagement))
-- [Mumbai property ads in the UAE](https://smithmankar.co.in/projects/uae-property-ads/): Research on advertising a Mumbai residential tower to buyers in the UAE across Meta and Google. (Delivered, 2026; Bombay Realty (pre-engagement))
-- [India Q4 ads landscape](https://smithmankar.co.in/projects/q4-market-brief/): An internal brief on India's festive-season ad market: marketplace sale calendars, cost shifts and what they mean for our brands. (Delivered, 2026; Sage Sparrows)
-- [SEO for Verte and Alexandre Christie](https://smithmankar.co.in/projects/seo-audits/): Search audits and fixes across three storefronts: what Google can crawl, what only JavaScript shows, and the structured data each page needs. (Delivered, 2026; Verte, Alexandre Christie)
-- [Verte Global landed cost](https://smithmankar.co.in/projects/landed-cost/): A per-model margin model for shipping watches to the US, built against the US tariff schedule itself. (Delivered, 2026; Verte)
-- [HarboCharge](https://smithmankar.co.in/projects/harbocharge/): A business analysis and a lead-generation setup for a startup that turns EV chargers into a revenue stream for property owners. (Delivered, 2026; HarboCharge)
-- [Real estate lead audit](https://smithmankar.co.in/projects/ths-leads-audit/): Traced 90 days of Meta leads through to site visits for a real estate developer, campaign by campaign. (Delivered, 2026; THS Projects)
+## [Sparrow Commerce](https://smithmankar.co.in/projects/sparrow-commerce/)
 
-## 3D & CAD
+A commerce platform so Verte can leave Shopify: admin, storefront API, its own checkout and GST.
 
-- [Project Karbon 3D viewer](https://smithmankar.co.in/projects/karbon-3d/): A real-time 3D Karbon for Verte's product pages, with a working movement behind the exhibition caseback and hands that tell the viewer's own time. (Built, 2026; Verte)
-- [Scroll-driven 3D stage](https://smithmankar.co.in/projects/verte-3d-stage/): A fixed full-screen three.js canvas whose scenes blend as you scroll, written for the Shopify theme and ported to React for the global store. (Built, 2026; Verte)
-- [Verte Titanium 38](https://smithmankar.co.in/projects/verte-38/): A new 38 mm titanium watch for Verte, taken from brief to factory CAD: dial directions, case styles, finishes and straps, decided one step at a time. (In progress, 2026; Verte)
-- [Cosmic crystals and moon](https://smithmankar.co.in/projects/cosmic-3d/): Six crystal models and a 3D moon for the Cosmic launch, modelled in Blender and rendered live in the browser. (Live, 2026; Alexandre Christie)
-- [Family home design](https://smithmankar.co.in/projects/house-design/): A two-storey home with a terrace on a 30 x 50 ft plot, drafted floor by floor as code-generated plans and then modelled in Blender. (In progress, 2026; Personal)
+- [Sparrow Commerce](https://smithmankar.co.in/projects/sparrow-commerce/): A commerce backend and merchant admin built to take Verte off Shopify: one Next.js app with the admin dashboard and a token-authenticated storefront API. (In progress, 2026; Verte)
 
-## Video, photo & VFX
+## [Alexandre Christie](https://smithmankar.co.in/projects/alexandre-christie/)
 
-- [Product photoshoots](https://smithmankar.co.in/projects/product-shoots/): Helping plan and run the in-person product shoots behind the brands' ads and product pages: where each shot sits, how the light falls, and how the shoot builds the brand. (Ongoing, 2026; Sage Sparrows clients)
-- [Verte jogging spot grade](https://smithmankar.co.in/projects/verte-jog-grade/): A soft morning-warmth colour grade for a Verte watch spot, designed as a custom LUT outside the editor so it could be iterated quickly. (Delivered, 2026; Verte)
-- [Alexandre Christie unboxing grade](https://smithmankar.co.in/projects/ac-unboxing-grade/): Three looks for a 60-shot unboxing montage, then the client's pick, with the dials brightened shot by shot. (Delivered, 2026; Alexandre Christie)
-- [Cosmic studio roto](https://smithmankar.co.in/projects/cosmic-roto/): Isolated a model from a 4K, 60 fps studio take (1,216 frames) onto clean green, removing the director, light stands, cables and floor. (Delivered, 2026; Alexandre Christie)
-- [Season Earth shot matching](https://smithmankar.co.in/projects/season-earth-light-match/): Matched light across hidden cuts in a locked-off outfit-change spot when only the flattened export existed. (Delivered, 2026; Season Earth)
-- [Kinetic captions](https://smithmankar.co.in/projects/kinetic-captions/): Word-timed captions for an explainer reel on how an automatic watch works, art-directed against the edit: pages snap to the music's beat grid and sit in the calmest band of each shot. (Delivered, 2026; Sage Sparrows client)
-- [EffectCraft contribution](https://smithmankar.co.in/projects/effectcraft/): A fix for ArtCraft's open-source After Effects rebuild in Rust: Key Cleaner's Reduce Chatter was a spatial blur, but After Effects defines it as temporal smoothing. (In progress, 2026; Open source)
+The Indian store rebuilt almost from scratch: every product page, a map of its stores, launches in 3D.
 
-## Personal apps & home
+- [Alexandre Christie storefront](https://smithmankar.co.in/projects/alexandre-christie/): Alexandre Christie's Indian store, rebuilt almost from scratch and run end to end: a new home page, every product page, a store locator with maps, launch pages, tracking, SEO and the Meta ads. (Live, 2026; Alexandre Christie)
+- [Cosmic launch pages](https://smithmankar.co.in/projects/alexandre-christie/#ac-cosmic): A pre-launch registration page and a bespoke, scroll-driven product page for Alexandre Christie's Cosmic watch, built from separate desktop and phone comps. (Live, 2026; Alexandre Christie)
+- [Black Forge product page](https://smithmankar.co.in/projects/alexandre-christie/#ac-black-forge): A scroll-choreographed product page for the Black Forge watch: hero, specs, reveal, materials and motion, with a fixed edition bar. (Live, 2026; Alexandre Christie)
+- [Reviews migration](https://smithmankar.co.in/projects/alexandre-christie/#ac-reviews-import): Moved Alexandre Christie's customer reviews, photos and videos into Judge.me. (Delivered, 2026; Alexandre Christie)
+- [Watch cutouts](https://smithmankar.co.in/projects/alexandre-christie/#product-cutouts): Background removal for watch packshots on white that handles what one-click tools get wrong: floor reflections, crown-guard gaps and polished highlights. (Delivered, 2026; Alexandre Christie)
+- [Cosmic crystals and moon](https://smithmankar.co.in/projects/alexandre-christie/#cosmic-3d): Six crystal models and a 3D moon for the Cosmic launch, modelled in Blender and rendered live in the browser. (Live, 2026; Alexandre Christie)
+- [Cosmic studio roto](https://smithmankar.co.in/projects/alexandre-christie/#cosmic-roto): Isolated a model from a 4K, 60 fps studio take (1,216 frames) onto clean green, removing the director, light stands, cables and floor. (Delivered, 2026; Alexandre Christie)
+- [Alexandre Christie unboxing grade](https://smithmankar.co.in/projects/alexandre-christie/#ac-unboxing-grade): Three looks for a 60-shot unboxing montage, then the client's pick, with the dials brightened shot by shot. (Delivered, 2026; Alexandre Christie)
+
+## [Ads & analytics](https://smithmankar.co.in/projects/ads-analytics/)
+
+Meta ads, and reports that check their own numbers, for watch, apparel, real-estate and EV brands.
+
+- [Meta ads management](https://smithmankar.co.in/projects/ads-analytics/#meta-ads): Running and auditing Meta ads for watch, apparel, real estate and EV brands: structure, launches, kill or keep reviews and budget proposals. (Ongoing, 2026; Verte, Alexandre Christie, Season Earth, THS, HarboCharge)
+- [Brand performance reports](https://smithmankar.co.in/projects/ads-analytics/#brand-reports): Recurring analytics reports for the agency's brands, built from Shopify, Meta, Google Ads, GA4 and Clarity, each shipped as an HTML report and a one-page PDF. (Ongoing, 2026; Verte, Alexandre Christie, Season Earth, THS)
+- [Customer audiences](https://smithmankar.co.in/projects/ads-analytics/#brand-audiences): Rebuilt the customer seed lists behind four brands' lookalike audiences after finding they were all effectively targeting one brand's buyers. (Delivered, 2026; Verte, Alexandre Christie, Season Earth, THS)
+- [SEO for Verte and Alexandre Christie](https://smithmankar.co.in/projects/ads-analytics/#seo-audits): Search audits and fixes across three storefronts: what Google can crawl, what only JavaScript shows, and the structured data each page needs. (Delivered, 2026; Verte, Alexandre Christie)
+- [Competitor research method](https://smithmankar.co.in/projects/ads-analytics/#competitor-research): A repeatable, evidence-only way to size the competition: Meta's Ad Library for auction size and share of voice, and Google's Ads Transparency Center through its internal RPC. (In use, 2026; Sage Sparrows)
+- [India Q4 ads landscape](https://smithmankar.co.in/projects/ads-analytics/#q4-market-brief): An internal brief on India's festive-season ad market: marketplace sale calendars, cost shifts and what they mean for our brands. (Delivered, 2026; Sage Sparrows)
+- [HarboCharge](https://smithmankar.co.in/projects/ads-analytics/#harbocharge): A business analysis and a lead-generation setup for a startup that turns EV chargers into a revenue stream for property owners. (Delivered, 2026; HarboCharge)
+- [Real estate lead audit](https://smithmankar.co.in/projects/ads-analytics/#ths-leads-audit): Traced 90 days of Meta leads through to site visits for a real estate developer, campaign by campaign. (Delivered, 2026; THS Projects)
+- [Temple-town stays demand](https://smithmankar.co.in/projects/ads-analytics/#ranjangaon-stays): Search demand for stays near the Ranjangaon Mahaganpati temple, for a prospective stay operator, with the religious-tourism calendar behind it. (Delivered, 2026; Pre-engagement research)
+- [Alternative investments search demand](https://smithmankar.co.in/projects/ads-analytics/#alternative-investments-demand): A search demand study for alternative investment funds, PMS, private credit and GIFT City funds in India. (Delivered, 2026; Neo (pre-engagement))
+- [Mumbai property ads in the UAE](https://smithmankar.co.in/projects/ads-analytics/#uae-property-ads): Research on advertising a Mumbai residential tower to buyers in the UAE across Meta and Google. (Delivered, 2026; Bombay Realty (pre-engagement))
+
+## [More Shopify stores](https://smithmankar.co.in/projects/shopify-stores/)
+
+Season Earth's linen menswear store and its analysis, plus Helios, Wayo and Somedays.
+
+- [Season Earth storefront](https://smithmankar.co.in/projects/shopify-stores/#season-earth): Season Earth's store, built and run end to end for a made-to-order linen menswear label: a customised Dawn theme with its own product page, size chart, coupon banner and full-set offers. (Live, 2026; Season Earth)
+- [Season Earth deep analysis](https://smithmankar.co.in/projects/shopify-stores/#season-earth-analysis): Why a linen label's ads weren't turning into sales, rebuilt to a full audit standard after the first pass. (Delivered, 2026; Season Earth)
+- [Season Earth shot matching](https://smithmankar.co.in/projects/shopify-stores/#season-earth-light-match): Matched light across hidden cuts in a locked-off outfit-change spot when only the flattened export existed. (Delivered, 2026; Season Earth)
+- [Helios storefront](https://smithmankar.co.in/projects/shopify-stores/#helios): A Dawn fork for a wellness brand selling supplement patches. It had a strong sales record until the brand chose to stop selling online. (Retired, 2026; Helios)
+- [Wayo storefront](https://smithmankar.co.in/projects/shopify-stores/#wayo): A furniture store on Shopify's Origin theme: dimension sheets, a scroll-reveal hero, an interactive sofa-modes section and an About page built from Figma. The store is now offline. (Retired, 2026; Wayo)
+- [Somedays store setup](https://smithmankar.co.in/projects/shopify-stores/#somedays): A food brand's Shopify catalogue built as code: products, metafields and collections created through the Admin GraphQL API from one JSON source of truth. (Built, 2026; Somedays)
+
+## [Websites](https://smithmankar.co.in/projects/websites/)
+
+The agency site, two real-estate launches, a Figma-exact marketing site and a film studio.
+
+- [Sage Sparrows website](https://smithmankar.co.in/projects/websites/#sage-site): The agency's own site: service modules, case studies for Verte, Muskurahat and THS, a works showcase and a demo booking form. (Live, 2026; Sage Sparrows)
+- [Beyond Horizon](https://smithmankar.co.in/projects/websites/#beyond-horizon): A one-page scroll story for a real estate development, with a lead form and a side tab that is always in reach. (Live, 2026; THS Projects)
+- [Ramee BlueNeck](https://smithmankar.co.in/projects/websites/#bn-site): An 11-section scroll-story site for a hospitality asset investment in Karjat, built from a mobile-first design deck. (Live, 2026; THS Projects)
+- [THS legal pages](https://smithmankar.co.in/projects/websites/#ths-sites): Privacy policy and terms of service sites for a real estate developer's lead campaigns. (Delivered, 2026; THS Projects)
+- [WatchQube](https://smithmankar.co.in/projects/websites/#watchqube): A marketing site built from Figma with no breakpoints: every size interpolates linearly between the 402 px and 1920 px artboards, so both reproduce exactly. (Live, 2026; WatchQube)
+- [Abundantia Entertainment](https://smithmankar.co.in/projects/websites/#abundantia): Content updates to a film production company's site: the year-by-year movie timeline, originals, trending and contact pages. (Live, 2026; Abundantia Entertainment)
+
+## [Claude & dev tools](https://smithmankar.co.in/projects/claude-tools/)
+
+Analytics skills and MCP servers for Claude, and a Git extension the team works in.
+
+- [Analytics skills for Claude](https://smithmankar.co.in/projects/claude-tools/#claude-analytics-skills): Eight house skills that make Claude analyse like a careful analyst: context first, evidence before claims, bias checks before conclusions. (In use, 2026; Sage Sparrows)
+- [Analytics Toolkit](https://smithmankar.co.in/projects/claude-tools/#analytics-toolkit): An on-demand library Claude searches instead of loading everything: the house skills, three outside skill libraries, a Python statistics stack and DuckDB. (In use, 2026; Sage Sparrows)
+- [Reddit Ads MCP server](https://smithmankar.co.in/projects/claude-tools/#reddit-ads-mcp): Reads Reddit's own ad reporting from Claude Code so its claims can be checked against GA4 and Shopify. (In use, 2026; Sage Sparrows)
+- [Sparrow Git](https://smithmankar.co.in/projects/claude-tools/#sparrow-git): A private VS Code extension that gives the team a visual Git workflow in the sidebar, so nobody has to fight the terminal. (In use, 2026; Sage Sparrows)
+
+## [AI, video & media](https://smithmankar.co.in/projects/media/)
+
+A photo-to-listing pipeline, local Hinglish transcription, beat-timed captions and product shoots.
+
+- [AI product shoot pipeline](https://smithmankar.co.in/projects/media/#ai-product-shoot): A Python suite that takes a product from raw photos to a live Shopify listing: AI model shots, AI descriptions, upscaling, resizing and upload. (In use, 2026; Sage Sparrows clients)
+- [Hinglish transcription](https://smithmankar.co.in/projects/media/#hinglish-transcription): Fully local transcription of Hindi and English interviews for testimonial reels: 24 minutes of audio in about 2.3 minutes on a MacBook. (Delivered, 2026; Sage Sparrows client)
+- [Kinetic captions](https://smithmankar.co.in/projects/media/#kinetic-captions): Word-timed captions for an explainer reel on how an automatic watch works, art-directed against the edit: pages snap to the music's beat grid and sit in the calmest band of each shot. (Delivered, 2026; Sage Sparrows client)
+- [Product photoshoots](https://smithmankar.co.in/projects/media/#product-shoots): Helping plan and run the in-person product shoots behind the brands' ads and product pages: where each shot sits, how the light falls, and how the shoot builds the brand. (Ongoing, 2026; Sage Sparrows clients)
+- [EffectCraft contribution](https://smithmankar.co.in/projects/media/#effectcraft): A fix for ArtCraft's open-source After Effects rebuild in Rust: Key Cleaner's Reduce Chatter was a spatial blur, but After Effects defines it as temporal smoothing. (In progress, 2026; Open source)
+
+## [Personal & college](https://smithmankar.co.in/projects/personal/)
+
+A NEET prep app, an iOS study companion, a work log, a home lab and a house design.
 
 - [NEET-UG prep app](https://smithmankar.co.in/projects/neet-prep/): An all-in-one NEET-UG 2027 study app for one student: past papers question by question, syllabus tracking, a daily plan and an AI tutor. (Built, 2026; Personal)
 - [IITM Companion](https://smithmankar.co.in/projects/iitm-companion/): A personal iOS app that runs my IIT Madras study plan: tap to start a block, a lock-screen countdown, and planned versus actual hours every week. (In use, 2026; Personal)
-- [Minutes](https://smithmankar.co.in/projects/minutes/): A private work log for macOS: clock in and out, breaks, what you worked on, away time and git commits, exported as one HTML report. (In use, 2026; Personal)
-- [Home automation](https://smithmankar.co.in/projects/home-automation/): Local smart-home control on a self-hosted Home Assistant, including an AC whose remote protocol I reverse-engineered. (In use, 2026; Personal)
-- [Home server and domain](https://smithmankar.co.in/projects/home-server/): A Linux home server running my services in Docker, published on subdomains of my own domain through Cloudflare tunnels with nothing port-forwarded. (In use, 2026; Personal)
-- [Satisfactory factory planner](https://smithmankar.co.in/projects/sf-architect/): A factory planner for the game Satisfactory that reads your save file, solves production with linear programming, and lays out the plan as a graph and on the map. (Built, 2026; Personal)
+- [Minutes](https://smithmankar.co.in/projects/personal/#minutes): A private work log for macOS: clock in and out, breaks, what you worked on, away time and git commits, exported as one HTML report. (In use, 2026; Personal)
+- [Home automation](https://smithmankar.co.in/projects/personal/#home-automation): Local smart-home control on a self-hosted Home Assistant, including an AC whose remote protocol I reverse-engineered. (In use, 2026; Personal)
+- [Home server and domain](https://smithmankar.co.in/projects/personal/#home-server): A Linux home server running my services in Docker, published on subdomains of my own domain through Cloudflare tunnels with nothing port-forwarded. (In use, 2026; Personal)
+- [Family home design](https://smithmankar.co.in/projects/personal/#house-design): A two-storey home with a terrace on a 30 x 50 ft plot, drafted floor by floor as code-generated plans and then modelled in Blender. (In progress, 2026; Personal)
+- [Satisfactory factory planner](https://smithmankar.co.in/projects/personal/#sf-architect): A factory planner for the game Satisfactory that reads your save file, solves production with linear programming, and lays out the plan as a graph and on the map. (Built, 2026; Personal)
+- [Novel knowledge graph](https://smithmankar.co.in/projects/personal/#booktheory): An LLM extraction pipeline that read all 1,431 chapters of a web novel and built a queryable record of who knows what, and when. (Delivered, 2026; Personal)
+- [Employee attrition predictor](https://smithmankar.co.in/projects/personal/#attrition-predictor): Classification models that predict which employees will leave, trained on IBM's 35-attribute HR dataset. (Delivered, 2025; College)
+- [Top 250 movie dataset](https://smithmankar.co.in/projects/personal/#movie-dataset): A dataset of IMDb's Top 250 films, scraped from the chart and enriched with OMDb metadata. (Delivered, 2025; College)
 
-## Muskurahat & nonprofits
+## [Muskurahat & nonprofits](https://smithmankar.co.in/projects/muskurahat/)
 
-- [ML lead rating](https://smithmankar.co.in/projects/ml-lead-rating/): Rates internship applicant quality by embedding their free-text responses and comparing them against a labelled training set using cosine similarity. (Delivered, 2025; Muskurahat Foundation)
-- [Fundraising leaderboard bot](https://smithmankar.co.in/projects/discord-leaderboard-bot/): A Discord bot that runs the crowdfunding leaderboard for Muskurahat's fundraising interns from Google Sheets, giving out milestone roles that unlock perks as each intern's total grows. (Delivered, 2025; Muskurahat Foundation)
-- [WhatsApp outreach](https://smithmankar.co.in/projects/whatsapp-automation/): Contact and template automation on WATI for the foundation's WhatsApp outreach. (Delivered, 2025; Muskurahat Foundation)
-- [Google Apps Script suite](https://smithmankar.co.in/projects/apps-script-suite/): Sheet automations for the internship team, run from buttons in the sheet: call logs, data updates, invite emails, ranks and contact saving. (Delivered, 2025; Muskurahat Foundation)
-- [Internshala outreach automation](https://smithmankar.co.in/projects/internshala-outreach/): Desktop automation that sends the foundation's internship invitation to shortlisted applicants on Internshala. (Delivered, 2025; Muskurahat Foundation)
-- [Fundraising internship SOP](https://smithmankar.co.in/projects/fundraising-sop/): The end-to-end operating procedure for a fundraising internship, drawn as FigJam diagrams: lead, consent, dashboard, orientation, weekly cycles and certificate. (Delivered, 2026; Muskurahat Foundation)
-- [CareGuru intern dashboard spec](https://smithmankar.co.in/projects/careguru-dashboard/): A master build reference for a fundraising-intern dashboard that pulls five source documents into one, showing every disagreement side by side instead of choosing for the team. (Delivered, 2026; CareGuru Foundation)
+Applicant rating, a fundraising bot and outreach automation for a nonprofit's internships.
+
+- [ML lead rating](https://smithmankar.co.in/projects/muskurahat/#ml-lead-rating): Rates internship applicant quality by embedding their free-text responses and comparing them against a labelled training set using cosine similarity. (Delivered, 2025; Muskurahat Foundation)
+- [Fundraising leaderboard bot](https://smithmankar.co.in/projects/muskurahat/#discord-leaderboard-bot): A Discord bot that runs the crowdfunding leaderboard for Muskurahat's fundraising interns from Google Sheets, giving out milestone roles that unlock perks as each intern's total grows. (Delivered, 2025; Muskurahat Foundation)
+- [WhatsApp outreach](https://smithmankar.co.in/projects/muskurahat/#whatsapp-automation): Contact and template automation on WATI for the foundation's WhatsApp outreach. (Delivered, 2025; Muskurahat Foundation)
+- [Google Apps Script suite](https://smithmankar.co.in/projects/muskurahat/#apps-script-suite): Sheet automations for the internship team, run from buttons in the sheet: call logs, data updates, invite emails, ranks and contact saving. (Delivered, 2025; Muskurahat Foundation)
+- [Internshala outreach automation](https://smithmankar.co.in/projects/muskurahat/#internshala-outreach): Desktop automation that sends the foundation's internship invitation to shortlisted applicants on Internshala. (Delivered, 2025; Muskurahat Foundation)
+- [Fundraising internship SOP](https://smithmankar.co.in/projects/muskurahat/#fundraising-sop): The end-to-end operating procedure for a fundraising internship, drawn as FigJam diagrams: lead, consent, dashboard, orientation, weekly cycles and certificate. (Delivered, 2026; Muskurahat Foundation)
+- [CareGuru intern dashboard spec](https://smithmankar.co.in/projects/muskurahat/#careguru-dashboard): A master build reference for a fundraising-intern dashboard that pulls five source documents into one, showing every disagreement side by side instead of choosing for the team. (Delivered, 2026; CareGuru Foundation)

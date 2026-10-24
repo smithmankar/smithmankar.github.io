@@ -1,33 +1,18 @@
 # Smith Mankar
 
-> Head of Development & Analytics at Sage Sparrows (https://sagesparrows.in). Builds operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work. 82 projects are listed below, grouped by discipline.
+> Head of Development & Analytics at Sage Sparrows (https://sagesparrows.in). Builds operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work. The work is grouped below by brand or product, with every project inside each.
 
 - Email: smithmankar712@gmail.com
 - GitHub: https://github.com/smithmankar
 - LinkedIn: https://www.linkedin.com/in/smith-mankar-334049229/
 - Portfolio: https://smithmankar.co.in/
+- About: https://smithmankar.co.in/about/
 
 ## SparrowOS
 
-Platforms & internal tools · Sage Sparrows · 2026 · In use
 URL: https://smithmankar.co.in/projects/sparrowos/
 
-The operations platform Sage Sparrows runs on. It replaced scattered Google Sheets and WhatsApp threads with one place for tasks, chat, KPIs and analytics across every brand the agency manages.
-
-What was built:
-- Tasks with a reviewer-driven stage flow, real-time chat (threads, mentions, reactions, file sharing), Google Calendar sync and global search
-- Built-in mail and drive on the company's own Stalwart server, private notes with share links, and a daily standup board
-- KPI calculator with weighted department scoring, MD scores and profit sharing
-- Daily pipelines from Meta Ads, Google Ads, GA4, Shopify, Microsoft Clarity and Google Trends feeding per-brand revenue, traffic, conversion and ad dashboards
-- Ad evaluation engine that sorts every ad into test, kill, optimise, breakeven or scale
-- Six-tier roles, TOTP-gated impersonation, web push with retries and batching, and a WebSocket build id that reloads clients after a deploy
-- Plain-English and voice commands across 49 actions, with an undo log and single-use plan tokens
-
-Results:
-- In daily use: on 2 Sep 2026 it held 9 brands, 56 campaigns, about 110 assets and 120 open tasks
-- Replaced Google Sheets and WhatsApp as the way the team runs work, with productivity and progress tracking up by about 70%
-
-Stack: React, Vite, Tailwind CSS, Radix UI, Node.js, Fastify, MySQL, WebSocket, Google APIs, Meta Graph API, Web Push
+The operations platform a 15-person agency runs on, on the web and as a native Mac app.
 
 Case study:
 The operations platform a marketing agency runs on: tasks, chat, KPIs, analytics, mail and drive in one place, on the web and as a native Mac app.
@@ -75,10 +60,32 @@ Decision: glass on chrome, flat content. Translucency is used only for navigatio
 The team runs its work from SparrowOS instead of Sheets and WhatsApp. Management reviews every brand from one analytics page, and campaigns that are switched on but not spending now raise an alarm instead of going unnoticed for days.
 Next: moving off shared hosting to a VPS, then Windows, iOS and Android clients on the same server.
 
-## SparrowOS for Mac
+### SparrowOS
 
 Platforms & internal tools · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/sparrowos-mac/
+URL: https://smithmankar.co.in/projects/sparrowos/
+
+The operations platform Sage Sparrows runs on. It replaced scattered Google Sheets and WhatsApp threads with one place for tasks, chat, KPIs and analytics across every brand the agency manages.
+
+What was built:
+- Tasks with a reviewer-driven stage flow, real-time chat (threads, mentions, reactions, file sharing), Google Calendar sync and global search
+- Built-in mail and drive on the company's own Stalwart server, private notes with share links, and a daily standup board
+- KPI calculator with weighted department scoring, MD scores and profit sharing
+- Daily pipelines from Meta Ads, Google Ads, GA4, Shopify, Microsoft Clarity and Google Trends feeding per-brand revenue, traffic, conversion and ad dashboards
+- Ad evaluation engine that sorts every ad into test, kill, optimise, breakeven or scale
+- Six-tier roles, TOTP-gated impersonation, web push with retries and batching, and a WebSocket build id that reloads clients after a deploy
+- Plain-English and voice commands across 49 actions, with an undo log and single-use plan tokens
+
+Results:
+- In daily use: on 2 Sep 2026 it held 9 brands, 56 campaigns, about 110 assets and 120 open tasks
+- Replaced Google Sheets and WhatsApp as the way the team runs work, with productivity and progress tracking up by about 70%
+
+Stack: React, Vite, Tailwind CSS, Radix UI, Node.js, Fastify, MySQL, WebSocket, Google APIs, Meta Graph API, Web Push
+
+### SparrowOS for Mac
+
+Platforms & internal tools · Sage Sparrows · 2026 · In use
+URL: https://smithmankar.co.in/projects/sparrowos/#sparrowos-mac
 
 A native SwiftUI client for SparrowOS, built from scratch rather than wrapped around the web app, so the team gets a real dock app and notifications that actually arrive.
 
@@ -95,10 +102,10 @@ Results:
 
 Stack: Swift, SwiftUI, SQLCipher, CryptoKit, MLX, Speech, XcodeGen
 
-## SparrowOS for Windows
+### SparrowOS for Windows
 
 Platforms & internal tools · Sage Sparrows · 2026 · Planned
-URL: https://smithmankar.co.in/projects/sparrowos-windows/
+URL: https://smithmankar.co.in/projects/sparrowos/#sparrowos-windows
 
 The Windows sibling of the Mac app: a native WinUI 3 client with the same layouts and navigation, in Fluent Design instead of Liquid Glass.
 
@@ -109,10 +116,10 @@ What was built:
 
 Stack: C#, .NET 10, WinUI 3, Windows App SDK, CommunityToolkit.Mvvm
 
-## SparrowCrypto
+### SparrowCrypto
 
 Platforms & internal tools · Sage Sparrows · 2026 · Built
-URL: https://smithmankar.co.in/projects/sparrowcrypto/
+URL: https://smithmankar.co.in/projects/sparrowos/#sparrowcrypto
 
 One owned encryption format for company data across every SparrowOS client and the backend: a versioned envelope over standard AES-256-GCM.
 
@@ -123,25 +130,10 @@ What was built:
 
 Stack: AES-256-GCM, Node.js, Swift, CryptoKit
 
-## Sparrow Git
+### Sparrow Mail & Drive
 
 Platforms & internal tools · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/sparrow-git/
-
-A private VS Code extension that gives the team a visual Git workflow in the sidebar, so nobody has to fight the terminal.
-
-What was built:
-- Enforces team conventions: branch naming, commit prefixes and protected main
-- Smart Split, AI suggestions for commits, branches and PRs, and pull request review from the editor
-- Background branch health monitoring, with a lock that keeps pollers from colliding with the user's own git commands
-- Refuses commits in detached HEAD and on protected branches
-
-Stack: TypeScript, VS Code API, simple-git, GitHub CLI, esbuild
-
-## Sparrow Mail & Drive
-
-Platforms & internal tools · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/sparrow-mail/
+URL: https://smithmankar.co.in/projects/sparrowos/#sparrow-mail
 
 The company's own workspace instead of a Google Workspace subscription: email, calendars and file storage self-hosted on Stalwart, with SparrowOS as the interface.
 
@@ -158,132 +150,39 @@ Results:
 
 Stack: Stalwart, JMAP, IMAP, WebDAV, CalDAV, Node.js, Fastify, nginx
 
-## Sparrow Commerce
+### AdPilot
 
-Client apps & platforms · Verte · 2026 · In progress
-URL: https://smithmankar.co.in/projects/sparrow-commerce/
+Meta ads & analytics · Sage Sparrows · 2026 · Built
+URL: https://smithmankar.co.in/projects/sparrowos/#adpilot
 
-A commerce backend and merchant admin built to take Verte off Shopify: one Next.js app with the admin dashboard and a token-authenticated storefront API.
-
-What was built:
-- Admin for products, collections, inventory, price lists, subscriptions, orders, carts, customers, discounts, reviews, GST, analytics, reports, content, email and team
-- Storefront API for catalog, search, cart, checkout, customer accounts, discounts and event ingestion
-- Stripe Checkout with webhooks; a storefront moves onto it by changing one file
-- Docker review stack (admin, demo storefront, seeded Postgres and Caddy with basic auth) so stakeholders can click through it safely
-- About 25,000 lines of TypeScript
-
-Stack: Next.js 16, React 19, TypeScript, PostgreSQL, Drizzle ORM, Stripe, Docker
-
-Case study:
-A commerce platform built so Verte can leave Shopify: a merchant admin and a storefront API in one Next.js app, with its own checkout, GST invoicing and profit analytics.
-Role: Sole developer: architecture, data model, admin, storefront API, payments and deployment. Period: May to October 2026.
-- ~25,000: lines of TypeScript across the admin and storefront API
-- 1 file: to move a storefront onto it, by design
-- 4: paid Shopify apps it replaces: profit, promotions, GST and reviews
-- 96: USD orders through vertewatches.com's own checkout, the first piece of the move
-
-### The brief
-
-Verte sells in India and worldwide, but Shopify can't take payment in anything except rupees for an Indian merchant, and the brand was paying for four separate apps to cover profit analytics, bundle promotions, GST compliance and reviews.
-The goal was a commerce platform Verte owns: its own admin, its own checkout in each market's currency, GST built in, and profit numbers it can trust, without stopping sales while the move happens.
-
-### What I built
-
-- A merchant admin for products, collections, inventory, price lists, subscriptions, orders, carts, customers, discounts, reviews, GST, analytics, reports, content, email and team.
-- A token-authenticated storefront API for catalog, search, cart, checkout, customer accounts, discounts, inventory, reviews, content and event tracking.
-- Stripe Checkout with webhooks that turn a completed payment into an order.
-- GST invoicing with GSTR-1 export, a promotions engine, a reviews module with moderation, and profit analytics.
-- A Shopify sync that imports the catalogue and orders, so the move happens on real data.
-- A Docker review stack (admin, a demo storefront, seeded Postgres and Caddy behind basic auth) so the client can click through everything safely before it goes live.
-
-### How I did it
-
-- May 2026: Prove the checkout first. The most urgent gap was charging in USD. While the platform was being built, the global store vertewatches.com went live on 19 May on its own Stripe checkout, with orders written back into Shopify. That proved the payment flow in production while sales carried on.
-- May and June 2026: Design for the swap. The storefront calls commerce through one file, so moving a store from Shopify to Sparrow Commerce changes that file and nothing else. The platform is one Next.js app on PostgreSQL with Drizzle, with the admin and the storefront API as its two surfaces.
-- June to August 2026: Build the admin the client actually uses. Every area of the admin was built against the apps it replaces, then the whole codebase was read end to end twice, in June and August, with the design, the reasoning and a setup runbook written down as it went.
-- October 2026: A readiness review, point by point. Measured against the go-live checklist: 11 of 13 areas are built, including checkout, pricing and profit analytics, which are already live. Four built areas (customers, reviews, products and discounts) are waiting to go live with the move, and 2 are still being finished. The global store moves first. India follows, on Indian payment gateways.
-Decision: keep selling while moving. Nothing switches off until its replacement has run in production. Orders kept flowing through Shopify while the new checkout proved itself, and each store moves on its own, with a one-change rollback.
-
-### Where it stands
-
-- 11 of 13: go-live areas built, with checkout, pricing and profit analytics already live
-- 4: built and waiting to go live with the move: customers, reviews, products and discounts
-- 2: areas still being built
-When both stores have moved, Verte runs on a platform it owns, charges each market in its own currency, files GST from its own admin and drops four app subscriptions.
-
-## Verte global storefront
-
-Client apps & platforms · Verte · 2026 · Live
-URL: https://smithmankar.co.in/projects/verte-web/
-Live: https://vertewatches.com
-
-vertewatches.com: a headless Next.js port of Verte's Shopify theme that sells worldwide in USD through its own Stripe checkout.
+A Claude-powered ad-ops assistant inside SparrowOS. The ad engine decides, a person confirms, and our code executes; Claude never fires anything itself.
 
 What was built:
-- The theme's JSON templates are imported and rendered in React, so pages keep the same sections and settings as the Shopify store
-- Stripe checkout with orders created back in Shopify, and USD prices read from variant metafields
-- Geo split that sends Indian visitors to verte.co.in while keeping both sites indexable
-- SEO pass: sitemap, robots, Product and Organization JSON-LD with ratings and shipping policy, hreflang and H1s
-- Fixed the layout shift that was failing Core Web Vitals (CLS 0.52 on phones) by measuring every element with and without media
-- Review stars and a region-aware payment and pay-later line on every watch page
-- Host allowlist, Cloudflare WAF and authenticated origin pulls against a live reverse-proxy clone of the site
-- Fixed a thank-you page that reported unpaid checkouts to Meta as purchases
-- About 43,000 lines of TypeScript
+- Creates campaigns, ad sets and ads from Google Drive assets, always paused for review, including carousel, dynamic, WhatsApp and partnership formats
+- 27 typed change proposals; deletes, objective changes and anything touching PII are refused outright
+- Confirmation is a backend event Claude cannot create
+- First real ad created live through it
 
-Results:
-- 96 orders through its own Stripe checkout from launch on 19 May to 23 Oct 2026 (Shopify count, team orders included)
+Stack: Claude API, Meta Graph API, Node.js, Google Drive API
 
-Stack: Next.js 16, React 19, TypeScript, Tailwind CSS, Stripe, Shopify Storefront API, Zustand, Cloudflare, PM2
+### SparrowOS MCP server
 
-## Verte profit analytics
+Claude skills & MCP · Sage Sparrows · 2026 · In use
+URL: https://smithmankar.co.in/projects/sparrowos/#sparrowos-mcp
 
-Client apps & platforms · Verte · 2026 · Live
-URL: https://smithmankar.co.in/projects/verte-profit/
-
-A single-purpose profit app for Verte, because revenue minus product cost leaves out ad spend, shipping, gateway fees, returns and packaging.
+Lets Claude Code ask the live SparrowOS server analytics questions directly, instead of exporting a 3.5 GB database dump every time.
 
 What was built:
-- Every cost carries its provenance (measured, rate card, assumed or unknown) and no cost is ever silently zero
-- Every figure states its coverage, so the app was useful on day one and gets more accurate as estimates are replaced
-- Checkout health alert: a Playwright test checkout every 15 minutes, an email alert and a one-click button to pause the India ads, added after the payment step silently failed for hours while the vendor's status page showed 100% uptime
-- Built and verified against live data in about four days
+- Read-only, and scoped by the same roles and brand access as the apps
+- Token kept in the macOS Keychain, expires after 90 days and can be revoked from Settings
+- Tools for metrics, fact rows, brand sources and full reports
 
-Results:
-- Live, and the checkout alert has watched the India checkout since 8 Oct 2026
+Stack: Node.js, MCP, Zod
 
-Stack: Next.js, React, PostgreSQL, Nodemailer, Playwright
-
-## Verte checkout extension
-
-Client apps & platforms · Verte · 2026 · Built
-URL: https://smithmankar.co.in/projects/verte-checkout-extension/
-
-A Shopify Checkout UI extension that shows international shoppers an exact USD reference price, and a note on the INR charge, on Shopify's own checkout page.
-
-What was built:
-- Reads the price from a public SparrowOS endpoint backed by a cached Admin GraphQL catalog lookup
-- Renders nothing for Indian shoppers, where INR is already right
-
-Stack: Shopify Checkout UI Extensions, Shopify CLI, SparrowOS API
-
-## Warranty claims
-
-Client apps & platforms · Verte · 2026 · Live
-URL: https://smithmankar.co.in/projects/warranty-claims/
-
-A customer-facing warranty claim flow for watch brands, served from SparrowOS into each Shopify store through the App Proxy.
-
-What was built:
-- Phone sign-in with a WhatsApp one-time code
-- Looks up the customer's Shopify order, then logs the claim to email and Google Sheets
-- Every request verified with Shopify's App Proxy HMAC
-
-Stack: Node.js, Fastify, Shopify App Proxy, WhatsApp API, Google Sheets API
-
-## Lead and cart pipelines
+### Lead and cart pipelines
 
 Client apps & platforms · THS, Verte, Alexandre Christie · 2026 · Live
-URL: https://smithmankar.co.in/projects/lead-cart-sync/
+URL: https://smithmankar.co.in/projects/sparrowos/#lead-cart-sync
 
 In-house replacements for Zapier-style tools: Meta lead ads and Shiprocket abandoned carts land straight in the sales teams' Google Sheets.
 
@@ -297,41 +196,103 @@ Results:
 
 Stack: Node.js, Meta Graph API, Google Sheets API, Webhooks
 
-## Proposals as code
+### Warranty claims
 
-Client apps & platforms · Verte · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/proposal-docs/
+Client apps & platforms · Verte · 2026 · Live
+URL: https://smithmankar.co.in/projects/sparrowos/#warranty-claims
 
-Platform proposals, capability and cost roadmaps and a product readiness answer, each generated from a script so every figure has one source.
-
-What was built:
-- A build script holds every line and number; a checker re-adds the totals from the finished HTML
-- Prints to paginated A4 PDFs through headless Chrome
-- The checker fails the build on any dash character, so the house writing style can't slip
-
-Stack: Node.js, HTML, Headless Chrome
-
-## Verte India storefront
-
-Shopify storefronts · Verte · 2026 · Live
-URL: https://smithmankar.co.in/projects/verte-india/
-Live: https://verte.co.in
-
-Verte's Indian store, rebuilt almost from scratch and run end to end: every page on a freeform layout system, the Project Karbon and URBN launches, 3D, checkout and payments, SEO and the Meta ads.
+A customer-facing warranty claim flow for watch brands, served from SparrowOS into each Shopify store through the App Proxy.
 
 What was built:
-- Rebuilt almost from scratch on 33 sections of our own: the home page, the Karbon, Speciale and URBN pages, the blog, the watch FAQ, warranty claims and launch forms
-- Urban Canvas: place text, images and video at exact coordinates with parallax, in desktop, mobile and hero variants
-- Moved checkout from Shopflo to Shiprocket with our own buy buttons after the vendor's theme hid them
-- Diwali registration page posting to Google Sheets through Apps Script, with a consent line and a Meta registration event
-- Monthly EMI shown on product pages, worked out in Liquid from the payment gateway's rates
-- Warranty claim page wired to SparrowOS
+- Phone sign-in with a WhatsApp one-time code
+- Looks up the customer's Shopify order, then logs the claim to email and Google Sheets
+- Every request verified with Shopify's App Proxy HMAC
+
+Stack: Node.js, Fastify, Shopify App Proxy, WhatsApp API, Google Sheets API
+
+## Atlas 1.0
+
+URL: https://smithmankar.co.in/projects/atlas/
+
+A 2B model fine-tuned on Apple MLX, so SparrowOS understands plain English on each Mac.
+
+Case study:
+A small language model I fine-tuned so SparrowOS understands plain-English and Hinglish commands, running privately on each person's Mac.
+Role: Sole developer: benchmark, training data, fine-tuning, evaluation and the Mac integration. Period: September 2026.
+- 88.6%: correct on a frozen set of 297 held-out commands
+- ~50%: for the best of 34 open models before fine-tuning
+- 33 / 38: standup commands right, up from 12 with the previous model
+- ~330 ms: per command in testing on a Mac, with nothing sent to the cloud
+
+### The brief
+
+SparrowOS has 49 actions: create and move tasks, post in chat, log time, pull a brand's analytics, find a file, send mail and more. The team wanted to drive them by voice or a typed sentence, in English or Hinglish, without sending their work to a cloud model.
+So the model's job is deliberately narrow. It reads a request and returns which action to take plus the exact words that matter, like the task, the person or the date. Code does everything else: it resolves names, checks permissions, asks for confirmation, executes and keeps an undo.
+
+### What I did
+
+- Benchmarked 34 open models on calling these exact tools. The best managed about half, and models built specifically for function calling lost decisively, so fine-tuning was required, not optional.
+- Built a training set of about 3,500 labelled commands against the real tool catalogue, in English and Hinglish, and checked it for overlap with the test set.
+- Fine-tuned Qwen3.5 2B (4-bit) with LoRA on Apple MLX, then averaged checkpoints from within the run.
+- Measured it on a frozen 297-case test set that was read once, at the end.
+- Shipped it inside the SparrowOS Mac app behind Option+Space, with on-device dictation that refuses to fall back to the cloud.
+
+### How I did it
+
+- Benchmark before building. Every candidate got the same prompts and was scored on choosing the right tool and filling its arguments. Qwen3.5 and Gemma led at roughly 48 to 54 percent. Function-calling specialists (xLAM, Hammer, ToolACE) came last.
+- Train small, on the machine it runs on. A 2B model in 4-bit fits comfortably beside everything else on a work Mac. LoRA on Apple MLX kept training local; bigger experiments later ran on cloud GPUs. Averaging checkpoints within one run helped. Averaging across separate runs did not, because each run settles somewhere different, so that idea was dropped.
+- Make the number honest. I found that earlier averaged models had been picked using the same 297 cases they were then scored on, which inflated results by about 4 points. Selection moved to a separate 200-case validation set, and the test set is now read once, at the end. A power check showed 297 cases can only separate differences of about 5 points, so anything smaller is reported as not distinguishable.
+- Say no to things that looked good. A vote between three models added 1 point that wasn't statistically significant, at 3.5 times the latency. DoRA took 798 ms per command against LoRA's 330 ms. A later experiment that put the whole tool catalogue in the prompt scored 12.1 points lower and was not shipped. One corrupted run, where padding in the prompt leaked the length of the answer, was caught and quarantined. A corpus validator and 36 regression tests, each one a bug that really happened, now guard against repeats.
+- Ship it where people work. Atlas lives in the Mac app. Hold Option+Space in any app, speak or type, see what it will do, confirm. It is the first model in SparrowOS Intelligence, the family name for models trained in-house.
+Decision: the model names, code acts. The model never touches data. It returns an action name and quoted words, and the server decides whether the person may do that, asks once before a change and twice before anything client-visible or hard to undo, and can undo it. Decoding is held to a grammar generated from the action catalogue, so the model cannot name an action that does not exist. A wrong guess costs a confirmation tap, not a deleted task.
+Decision: private by default. Dictation runs with on-device recognition required, and the model runs on the Mac itself. Nothing a person says to SparrowOS leaves their machine to be understood.
+
+### What it changed
+
+Chart, Atlas accuracy on 297 held-out cases: about 50% before fine-tuning, 88.6% after.
+- 88.6%: on 297 held-out commands, against about 50% for the best model off the shelf
+- 33 / 38: standup commands right, against 12 for the model that had been shipping
+The team can run SparrowOS by voice or a sentence, in the way they actually talk, on their own machines. And the numbers quoted for it hold up: they come from a test set that was never used to make a choice.
+
+### Atlas 1.0
+
+AI & ML · Sage Sparrows · 2026 · In use
+URL: https://smithmankar.co.in/projects/atlas/
+
+The first model in SparrowOS Intelligence: a small model fine-tuned to turn plain-English requests into SparrowOS actions, running on each person's own Mac.
+
+What was built:
+- Benchmarked 34 open models on tool calling first; the best managed only about half, so fine-tuning was required
+- LoRA fine-tune of Qwen3.5-2B (4-bit) on Apple MLX, with checkpoint averaging
+- 88.6% on a frozen 297-case test set, with model selection done on a separate validation set so the number is honest
+- Caught and retracted an earlier 90.2% that had been selected on the test set itself
+- Later runs on Colab L4 GPUs, guarded by a corpus validator and a 36-test harness where every test is a bug that once happened
 
 Results:
-- Verte's monthly orders went from about 30 (Feb to May) to over 300 (Aug and Sep 2026) while we ran its stores and ads (Shopify)
-- About 150 Diwali sign-ups in the page's first three days, at roughly ₹15 of ad spend each
+- 88.6% on 297 held-out cases, against roughly half for the best model before fine-tuning
+- Standup commands: 33 of 38 right, up from 12 with the model that had been shipping
 
-Stack: Shopify, Liquid, JavaScript, three.js, Apps Script, Shiprocket Checkout
+Stack: Python, MLX, LoRA, Qwen3.5, Swift, Google Colab
+
+### Local LLM evaluation
+
+AI & ML · Personal · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/atlas/#local-llm-eval
+
+A harness that measures what moving coding and analytics work to a local model on a 24 GB MacBook would really cost in quality.
+
+What was built:
+- Speed bench, a blind-graded set of 12 weighted tasks built from real traps, and a multi-file editing task scored by whether the patch applies and the tests pass
+- Finding: roughly 40 to 49% of frontier multi-file ability is the realistic ceiling; vendor benchmark claims ran about 2.5x high
+- Measured rules for this hardware: mixture-of-experts models only, MLX over GGUF, and the config traps that quietly degrade output
+
+Stack: Python, MLX, Ollama
+
+## Verte
+
+URL: https://smithmankar.co.in/projects/verte/
+
+Two stores rebuilt and run end to end, launches in 3D, and Meta ads judged on Shopify orders.
 
 Case study:
 An Indian watch brand's whole digital side, rebuilt almost from scratch and run as one system: two storefronts, every page and launch, the 3D and the modelling, the checkout, the tracking and the Meta ads. Monthly orders went from about 30 to over 300.
@@ -380,14 +341,61 @@ Decision: Shopify is the source of truth. Every result here is a Shopify order. 
 
 ### What it changed
 
-Verte orders a month (Shopify): Feb to May ~31, June 175, July 275, August 309, September 307.
-February to May is the average of 126 orders between 27 January and 31 May 2026. Counts include both stores.
+Chart, Verte orders a month (Shopify): February to May about 31 a month on average, then Jun 175, Jul 275, Aug 309, Sep 307.
+Chart, Google search on the India store: 16% of sessions, 41% of purchases.
+Chart, payments: 63% of shoppers who chose a payment method paid on normal days, 30% on the days the payment step failed; payment completion 61% in Chrome against 31% in Instagram's and Facebook's in-app browsers.
 Verte now runs on a store rebuilt around its launches, sells worldwide in its own currency through a checkout it owns, shows its watches in live 3D, and judges its ads on real orders. When something breaks, a monitor says so within 15 minutes instead of a slow week saying it later.
 
-## Project Karbon and URBN launch pages
+### Verte India storefront
 
 Shopify storefronts · Verte · 2026 · Live
-URL: https://smithmankar.co.in/projects/verte-launch-pages/
+URL: https://smithmankar.co.in/projects/verte/#verte-india
+Live: https://verte.co.in
+
+Verte's Indian store, rebuilt almost from scratch and run end to end: every page on a freeform layout system, the Project Karbon and URBN launches, 3D, checkout and payments, SEO and the Meta ads.
+
+What was built:
+- Rebuilt almost from scratch on 33 sections of our own: the home page, the Karbon, Speciale and URBN pages, the blog, the watch FAQ, warranty claims and launch forms
+- Urban Canvas: place text, images and video at exact coordinates with parallax, in desktop, mobile and hero variants
+- Moved checkout from Shopflo to Shiprocket with our own buy buttons after the vendor's theme hid them
+- Diwali registration page posting to Google Sheets through Apps Script, with a consent line and a Meta registration event
+- Monthly EMI shown on product pages, worked out in Liquid from the payment gateway's rates
+- Warranty claim page wired to SparrowOS
+
+Results:
+- Verte's monthly orders went from about 30 (Feb to May) to over 300 (Aug and Sep 2026) while we ran its stores and ads (Shopify)
+- About 150 Diwali sign-ups in the page's first three days, at roughly ₹15 of ad spend each
+
+Stack: Shopify, Liquid, JavaScript, three.js, Apps Script, Shiprocket Checkout
+
+### Verte global storefront
+
+Client apps & platforms · Verte · 2026 · Live
+URL: https://smithmankar.co.in/projects/verte/#verte-web
+Live: https://vertewatches.com
+
+vertewatches.com: a headless Next.js port of Verte's Shopify theme that sells worldwide in USD through its own Stripe checkout.
+
+What was built:
+- The theme's JSON templates are imported and rendered in React, so pages keep the same sections and settings as the Shopify store
+- Stripe checkout with orders created back in Shopify, and USD prices read from variant metafields
+- Geo split that sends Indian visitors to verte.co.in while keeping both sites indexable
+- SEO pass: sitemap, robots, Product and Organization JSON-LD with ratings and shipping policy, hreflang and H1s
+- Fixed the layout shift that was failing Core Web Vitals (CLS 0.52 on phones) by measuring every element with and without media
+- Review stars and a region-aware payment and pay-later line on every watch page
+- Host allowlist, Cloudflare WAF and authenticated origin pulls against a live reverse-proxy clone of the site
+- Fixed a thank-you page that reported unpaid checkouts to Meta as purchases
+- About 43,000 lines of TypeScript
+
+Results:
+- 96 orders through its own Stripe checkout from launch on 19 May to 23 Oct 2026 (Shopify count, team orders included)
+
+Stack: Next.js 16, React 19, TypeScript, Tailwind CSS, Stripe, Shopify Storefront API, Zustand, Cloudflare, PM2
+
+### Project Karbon and URBN launch pages
+
+Shopify storefronts · Verte · 2026 · Live
+URL: https://smithmankar.co.in/projects/verte/#verte-launch-pages
 Live: https://verte.co.in/products/karbon
 
 The bespoke launch pages for Verte's Project Karbon, Karbon Speciale and URBN watches, built end to end on the Shopify store and ported to the global storefront.
@@ -400,23 +408,222 @@ What was built:
 
 Stack: Shopify, Liquid, JavaScript, Next.js, React
 
-## Alexandre Christie storefront
+### Project Karbon 3D viewer
 
-Shopify storefronts · Alexandre Christie · 2026 · Live
-URL: https://smithmankar.co.in/projects/alexandre-christie/
-Live: https://alexandrechristie.in
+3D & CAD · Verte · 2026 · Built
+URL: https://smithmankar.co.in/projects/verte/#karbon-3d
 
-Alexandre Christie's Indian store, rebuilt almost from scratch and run end to end: a new home page, every product page, a store locator with maps, launch pages, tracking, SEO and the Meta ads.
+A real-time 3D Karbon for Verte's product pages, with a working movement behind the exhibition caseback and hands that tell the viewer's own time.
 
 What was built:
-- Rebuilt almost from scratch, with the old store's basic code and designs thrown out; the new store went live on 8 June 2026
-- Home page designed at 1920 pixels and scaled as one piece: free-canvas hero, curtain slideshow, editions carousel, mosaic gallery and a reviews carousel fed from Judge.me metafields
-- Every product page built by hand: colourways on one page with their own photos, specs and names, plus templates for single watches, straps, winders and accessories
-- Store locator with maps: 143 stores on OpenStreetMap, searchable by pincode, city or your location, with directions to each
-- Warranty banner with an endless watch strip, and an airport locator where a plane takes off through fog and lands on the next airport's map
-- SEO across 800+ product pages, GA4 and Meta custom pixels, and the Meta ads
+- The second hand steps 8 times a second, matching the Miyota 9015's 28,800 vph, with every hand checked against seven clock times
+- Balance wheel oscillates at exactly 4 Hz; the rotor has inertia and is spun by dragging, as on a wrist
+- Gears turn at speeds inverse to their radius, neighbours counter-rotating, and the hairspring coils instead of spinning
+- Blender prep: a fused 113,000-vertex fittings mesh split into 93 parts, gears named by size and the missing balance wheel built
+- Materials made physically valid (the crystal had been an opaque metal), and the washed-out look traced to an HDR used as the backdrop
+- Section-scoped three.js viewer, about 1,860 lines, with a fisheye sheet of review cards around the watch
 
-Stack: Shopify, Liquid, JavaScript, Leaflet, Python, Apps Script
+Stack: three.js, Blender, glTF, Draco, gltf-transform, Shopify
+
+### Verte Titanium 38
+
+3D & CAD · Verte · 2026 · In progress
+URL: https://smithmankar.co.in/projects/verte/#verte-38
+
+A new 38 mm titanium watch for Verte, taken from brief to factory CAD: dial directions, case styles, finishes and straps, decided one step at a time.
+
+What was built:
+- Design brief from two reference watches: what to take, what to leave, and why
+- Factory CAD written in Python: a STEP assembly of six named parts plus STL files for 3D-printed mock-ups
+- 38 mm across, 44.7 mm lug to lug and 9.2 mm thick, sized around a Ronda quartz movement
+- Three dial directions (numerals, edge, 24-hour GMT), a 20-finish dial library, case styles and straps, over eight rounds
+- A one-file offline three.js configurator, with each round's model compressed from up to 111 MB to under 10 MB
+- Movement research across Ronda's range for height, battery life and cost
+
+Stack: Blender, Python, build123d, three.js, esbuild, glTF
+
+### Scroll-driven 3D stage
+
+3D & CAD · Verte · 2026 · Built
+URL: https://smithmankar.co.in/projects/verte/#verte-3d-stage
+
+A fixed full-screen three.js canvas whose scenes blend as you scroll, written for the Shopify theme and ported to React for the global store.
+
+What was built:
+- Scene-type registry: a new scene is one class with build, animate, camera and environment
+- Each Shopify section declares its scene and config, so merchants arrange 3D moments in the theme editor
+
+Stack: three.js, JavaScript, React, Liquid
+
+### Verte profit analytics
+
+Client apps & platforms · Verte · 2026 · Live
+URL: https://smithmankar.co.in/projects/verte/#verte-profit
+
+A single-purpose profit app for Verte, because revenue minus product cost leaves out ad spend, shipping, gateway fees, returns and packaging.
+
+What was built:
+- Every cost carries its provenance (measured, rate card, assumed or unknown) and no cost is ever silently zero
+- Every figure states its coverage, so the app was useful on day one and gets more accurate as estimates are replaced
+- Checkout health alert: a Playwright test checkout every 15 minutes, an email alert and a one-click button to pause the India ads, added after the payment step silently failed for hours while the vendor's status page showed 100% uptime
+- Built and verified against live data in about four days
+
+Results:
+- Live, and the checkout alert has watched the India checkout since 8 Oct 2026
+
+Stack: Next.js, React, PostgreSQL, Nodemailer, Playwright
+
+### Verte checkout extension
+
+Client apps & platforms · Verte · 2026 · Built
+URL: https://smithmankar.co.in/projects/verte/#verte-checkout-extension
+
+A Shopify Checkout UI extension that shows international shoppers an exact USD reference price, and a note on the INR charge, on Shopify's own checkout page.
+
+What was built:
+- Reads the price from a public SparrowOS endpoint backed by a cached Admin GraphQL catalog lookup
+- Renders nothing for Indian shoppers, where INR is already right
+
+Stack: Shopify Checkout UI Extensions, Shopify CLI, SparrowOS API
+
+### Project Karbon launch emails
+
+Websites & email · Verte · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/verte/#verte-emails
+
+HTML emails for the Karbon launch, with every heading rendered to a transparent image so the typography holds in Outlook, Gmail and Apple Mail.
+
+What was built:
+- Python renders each text block to PNG and uploads it to Cloudinary
+- Figma assets pulled and re-hosted, with one JSON map of every URL
+- Early-access and campaign emails with separate desktop and mobile art
+
+Stack: HTML email, Python, Pillow, Cloudinary, Figma
+
+### Verte jogging spot grade
+
+Video, photo & VFX · Verte · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/verte/#verte-jog-grade
+
+A soft morning-warmth colour grade for a Verte watch spot, designed as a custom LUT outside the editor so it could be iterated quickly.
+
+What was built:
+- 33-point .cube LUT built in Python: tone curve first, green desaturation after, warmth that fades to zero at white and in shadows
+- Skin and greens kept apart by hue, so skin never turns orange
+- The graphic end card protected by blending graded and ungraded renders frame by frame
+- Drove DaVinci Resolve's free edition through a Lua console bridge, since it has no scripting API
+- Resolve's render verified against the reference to within 2/255
+
+Stack: Python, NumPy, ffmpeg, DaVinci Resolve, Lua
+
+### Verte Global landed cost
+
+Meta ads & analytics · Verte · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/verte/#landed-cost
+
+A per-model margin model for shipping watches to the US, built against the US tariff schedule itself.
+
+What was built:
+- Chapter 91 component duty plus Section 301, checked against the 2026 USITC schedule
+- Absorbed duty versus customer-paid duty compared per model
+
+Stack: Python, HTML
+
+### Reddit ads review
+
+Meta ads & analytics · Verte · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/verte/#reddit-ads-review
+
+A three-week review of Verte's US Reddit campaign against Meta, ending in a rebuild plan with pass marks set in advance.
+
+What was built:
+- Click-through, engagement and cost per funnel step compared against Meta USA on the same pages
+- Pass marks for a 14-day rebuild, and where the budget goes if it misses
+
+Results:
+- Showed that three weeks of US Reddit spend had produced no sales, by Shopify and by Reddit's own count
+
+Stack: Reddit Ads API, GA4, Python
+
+### Proposals as code
+
+Client apps & platforms · Verte · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/verte/#proposal-docs
+
+Platform proposals, capability and cost roadmaps and a product readiness answer, each generated from a script so every figure has one source.
+
+What was built:
+- A build script holds every line and number; a checker re-adds the totals from the finished HTML
+- Prints to paginated A4 PDFs through headless Chrome
+- The checker fails the build on any dash character, so the house writing style can't slip
+
+Stack: Node.js, HTML, Headless Chrome
+
+## Sparrow Commerce
+
+URL: https://smithmankar.co.in/projects/sparrow-commerce/
+
+A commerce platform so Verte can leave Shopify: admin, storefront API, its own checkout and GST.
+
+Case study:
+A commerce platform built so Verte can leave Shopify: a merchant admin and a storefront API in one Next.js app, with its own checkout, GST invoicing and profit analytics.
+Role: Sole developer: architecture, data model, admin, storefront API, payments and deployment. Period: May to October 2026.
+- ~25,000: lines of TypeScript across the admin and storefront API
+- 1 file: to move a storefront onto it, by design
+- 4: paid Shopify apps it replaces: profit, promotions, GST and reviews
+- 96: USD orders through vertewatches.com's own checkout, the first piece of the move
+
+### The brief
+
+Verte sells in India and worldwide, but Shopify can't take payment in anything except rupees for an Indian merchant, and the brand was paying for four separate apps to cover profit analytics, bundle promotions, GST compliance and reviews.
+The goal was a commerce platform Verte owns: its own admin, its own checkout in each market's currency, GST built in, and profit numbers it can trust, without stopping sales while the move happens.
+
+### What I built
+
+- A merchant admin for products, collections, inventory, price lists, subscriptions, orders, carts, customers, discounts, reviews, GST, analytics, reports, content, email and team.
+- A token-authenticated storefront API for catalog, search, cart, checkout, customer accounts, discounts, inventory, reviews, content and event tracking.
+- Stripe Checkout with webhooks that turn a completed payment into an order.
+- GST invoicing with GSTR-1 export, a promotions engine, a reviews module with moderation, and profit analytics.
+- A Shopify sync that imports the catalogue and orders, so the move happens on real data.
+- A Docker review stack (admin, a demo storefront, seeded Postgres and Caddy behind basic auth) so the client can click through everything safely before it goes live.
+
+### How I did it
+
+- May 2026: Prove the checkout first. The most urgent gap was charging in USD. While the platform was being built, the global store vertewatches.com went live on 19 May on its own Stripe checkout, with orders written back into Shopify. That proved the payment flow in production while sales carried on.
+- May and June 2026: Design for the swap. The storefront calls commerce through one file, so moving a store from Shopify to Sparrow Commerce changes that file and nothing else. The platform is one Next.js app on PostgreSQL with Drizzle, with the admin and the storefront API as its two surfaces.
+- June to August 2026: Build the admin the client actually uses. Every area of the admin was built against the apps it replaces, then the whole codebase was read end to end twice, in June and August, with the design, the reasoning and a setup runbook written down as it went.
+- October 2026: A readiness review, point by point. Measured against the go-live checklist: 11 of 13 areas are built, including checkout, pricing and profit analytics, which are already live. Four built areas (customers, reviews, products and discounts) are waiting to go live with the move, and 2 are still being finished. The global store moves first. India follows, on Indian payment gateways.
+Decision: keep selling while moving. Nothing switches off until its replacement has run in production. Orders kept flowing through Shopify while the new checkout proved itself, and each store moves on its own, with a one-change rollback.
+
+### Where it stands
+
+- 11 of 13: go-live areas built, with checkout, pricing and profit analytics already live
+- 4: built and waiting to go live with the move: customers, reviews, products and discounts
+- 2: areas still being built
+Chart, the go-live list: 11 of 13 areas done (4 of them waiting to go live), 2 being finished.
+When both stores have moved, Verte runs on a platform it owns, charges each market in its own currency, files GST from its own admin and drops four app subscriptions.
+
+### Sparrow Commerce
+
+Client apps & platforms · Verte · 2026 · In progress
+URL: https://smithmankar.co.in/projects/sparrow-commerce/
+
+A commerce backend and merchant admin built to take Verte off Shopify: one Next.js app with the admin dashboard and a token-authenticated storefront API.
+
+What was built:
+- Admin for products, collections, inventory, price lists, subscriptions, orders, carts, customers, discounts, reviews, GST, analytics, reports, content, email and team
+- Storefront API for catalog, search, cart, checkout, customer accounts, discounts and event ingestion
+- Stripe Checkout with webhooks; a storefront moves onto it by changing one file
+- Docker review stack (admin, demo storefront, seeded Postgres and Caddy with basic auth) so stakeholders can click through it safely
+- About 25,000 lines of TypeScript
+
+Stack: Next.js 16, React 19, TypeScript, PostgreSQL, Drizzle ORM, Stripe, Docker
+
+## Alexandre Christie
+
+URL: https://smithmankar.co.in/projects/alexandre-christie/
+
+The Indian store rebuilt almost from scratch: every product page, a map of its stores, launches in 3D.
 
 Case study:
 Alexandre Christie's Indian store, rebuilt almost from scratch and run end to end: a new home page, every product page, a store locator with maps, launch pages for Black Forge and Cosmic, live 3D, SEO across 800+ products and the Meta ads.
@@ -467,16 +674,35 @@ Decision: render it before calling it fixed. Theme changes are checked in a loca
 
 ### What it changed
 
+Chart, a map of India with Alexandre Christie's 143 stores, 7 of them at airports.
 - 143: stores on one searchable map, where 25 city sections had a search that only worked on the first
 - 54%: lighter home page on load, after video was made to wait until it scrolls into view
 - 800+: product pages that search engines can read in full, with Product structured data
 - 154: people registered for Cosmic before it went on sale
 Alexandre Christie now has a store that looks like the brand: every product on a page built for it, launches on pages of their own, a map that sends shoppers to the nearest of 143 stores, real reviews and videos, and product data search engines can read, on a theme the team can keep tuning from the editor.
 
-## Cosmic launch pages
+### Alexandre Christie storefront
 
 Shopify storefronts · Alexandre Christie · 2026 · Live
-URL: https://smithmankar.co.in/projects/ac-cosmic/
+URL: https://smithmankar.co.in/projects/alexandre-christie/
+Live: https://alexandrechristie.in
+
+Alexandre Christie's Indian store, rebuilt almost from scratch and run end to end: a new home page, every product page, a store locator with maps, launch pages, tracking, SEO and the Meta ads.
+
+What was built:
+- Rebuilt almost from scratch, with the old store's basic code and designs thrown out; the new store went live on 8 June 2026
+- Home page designed at 1920 pixels and scaled as one piece: free-canvas hero, curtain slideshow, editions carousel, mosaic gallery and a reviews carousel fed from Judge.me metafields
+- Every product page built by hand: colourways on one page with their own photos, specs and names, plus templates for single watches, straps, winders and accessories
+- Store locator with maps: 143 stores on OpenStreetMap, searchable by pincode, city or your location, with directions to each
+- Warranty banner with an endless watch strip, and an airport locator where a plane takes off through fog and lands on the next airport's map
+- SEO across 800+ product pages, GA4 and Meta custom pixels, and the Meta ads
+
+Stack: Shopify, Liquid, JavaScript, Leaflet, Python, Apps Script
+
+### Cosmic launch pages
+
+Shopify storefronts · Alexandre Christie · 2026 · Live
+URL: https://smithmankar.co.in/projects/alexandre-christie/#ac-cosmic
 Live: https://alexandrechristie.in/products/cosmic
 
 A pre-launch registration page and a bespoke, scroll-driven product page for Alexandre Christie's Cosmic watch, built from separate desktop and phone comps.
@@ -493,10 +719,10 @@ Results:
 
 Stack: Shopify, Liquid, JavaScript, three.js, Python
 
-## Black Forge product page
+### Black Forge product page
 
 Shopify storefronts · Alexandre Christie · 2026 · Live
-URL: https://smithmankar.co.in/projects/ac-black-forge/
+URL: https://smithmankar.co.in/projects/alexandre-christie/#ac-black-forge
 Live: https://alexandrechristie.in/products/9205mtr
 
 A scroll-choreographed product page for the Black Forge watch: hero, specs, reveal, materials and motion, with a fixed edition bar.
@@ -508,10 +734,10 @@ What was built:
 
 Stack: Shopify, Liquid, JavaScript, CSS
 
-## Reviews migration
+### Reviews migration
 
 Shopify storefronts · Alexandre Christie · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/ac-reviews-import/
+URL: https://smithmankar.co.in/projects/alexandre-christie/#ac-reviews-import
 
 Moved Alexandre Christie's customer reviews, photos and videos into Judge.me.
 
@@ -522,285 +748,10 @@ What was built:
 
 Stack: Python, Judge.me, Cloudinary
 
-## Helios storefront
-
-Shopify storefronts · Helios · 2026 · Retired
-URL: https://smithmankar.co.in/projects/helios/
-
-A Dawn fork for a wellness brand selling supplement patches. It had a strong sales record until the brand chose to stop selling online.
-
-What was built:
-- 18 custom sections, 24 custom blocks and more than 30 product templates
-- Bundle builder and horizontal video blocks
-- Shiprocket headless checkout as an alternate checkout for Indian shoppers
-
-Stack: Shopify, Liquid, JavaScript, Shiprocket
-
-## Wayo storefront
-
-Shopify storefronts · Wayo · 2026 · Retired
-URL: https://smithmankar.co.in/projects/wayo/
-
-A furniture store on Shopify's Origin theme: dimension sheets, a scroll-reveal hero, an interactive sofa-modes section and an About page built from Figma. The store is now offline.
-
-What was built:
-- Sofa modes section that shows each configuration of the product
-- Scroll-reveal hero and scroll-swap banner
-- WhatsApp support button and Shiprocket checkout
-
-Stack: Shopify, Liquid, Figma
-
-## Season Earth storefront
-
-Shopify storefronts · Season Earth · 2026 · Live
-URL: https://smithmankar.co.in/projects/season-earth/
-Live: https://seasonearth.in
-
-Season Earth's store, built and run end to end for a made-to-order linen menswear label: a customised Dawn theme with its own product page, size chart, coupon banner and full-set offers.
-
-What was built:
-- Size chart modal and delivery estimate in the buy box
-- Coupon ticket with a uses-remaining counter
-- Shop-the-full-set offer and paired products
-
-Results:
-- 29 orders in September and October 2026, against 15 in July and August (Shopify)
-
-Stack: Shopify, Liquid, Shiprocket
-
-## Somedays store setup
-
-Shopify storefronts · Somedays · 2026 · Built
-URL: https://smithmankar.co.in/projects/somedays/
-
-A food brand's Shopify catalogue built as code: products, metafields and collections created through the Admin GraphQL API from one JSON source of truth.
-
-What was built:
-- 13 products in 5 collections, created and verified on the prep store on 21 Oct 2026
-- Subtitle and ingredients stored as metafields the theme can show
-- A read-only store check before every run, so the same files can rebuild the real store later
-
-Stack: Python, Shopify Admin GraphQL, Shopify CLI
-
-## Sage Sparrows website
-
-Websites & email · Sage Sparrows · 2026 · Live
-URL: https://smithmankar.co.in/projects/sage-site/
-Live: https://sagesparrows.in
-
-The agency's own site: service modules, case studies for Verte, Muskurahat and THS, a works showcase and a demo booking form.
-
-What was built:
-- Multi-page React app with a site-wide demo form
-- Build-time image processing with sharp
-- Privacy and terms pages tied to the company mail domain
-
-Stack: React 19, Vite, Tailwind CSS, React Router, sharp
-
-## Beyond Horizon
-
-Websites & email · THS Projects · 2026 · Live
-URL: https://smithmankar.co.in/projects/beyond-horizon/
-Live: https://beyondhorizon.thsprojects.com
-
-A one-page scroll story for a real estate development, with a lead form and a side tab that is always in reach.
-
-What was built:
-- Lead capture through a site-wide form popup
-- A Playwright script that scrolls the live site smoothly and records it as video for social reels
-
-Results:
-- 91 leads from its Meta campaign, at about ₹126 each
-
-Stack: React 19, TypeScript, Vite, Tailwind CSS, Motion, Playwright
-
-## Ramee BlueNeck
-
-Websites & email · THS Projects · 2026 · Live
-URL: https://smithmankar.co.in/projects/bn-site/
-Live: https://blueneck.thsprojects.com
-
-An 11-section scroll-story site for a hospitality asset investment in Karjat, built from a mobile-first design deck.
-
-What was built:
-- Static React site with a global lead form
-- Custom fonts and responsive image handling
-
-Stack: React 19, TypeScript, Vite, Tailwind CSS
-
-## THS legal pages
-
-Websites & email · THS Projects · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/ths-sites/
-
-Privacy policy and terms of service sites for a real estate developer's lead campaigns.
-
-What was built:
-- Two small React sites, routed so each policy has its own URL
-
-Stack: React 19, TypeScript, Vite, Tailwind CSS, React Router
-
-## WatchQube
-
-Websites & email · WatchQube · 2026 · Live
-URL: https://smithmankar.co.in/projects/watchqube/
-Live: https://watchqube.com
-
-A marketing site built from Figma with no breakpoints: every size interpolates linearly between the 402 px and 1920 px artboards, so both reproduce exactly.
-
-What was built:
-- One clamp() formula for every size, declared once
-- Layout reflows only where the two artboards genuinely disagree
-- Images exported from Figma and served through next/image
-
-Stack: Next.js 15, React 19, TypeScript, Tailwind CSS, Figma
-
-## Abundantia Entertainment
-
-Websites & email · Abundantia Entertainment · 2026 · Live
-URL: https://smithmankar.co.in/projects/abundantia/
-Live: https://www.abundantiaentertainment.com
-
-Content updates to a film production company's site: the year-by-year movie timeline, originals, trending and contact pages.
-
-What was built:
-- Worked inside a 13-page jQuery and Bootstrap site with no build step
-- Deployed on Firebase Hosting
-
-Stack: HTML, jQuery, Bootstrap, PHP, Firebase Hosting
-
-## Project Karbon launch emails
-
-Websites & email · Verte · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/verte-emails/
-
-HTML emails for the Karbon launch, with every heading rendered to a transparent image so the typography holds in Outlook, Gmail and Apple Mail.
-
-What was built:
-- Python renders each text block to PNG and uploads it to Cloudinary
-- Figma assets pulled and re-hosted, with one JSON map of every URL
-- Early-access and campaign emails with separate desktop and mobile art
-
-Stack: HTML email, Python, Pillow, Cloudinary, Figma
-
-## Atlas 1.0
-
-AI & ML · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/atlas/
-
-The first model in SparrowOS Intelligence: a small model fine-tuned to turn plain-English requests into SparrowOS actions, running on each person's own Mac.
-
-What was built:
-- Benchmarked 34 open models on tool calling first; the best managed only about half, so fine-tuning was required
-- LoRA fine-tune of Qwen3.5-2B (4-bit) on Apple MLX, with checkpoint averaging
-- 88.6% on a frozen 297-case test set, with model selection done on a separate validation set so the number is honest
-- Caught and retracted an earlier 90.2% that had been selected on the test set itself
-- Later runs on Colab L4 GPUs, guarded by a corpus validator and a 36-test harness where every test is a bug that once happened
-
-Results:
-- 88.6% on 297 held-out cases, against roughly half for the best model before fine-tuning
-- Standup commands: 33 of 38 right, up from 12 with the model that had been shipping
-
-Stack: Python, MLX, LoRA, Qwen3.5, Swift, Google Colab
-
-Case study:
-A small language model I fine-tuned so SparrowOS understands plain-English and Hinglish commands, running privately on each person's Mac.
-Role: Sole developer: benchmark, training data, fine-tuning, evaluation and the Mac integration. Period: September 2026.
-- 88.6%: correct on a frozen set of 297 held-out commands
-- ~50%: for the best of 34 open models before fine-tuning
-- 33 / 38: standup commands right, up from 12 with the previous model
-- ~330 ms: per command in testing on a Mac, with nothing sent to the cloud
-
-### The brief
-
-SparrowOS has 49 actions: create and move tasks, post in chat, log time, pull a brand's analytics, find a file, send mail and more. The team wanted to drive them by voice or a typed sentence, in English or Hinglish, without sending their work to a cloud model.
-So the model's job is deliberately narrow. It reads a request and returns which action to take plus the exact words that matter, like the task, the person or the date. Code does everything else: it resolves names, checks permissions, asks for confirmation, executes and keeps an undo.
-
-### What I did
-
-- Benchmarked 34 open models on calling these exact tools. The best managed about half, and models built specifically for function calling lost decisively, so fine-tuning was required, not optional.
-- Built a training set of about 3,500 labelled commands against the real tool catalogue, in English and Hinglish, and checked it for overlap with the test set.
-- Fine-tuned Qwen3.5 2B (4-bit) with LoRA on Apple MLX, then averaged checkpoints from within the run.
-- Measured it on a frozen 297-case test set that was read once, at the end.
-- Shipped it inside the SparrowOS Mac app behind Option+Space, with on-device dictation that refuses to fall back to the cloud.
-
-### How I did it
-
-- Benchmark before building. Every candidate got the same prompts and was scored on choosing the right tool and filling its arguments. Qwen3.5 and Gemma led at roughly 48 to 54 percent. Function-calling specialists (xLAM, Hammer, ToolACE) came last.
-- Train small, on the machine it runs on. A 2B model in 4-bit fits comfortably beside everything else on a work Mac. LoRA on Apple MLX kept training local; bigger experiments later ran on cloud GPUs. Averaging checkpoints within one run helped. Averaging across separate runs did not, because each run settles somewhere different, so that idea was dropped.
-- Make the number honest. I found that earlier averaged models had been picked using the same 297 cases they were then scored on, which inflated results by about 4 points. Selection moved to a separate 200-case validation set, and the test set is now read once, at the end. A power check showed 297 cases can only separate differences of about 5 points, so anything smaller is reported as not distinguishable.
-- Say no to things that looked good. A vote between three models added 1 point that wasn't statistically significant, at 3.5 times the latency. DoRA took 798 ms per command against LoRA's 330 ms. A later experiment that put the whole tool catalogue in the prompt scored 12.1 points lower and was not shipped. One corrupted run, where padding in the prompt leaked the length of the answer, was caught and quarantined. A corpus validator and 36 regression tests, each one a bug that really happened, now guard against repeats.
-- Ship it where people work. Atlas lives in the Mac app. Hold Option+Space in any app, speak or type, see what it will do, confirm. It is the first model in SparrowOS Intelligence, the family name for models trained in-house.
-Decision: the model names, code acts. The model never touches data. It returns an action name and quoted words, and the server decides whether the person may do that, asks once before a change and twice before anything client-visible or hard to undo, and can undo it. Decoding is held to a grammar generated from the action catalogue, so the model cannot name an action that does not exist. A wrong guess costs a confirmation tap, not a deleted task.
-Decision: private by default. Dictation runs with on-device recognition required, and the model runs on the Mac itself. Nothing a person says to SparrowOS leaves their machine to be understood.
-
-### What it changed
-
-- 88.6%: on 297 held-out commands, against about 50% for the best model off the shelf
-- 33 / 38: standup commands right, against 12 for the model that had been shipping
-The team can run SparrowOS by voice or a sentence, in the way they actually talk, on their own machines. And the numbers quoted for it hold up: they come from a test set that was never used to make a choice.
-
-## AI product shoot pipeline
-
-AI & ML · Sage Sparrows clients · 2026 · In use
-URL: https://smithmankar.co.in/projects/ai-product-shoot/
-
-A Python suite that takes a product from raw photos to a live Shopify listing: AI model shots, AI descriptions, upscaling, resizing and upload.
-
-What was built:
-- Gemini (Nano Banana Pro) generates six lifestyle variations per product from one model photo and one product photo
-- Gemini writes SEO titles and HTML descriptions from the raw images
-- 4x upscaling locally with SwinIR and GFPGAN face restoration, or through the Topaz API
-- Resizes to 3:4, compresses to a target size and uploads through the Shopify Admin API, all from one interactive menu
-
-Stack: Python, Gemini API, Pillow, PyTorch, OpenCV, Shopify Admin API
-
-## Local LLM evaluation
-
-AI & ML · Personal · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/local-llm-eval/
-
-A harness that measures what moving coding and analytics work to a local model on a 24 GB MacBook would really cost in quality.
-
-What was built:
-- Speed bench, a blind-graded set of 12 weighted tasks built from real traps, and a multi-file editing task scored by whether the patch applies and the tests pass
-- Finding: roughly 40 to 49% of frontier multi-file ability is the realistic ceiling; vendor benchmark claims ran about 2.5x high
-- Measured rules for this hardware: mixture-of-experts models only, MLX over GGUF, and the config traps that quietly degrade output
-
-Stack: Python, MLX, Ollama
-
-## Novel knowledge graph
-
-AI & ML · Personal · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/booktheory/
-
-An LLM extraction pipeline that read all 1,431 chapters of a web novel and built a queryable record of who knows what, and when.
-
-What was built:
-- 45,549 facts, 7,304 relationships and 1,912 aliases resolved to 4,386 distinct entities
-- Runs on a local Qwen3-14B through LM Studio, or a cloud model by config
-- Alias resolution folds a character's many names into one entity
-
-Stack: Python, LM Studio, Qwen3, OpenAI-compatible API
-
-## Hinglish transcription
-
-AI & ML · Sage Sparrows client · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/hinglish-transcription/
-
-Fully local transcription of Hindi and English interviews for testimonial reels: 24 minutes of audio in about 2.3 minutes on a MacBook.
-
-What was built:
-- A Whisper large-v3 fine-tune prompted for mixed output: Hindi in Devanagari, English in Latin script
-- Pause-aware chunking, with weak chunks re-decoded by beam search and compared
-- Word timings for cutting reels, and every cut read back to catch dropped or invented words
-
-Stack: Python, Transformers, Whisper, PyTorch
-
-## Watch cutouts
+### Watch cutouts
 
 AI & ML · Alexandre Christie · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/product-cutouts/
+URL: https://smithmankar.co.in/projects/alexandre-christie/#product-cutouts
 
 Background removal for watch packshots on white that handles what one-click tools get wrong: floor reflections, crown-guard gaps and polished highlights.
 
@@ -811,127 +762,55 @@ What was built:
 
 Stack: Python, PyTorch, BiRefNet
 
-## Employee attrition predictor
+### Cosmic crystals and moon
 
-AI & ML · College · 2025 · Delivered
-URL: https://smithmankar.co.in/projects/attrition-predictor/
+3D & CAD · Alexandre Christie · 2026 · Live
+URL: https://smithmankar.co.in/projects/alexandre-christie/#cosmic-3d
 
-Classification models that predict which employees will leave, trained on IBM's 35-attribute HR dataset.
-
-What was built:
-- Logistic Regression baseline: 84% precision
-- Decision Tree with GridSearchCV tuning
-- Feature analysis on 35 HR attributes
-- Confusion matrix and classification report
-
-Stack: Python, scikit-learn, Pandas, Jupyter
-
-## Top 250 movie dataset
-
-AI & ML · College · 2025 · Delivered
-URL: https://smithmankar.co.in/projects/movie-dataset/
-
-A dataset of IMDb's Top 250 films, scraped from the chart and enriched with OMDb metadata.
+Six crystal models and a 3D moon for the Cosmic launch, modelled in Blender and rendered live in the browser.
 
 What was built:
-- Chart scraped with BeautifulSoup, then each title fetched from the OMDb API
-- IMDb's weighted rating rebuilt from its public title and ratings files
+- Per-vertex thickness baked into the crystals so light attenuates through them like real glass
+- Moon built from NASA's lunar topography, cut down from a 299 MB source to web sizes
+- GLB optimisation recipe tuned so six named crystals are never fused into one mesh
+- Rendered only while on screen, one still frame under reduced motion, and an image fallback without WebGL2
 
-Stack: Python, BeautifulSoup, Pandas, OMDb API
+Stack: Blender, Python, three.js, gltf-transform, glTF
 
-## Analytics skills for Claude
+### Cosmic studio roto
 
-Claude skills & MCP · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/claude-analytics-skills/
+Video, photo & VFX · Alexandre Christie · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/alexandre-christie/#cosmic-roto
 
-Eight house skills that make Claude analyse like a careful analyst: context first, evidence before claims, bias checks before conclusions.
-
-What was built:
-- context-aware-analysis, verify-before-asserting, data-bias-checklist and analytics-laws-and-fallacies as guardrails
-- ad-performance-benchmark-diagnosis: read ads on the delivery funnel against a per-market benchmark instead of attributed ROAS
-- client-report-build: the house HTML report and one-page PDF
-- analyst-workflow and pipeline-rigor for reproducible, re-runnable analysis
-
-Stack: Claude Code, Agent Skills, Python, DuckDB
-
-## Analytics Toolkit
-
-Claude skills & MCP · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/analytics-toolkit/
-
-An on-demand library Claude searches instead of loading everything: the house skills, three outside skill libraries, a Python statistics stack and DuckDB.
+Isolated a model from a 4K, 60 fps studio take (1,216 frames) onto clean green, removing the director, light stands, cables and floor.
 
 What was built:
-- 133 skills indexed: 8 house skills, 33 analytics methodology, 18 Anthropic document skills and 74 Trail of Bits security skills
-- Evidence scripts that re-derive every figure in a report and assert it against the finished HTML
-- A QA gate that every report passes before it ships
+- BiRefNet HR matting in fp16 on Apple silicon, about 5x faster than full precision
+- A screen-colour key caps the matte; the director is removed with tracked masks
+- Flicker measured as pixel oscillations and cut by about 5x from the first version
+- Six versions against client feedback, with a hole scanner run on every render
 
-Stack: Claude Code, Python, DuckDB, MCP
+Stack: Python, PyTorch, BiRefNet, OpenCV, ffmpeg
 
-## SparrowOS MCP server
+### Alexandre Christie unboxing grade
 
-Claude skills & MCP · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/sparrowos-mcp/
+Video, photo & VFX · Alexandre Christie · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/alexandre-christie/#ac-unboxing-grade
 
-Lets Claude Code ask the live SparrowOS server analytics questions directly, instead of exporting a 3.5 GB database dump every time.
-
-What was built:
-- Read-only, and scoped by the same roles and brand access as the apps
-- Token kept in the macOS Keychain, expires after 90 days and can be revoked from Settings
-- Tools for metrics, fact rows, brand sources and full reports
-
-Stack: Node.js, MCP, Zod
-
-## Reddit Ads MCP server
-
-Claude skills & MCP · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/reddit-ads-mcp/
-
-Reads Reddit's own ad reporting from Claude Code so its claims can be checked against GA4 and Shopify.
+Three looks for a 60-shot unboxing montage, then the client's pick, with the dials brightened shot by shot.
 
 What was built:
-- Built after Reddit's dashboard counted every site purchase, from every channel, as its own
-- All 447 report fields and 20 breakdowns from Reddit's OpenAPI spec, with microcurrency and cents handled
-- One-time OAuth sign-in and a smoke test that drives the server end to end
+- SAM 2 video segmentation tracks each dial, so only the dial gets a softer black point
+- A per-cut lift so a dark section matches the accepted close-ups
+- Encode matched to the source, with the audio copied bit for bit
 
-Stack: Node.js, MCP, Zod, Reddit Ads API
+Stack: Python, SAM 2, PyTorch, ffmpeg
 
-## Brand performance reports
+## Ads & analytics
 
-Meta ads & analytics · Verte, Alexandre Christie, Season Earth, THS · 2026 · Ongoing
-URL: https://smithmankar.co.in/projects/brand-reports/
+URL: https://smithmankar.co.in/projects/ads-analytics/
 
-Recurring analytics reports for the agency's brands, built from Shopify, Meta, Google Ads, GA4 and Clarity, each shipped as an HTML report and a one-page PDF.
-
-What was built:
-- Shopify is the source of truth for orders; ad platforms are only used for attribution
-- Every figure re-derived by an evidence script and asserted against the report before delivery
-- Delivery-funnel metrics against per-market benchmarks instead of attributed ROAS
-- Investigations on demand: bot traffic, alternate-day order dips and an ad history with significance tests
-
-Results:
-- 36 reports delivered for Verte, Alexandre Christie, Season Earth, THS and prospects, each as HTML and a one-page PDF
-
-Stack: Python, DuckDB, Node.js, GA4 API, Meta Marketing API, Microsoft Clarity
-
-## Meta ads management
-
-Meta ads & analytics · Verte, Alexandre Christie, Season Earth, THS, HarboCharge · 2026 · Ongoing
-URL: https://smithmankar.co.in/projects/meta-ads/
-
-Running and auditing Meta ads for watch, apparel, real estate and EV brands: structure, launches, kill or keep reviews and budget proposals.
-
-What was built:
-- One ad set per product per market, location as a hard rule, and no verdict before days live and spend say there is one
-- Change-log audits that check our own edits before blaming the platform
-- Kill or keep reviews and outage diagnosis down to the single ad
-- Lead campaigns with website pixel events, and market tests staged as paused drafts for approval
-
-Results:
-- Verte: from about 30 orders a month (Feb to May) to over 300 (Aug and Sep 2026), with Shopify sales at 10 to 12 times Meta spend from June to August
-- THS: 1,603 Meta leads from April to October 2026 at about ₹183 each
-
-Stack: Meta Ads Manager, Meta Marketing API, GA4
+Meta ads, and reports that check their own numbers, for watch, apparel, real-estate and EV brands.
 
 Case study:
 Meta ads for watch, apparel, real estate and EV brands, and the measurement behind them: reports that check their own numbers, leads that reach sales in seconds, and audits that follow the money past the click.
@@ -974,25 +853,47 @@ Decision: check our own edits first. When results drop, the first suspect is our
 - 154: pre-launch registrations for Alexandre Christie's Cosmic watch
 Each brand's decisions now rest on numbers that reconcile with its own sales: Shopify orders for the stores, sheet rows and site visits for real estate. When the ads aren't the problem, the reports say so and point at what is.
 
-## AdPilot
+### Meta ads management
 
-Meta ads & analytics · Sage Sparrows · 2026 · Built
-URL: https://smithmankar.co.in/projects/adpilot/
+Meta ads & analytics · Verte, Alexandre Christie, Season Earth, THS, HarboCharge · 2026 · Ongoing
+URL: https://smithmankar.co.in/projects/ads-analytics/#meta-ads
 
-A Claude-powered ad-ops assistant inside SparrowOS. The ad engine decides, a person confirms, and our code executes; Claude never fires anything itself.
+Running and auditing Meta ads for watch, apparel, real estate and EV brands: structure, launches, kill or keep reviews and budget proposals.
 
 What was built:
-- Creates campaigns, ad sets and ads from Google Drive assets, always paused for review, including carousel, dynamic, WhatsApp and partnership formats
-- 27 typed change proposals; deletes, objective changes and anything touching PII are refused outright
-- Confirmation is a backend event Claude cannot create
-- First real ad created live through it
+- One ad set per product per market, location as a hard rule, and no verdict before days live and spend say there is one
+- Change-log audits that check our own edits before blaming the platform
+- Kill or keep reviews and outage diagnosis down to the single ad
+- Lead campaigns with website pixel events, and market tests staged as paused drafts for approval
 
-Stack: Claude API, Meta Graph API, Node.js, Google Drive API
+Results:
+- Verte: from about 30 orders a month (Feb to May) to over 300 (Aug and Sep 2026), with Shopify sales at 10 to 12 times Meta spend from June to August
+- THS: 1,603 Meta leads from April to October 2026 at about ₹183 each
 
-## Customer audiences
+Stack: Meta Ads Manager, Meta Marketing API, GA4
+
+### Brand performance reports
+
+Meta ads & analytics · Verte, Alexandre Christie, Season Earth, THS · 2026 · Ongoing
+URL: https://smithmankar.co.in/projects/ads-analytics/#brand-reports
+
+Recurring analytics reports for the agency's brands, built from Shopify, Meta, Google Ads, GA4 and Clarity, each shipped as an HTML report and a one-page PDF.
+
+What was built:
+- Shopify is the source of truth for orders; ad platforms are only used for attribution
+- Every figure re-derived by an evidence script and asserted against the report before delivery
+- Delivery-funnel metrics against per-market benchmarks instead of attributed ROAS
+- Investigations on demand: bot traffic, alternate-day order dips and an ad history with significance tests
+
+Results:
+- 36 reports delivered for Verte, Alexandre Christie, Season Earth, THS and prospects, each as HTML and a one-page PDF
+
+Stack: Python, DuckDB, Node.js, GA4 API, Meta Marketing API, Microsoft Clarity
+
+### Customer audiences
 
 Meta ads & analytics · Verte, Alexandre Christie, Season Earth, THS · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/brand-audiences/
+URL: https://smithmankar.co.in/projects/ads-analytics/#brand-audiences
 
 Rebuilt the customer seed lists behind four brands' lookalike audiences after finding they were all effectively targeting one brand's buyers.
 
@@ -1004,10 +905,144 @@ What was built:
 
 Stack: Python, Meta Custom Audiences
 
-## Season Earth deep analysis
+### SEO for Verte and Alexandre Christie
+
+Meta ads & analytics · Verte, Alexandre Christie · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/ads-analytics/#seo-audits
+
+Search audits and fixes across three storefronts: what Google can crawl, what only JavaScript shows, and the structured data each page needs.
+
+What was built:
+- Search Console linked to GA4 for both Verte sites
+- Raw HTML fetched as Googlebot compared with the rendered page to find JavaScript-only content
+- Product JSON-LD, meta descriptions and H1s added without any visual change
+
+Stack: Search Console, GA4, Liquid, Next.js
+
+### Competitor research method
+
+Meta ads & analytics · Sage Sparrows · 2026 · In use
+URL: https://smithmankar.co.in/projects/ads-analytics/#competitor-research
+
+A repeatable, evidence-only way to size the competition: Meta's Ad Library for auction size and share of voice, and Google's Ads Transparency Center through its internal RPC.
+
+What was built:
+- Three query shapes: market size, the client's own share of voice, and whether a named rival advertises at all
+- Ad headlines used as evidence of prices, offers and cash on delivery
+- A positive control before any zero result is trusted
+
+Stack: Meta Ad Library API, Python
+
+### India Q4 ads landscape
+
+Meta ads & analytics · Sage Sparrows · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/ads-analytics/#q4-market-brief
+
+An internal brief on India's festive-season ad market: marketplace sale calendars, cost shifts and what they mean for our brands.
+
+What was built:
+- Every one of its 129 figures re-derived and asserted by an evidence script
+- Two QA rounds with the Analytics Toolkit before it went out
+
+Stack: Node.js, Python
+
+### HarboCharge
+
+Meta ads & analytics · HarboCharge · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/ads-analytics/#harbocharge
+
+A business analysis and a lead-generation setup for a startup that turns EV chargers into a revenue stream for property owners.
+
+What was built:
+- Business analysis and thesis document
+- Website pixel that tracks calculator use, form steps and leads
+- Website-leads campaign aimed at property owners and small businesses in Bangalore
+
+Stack: Meta Pixel, Meta Ads
+
+### Real estate lead audit
+
+Meta ads & analytics · THS Projects · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/ads-analytics/#ths-leads-audit
+
+Traced 90 days of Meta leads through to site visits for a real estate developer, campaign by campaign.
+
+What was built:
+- Cost per lead and per site visit for each campaign
+- Found an audience that still carried another brand's buyers
+- Recommended better qualifying questions and lead IDs in the visit log
+
+Stack: Meta Ads, Google Sheets, Python
+
+### Temple-town stays demand
+
+Meta ads & analytics · Pre-engagement research · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/ads-analytics/#ranjangaon-stays
+
+Search demand for stays near the Ranjangaon Mahaganpati temple, for a prospective stay operator, with the religious-tourism calendar behind it.
+
+What was built:
+- Google Trends and Keyword Planner pulls, prepared and checked by script
+- Year on year compared on complete seasons, which corrected an overstated decline
+- QA sign-off and an assumptions log before delivery
+
+Stack: Python, pytrends, Google Ads Keyword Planner, Node.js
+
+### Alternative investments search demand
+
+Meta ads & analytics · Neo (pre-engagement) · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/ads-analytics/#alternative-investments-demand
+
+A search demand study for alternative investment funds, PMS, private credit and GIFT City funds in India.
+
+What was built:
+- Parser that extracts Google Trends data from saved pages
+- Comparison across fund categories and regions
+
+Stack: Python, Google Trends
+
+### Mumbai property ads in the UAE
+
+Meta ads & analytics · Bombay Realty (pre-engagement) · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/ads-analytics/#uae-property-ads
+
+Research on advertising a Mumbai residential tower to buyers in the UAE across Meta and Google.
+
+What was built:
+- Counted competing developers' live ads in the UAE from the Meta Ad Library
+- Google Ads Transparency Center checked through its RPC, with a positive control first
+- Withheld costed forecasts on purpose, since the prices were not developer-confirmed
+
+Stack: Meta Ad Library API, Python, Node.js
+
+## More Shopify stores
+
+URL: https://smithmankar.co.in/projects/shopify-stores/
+
+Season Earth's linen menswear store and its analysis, plus Helios, Wayo and Somedays.
+
+### Season Earth storefront
+
+Shopify storefronts · Season Earth · 2026 · Live
+URL: https://smithmankar.co.in/projects/shopify-stores/#season-earth
+Live: https://seasonearth.in
+
+Season Earth's store, built and run end to end for a made-to-order linen menswear label: a customised Dawn theme with its own product page, size chart, coupon banner and full-set offers.
+
+What was built:
+- Size chart modal and delivery estimate in the buy box
+- Coupon ticket with a uses-remaining counter
+- Shop-the-full-set offer and paired products
+
+Results:
+- 29 orders in September and October 2026, against 15 in July and August (Shopify)
+
+Stack: Shopify, Liquid, Shiprocket
+
+### Season Earth deep analysis
 
 Meta ads & analytics · Season Earth · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/season-earth-analysis/
+URL: https://smithmankar.co.in/projects/shopify-stores/#season-earth-analysis
 
 Why a linen label's ads weren't turning into sales, rebuilt to a full audit standard after the first pass.
 
@@ -1019,284 +1054,10 @@ What was built:
 
 Stack: Python, DuckDB, Node.js, Meta Ad Library API
 
-## Reddit ads review
-
-Meta ads & analytics · Verte · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/reddit-ads-review/
-
-A three-week review of Verte's US Reddit campaign against Meta, ending in a rebuild plan with pass marks set in advance.
-
-What was built:
-- Click-through, engagement and cost per funnel step compared against Meta USA on the same pages
-- Pass marks for a 14-day rebuild, and where the budget goes if it misses
-
-Results:
-- Showed that three weeks of US Reddit spend had produced no sales, by Shopify and by Reddit's own count
-
-Stack: Reddit Ads API, GA4, Python
-
-## Competitor research method
-
-Meta ads & analytics · Sage Sparrows · 2026 · In use
-URL: https://smithmankar.co.in/projects/competitor-research/
-
-A repeatable, evidence-only way to size the competition: Meta's Ad Library for auction size and share of voice, and Google's Ads Transparency Center through its internal RPC.
-
-What was built:
-- Three query shapes: market size, the client's own share of voice, and whether a named rival advertises at all
-- Ad headlines used as evidence of prices, offers and cash on delivery
-- A positive control before any zero result is trusted
-
-Stack: Meta Ad Library API, Python
-
-## Temple-town stays demand
-
-Meta ads & analytics · Pre-engagement research · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/ranjangaon-stays/
-
-Search demand for stays near the Ranjangaon Mahaganpati temple, for a prospective stay operator, with the religious-tourism calendar behind it.
-
-What was built:
-- Google Trends and Keyword Planner pulls, prepared and checked by script
-- Year on year compared on complete seasons, which corrected an overstated decline
-- QA sign-off and an assumptions log before delivery
-
-Stack: Python, pytrends, Google Ads Keyword Planner, Node.js
-
-## Alternative investments search demand
-
-Meta ads & analytics · Neo (pre-engagement) · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/alternative-investments-demand/
-
-A search demand study for alternative investment funds, PMS, private credit and GIFT City funds in India.
-
-What was built:
-- Parser that extracts Google Trends data from saved pages
-- Comparison across fund categories and regions
-
-Stack: Python, Google Trends
-
-## Mumbai property ads in the UAE
-
-Meta ads & analytics · Bombay Realty (pre-engagement) · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/uae-property-ads/
-
-Research on advertising a Mumbai residential tower to buyers in the UAE across Meta and Google.
-
-What was built:
-- Counted competing developers' live ads in the UAE from the Meta Ad Library
-- Google Ads Transparency Center checked through its RPC, with a positive control first
-- Withheld costed forecasts on purpose, since the prices were not developer-confirmed
-
-Stack: Meta Ad Library API, Python, Node.js
-
-## India Q4 ads landscape
-
-Meta ads & analytics · Sage Sparrows · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/q4-market-brief/
-
-An internal brief on India's festive-season ad market: marketplace sale calendars, cost shifts and what they mean for our brands.
-
-What was built:
-- Every one of its 129 figures re-derived and asserted by an evidence script
-- Two QA rounds with the Analytics Toolkit before it went out
-
-Stack: Node.js, Python
-
-## SEO for Verte and Alexandre Christie
-
-Meta ads & analytics · Verte, Alexandre Christie · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/seo-audits/
-
-Search audits and fixes across three storefronts: what Google can crawl, what only JavaScript shows, and the structured data each page needs.
-
-What was built:
-- Search Console linked to GA4 for both Verte sites
-- Raw HTML fetched as Googlebot compared with the rendered page to find JavaScript-only content
-- Product JSON-LD, meta descriptions and H1s added without any visual change
-
-Stack: Search Console, GA4, Liquid, Next.js
-
-## Verte Global landed cost
-
-Meta ads & analytics · Verte · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/landed-cost/
-
-A per-model margin model for shipping watches to the US, built against the US tariff schedule itself.
-
-What was built:
-- Chapter 91 component duty plus Section 301, checked against the 2026 USITC schedule
-- Absorbed duty versus customer-paid duty compared per model
-
-Stack: Python, HTML
-
-## HarboCharge
-
-Meta ads & analytics · HarboCharge · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/harbocharge/
-
-A business analysis and a lead-generation setup for a startup that turns EV chargers into a revenue stream for property owners.
-
-What was built:
-- Business analysis and thesis document
-- Website pixel that tracks calculator use, form steps and leads
-- Website-leads campaign aimed at property owners and small businesses in Bangalore
-
-Stack: Meta Pixel, Meta Ads
-
-## Real estate lead audit
-
-Meta ads & analytics · THS Projects · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/ths-leads-audit/
-
-Traced 90 days of Meta leads through to site visits for a real estate developer, campaign by campaign.
-
-What was built:
-- Cost per lead and per site visit for each campaign
-- Found an audience that still carried another brand's buyers
-- Recommended better qualifying questions and lead IDs in the visit log
-
-Stack: Meta Ads, Google Sheets, Python
-
-## Project Karbon 3D viewer
-
-3D & CAD · Verte · 2026 · Built
-URL: https://smithmankar.co.in/projects/karbon-3d/
-
-A real-time 3D Karbon for Verte's product pages, with a working movement behind the exhibition caseback and hands that tell the viewer's own time.
-
-What was built:
-- The second hand steps 8 times a second, matching the Miyota 9015's 28,800 vph, with every hand checked against seven clock times
-- Balance wheel oscillates at exactly 4 Hz; the rotor has inertia and is spun by dragging, as on a wrist
-- Gears turn at speeds inverse to their radius, neighbours counter-rotating, and the hairspring coils instead of spinning
-- Blender prep: a fused 113,000-vertex fittings mesh split into 93 parts, gears named by size and the missing balance wheel built
-- Materials made physically valid (the crystal had been an opaque metal), and the washed-out look traced to an HDR used as the backdrop
-- Section-scoped three.js viewer, about 1,860 lines, with a fisheye sheet of review cards around the watch
-
-Stack: three.js, Blender, glTF, Draco, gltf-transform, Shopify
-
-## Scroll-driven 3D stage
-
-3D & CAD · Verte · 2026 · Built
-URL: https://smithmankar.co.in/projects/verte-3d-stage/
-
-A fixed full-screen three.js canvas whose scenes blend as you scroll, written for the Shopify theme and ported to React for the global store.
-
-What was built:
-- Scene-type registry: a new scene is one class with build, animate, camera and environment
-- Each Shopify section declares its scene and config, so merchants arrange 3D moments in the theme editor
-
-Stack: three.js, JavaScript, React, Liquid
-
-## Verte Titanium 38
-
-3D & CAD · Verte · 2026 · In progress
-URL: https://smithmankar.co.in/projects/verte-38/
-
-A new 38 mm titanium watch for Verte, taken from brief to factory CAD: dial directions, case styles, finishes and straps, decided one step at a time.
-
-What was built:
-- Design brief from two reference watches: what to take, what to leave, and why
-- Factory CAD written in Python: a STEP assembly of six named parts plus STL files for 3D-printed mock-ups
-- 38 mm across, 44.7 mm lug to lug and 9.2 mm thick, sized around a Ronda quartz movement
-- Three dial directions (numerals, edge, 24-hour GMT), a 20-finish dial library, case styles and straps, over eight rounds
-- A one-file offline three.js configurator, with each round's model compressed from up to 111 MB to under 10 MB
-- Movement research across Ronda's range for height, battery life and cost
-
-Stack: Blender, Python, build123d, three.js, esbuild, glTF
-
-## Cosmic crystals and moon
-
-3D & CAD · Alexandre Christie · 2026 · Live
-URL: https://smithmankar.co.in/projects/cosmic-3d/
-
-Six crystal models and a 3D moon for the Cosmic launch, modelled in Blender and rendered live in the browser.
-
-What was built:
-- Per-vertex thickness baked into the crystals so light attenuates through them like real glass
-- Moon built from NASA's lunar topography, cut down from a 299 MB source to web sizes
-- GLB optimisation recipe tuned so six named crystals are never fused into one mesh
-- Rendered only while on screen, one still frame under reduced motion, and an image fallback without WebGL2
-
-Stack: Blender, Python, three.js, gltf-transform, glTF
-
-## Family home design
-
-3D & CAD · Personal · 2026 · In progress
-URL: https://smithmankar.co.in/projects/house-design/
-
-A two-storey home with a terrace on a 30 x 50 ft plot, drafted floor by floor as code-generated plans and then modelled in Blender.
-
-What was built:
-- Plans generated as SVG by Python from coordinate tables in feet, then rendered and checked in headless Chrome
-- Each floor locked before work on the next began
-- Services designed in from the start: one extract shaft, a ceiling plenum for ducts and wiring, and an AC plan per room
-
-Stack: Python, SVG, Blender
-
-## Product photoshoots
-
-Video, photo & VFX · Sage Sparrows clients · 2026 · Ongoing
-URL: https://smithmankar.co.in/projects/product-shoots/
-
-Helping plan and run the in-person product shoots behind the brands' ads and product pages: where each shot sits, how the light falls, and how the shoot builds the brand.
-
-What was built:
-- Shoot planning and shot placement for product and model shots
-- Lighting checks on set
-- Brand building: keeping each shoot true to the brand it is for
-
-Stack: Photography, Lighting, Art direction, Brand
-
-## Verte jogging spot grade
-
-Video, photo & VFX · Verte · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/verte-jog-grade/
-
-A soft morning-warmth colour grade for a Verte watch spot, designed as a custom LUT outside the editor so it could be iterated quickly.
-
-What was built:
-- 33-point .cube LUT built in Python: tone curve first, green desaturation after, warmth that fades to zero at white and in shadows
-- Skin and greens kept apart by hue, so skin never turns orange
-- The graphic end card protected by blending graded and ungraded renders frame by frame
-- Drove DaVinci Resolve's free edition through a Lua console bridge, since it has no scripting API
-- Resolve's render verified against the reference to within 2/255
-
-Stack: Python, NumPy, ffmpeg, DaVinci Resolve, Lua
-
-## Alexandre Christie unboxing grade
-
-Video, photo & VFX · Alexandre Christie · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/ac-unboxing-grade/
-
-Three looks for a 60-shot unboxing montage, then the client's pick, with the dials brightened shot by shot.
-
-What was built:
-- SAM 2 video segmentation tracks each dial, so only the dial gets a softer black point
-- A per-cut lift so a dark section matches the accepted close-ups
-- Encode matched to the source, with the audio copied bit for bit
-
-Stack: Python, SAM 2, PyTorch, ffmpeg
-
-## Cosmic studio roto
-
-Video, photo & VFX · Alexandre Christie · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/cosmic-roto/
-
-Isolated a model from a 4K, 60 fps studio take (1,216 frames) onto clean green, removing the director, light stands, cables and floor.
-
-What was built:
-- BiRefNet HR matting in fp16 on Apple silicon, about 5x faster than full precision
-- A screen-colour key caps the matte; the director is removed with tracked masks
-- Flicker measured as pixel oscillations and cut by about 5x from the first version
-- Six versions against client feedback, with a hole scanner run on every render
-
-Stack: Python, PyTorch, BiRefNet, OpenCV, ffmpeg
-
-## Season Earth shot matching
+### Season Earth shot matching
 
 Video, photo & VFX · Season Earth · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/season-earth-light-match/
+URL: https://smithmankar.co.in/projects/shopify-stores/#season-earth-light-match
 
 Matched light across hidden cuts in a locked-off outfit-change spot when only the flattened export existed.
 
@@ -1307,10 +1068,244 @@ What was built:
 
 Stack: Python, NumPy, OpenCV, ffmpeg
 
-## Kinetic captions
+### Helios storefront
+
+Shopify storefronts · Helios · 2026 · Retired
+URL: https://smithmankar.co.in/projects/shopify-stores/#helios
+
+A Dawn fork for a wellness brand selling supplement patches. It had a strong sales record until the brand chose to stop selling online.
+
+What was built:
+- 18 custom sections, 24 custom blocks and more than 30 product templates
+- Bundle builder and horizontal video blocks
+- Shiprocket headless checkout as an alternate checkout for Indian shoppers
+
+Stack: Shopify, Liquid, JavaScript, Shiprocket
+
+### Wayo storefront
+
+Shopify storefronts · Wayo · 2026 · Retired
+URL: https://smithmankar.co.in/projects/shopify-stores/#wayo
+
+A furniture store on Shopify's Origin theme: dimension sheets, a scroll-reveal hero, an interactive sofa-modes section and an About page built from Figma. The store is now offline.
+
+What was built:
+- Sofa modes section that shows each configuration of the product
+- Scroll-reveal hero and scroll-swap banner
+- WhatsApp support button and Shiprocket checkout
+
+Stack: Shopify, Liquid, Figma
+
+### Somedays store setup
+
+Shopify storefronts · Somedays · 2026 · Built
+URL: https://smithmankar.co.in/projects/shopify-stores/#somedays
+
+A food brand's Shopify catalogue built as code: products, metafields and collections created through the Admin GraphQL API from one JSON source of truth.
+
+What was built:
+- 13 products in 5 collections, created and verified on the prep store on 21 Oct 2026
+- Subtitle and ingredients stored as metafields the theme can show
+- A read-only store check before every run, so the same files can rebuild the real store later
+
+Stack: Python, Shopify Admin GraphQL, Shopify CLI
+
+## Websites
+
+URL: https://smithmankar.co.in/projects/websites/
+
+The agency site, two real-estate launches, a Figma-exact marketing site and a film studio.
+
+### Sage Sparrows website
+
+Websites & email · Sage Sparrows · 2026 · Live
+URL: https://smithmankar.co.in/projects/websites/#sage-site
+Live: https://sagesparrows.in
+
+The agency's own site: service modules, case studies for Verte, Muskurahat and THS, a works showcase and a demo booking form.
+
+What was built:
+- Multi-page React app with a site-wide demo form
+- Build-time image processing with sharp
+- Privacy and terms pages tied to the company mail domain
+
+Stack: React 19, Vite, Tailwind CSS, React Router, sharp
+
+### Beyond Horizon
+
+Websites & email · THS Projects · 2026 · Live
+URL: https://smithmankar.co.in/projects/websites/#beyond-horizon
+Live: https://beyondhorizon.thsprojects.com
+
+A one-page scroll story for a real estate development, with a lead form and a side tab that is always in reach.
+
+What was built:
+- Lead capture through a site-wide form popup
+- A Playwright script that scrolls the live site smoothly and records it as video for social reels
+
+Results:
+- 91 leads from its Meta campaign, at about ₹126 each
+
+Stack: React 19, TypeScript, Vite, Tailwind CSS, Motion, Playwright
+
+### Ramee BlueNeck
+
+Websites & email · THS Projects · 2026 · Live
+URL: https://smithmankar.co.in/projects/websites/#bn-site
+Live: https://blueneck.thsprojects.com
+
+An 11-section scroll-story site for a hospitality asset investment in Karjat, built from a mobile-first design deck.
+
+What was built:
+- Static React site with a global lead form
+- Custom fonts and responsive image handling
+
+Stack: React 19, TypeScript, Vite, Tailwind CSS
+
+### THS legal pages
+
+Websites & email · THS Projects · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/websites/#ths-sites
+
+Privacy policy and terms of service sites for a real estate developer's lead campaigns.
+
+What was built:
+- Two small React sites, routed so each policy has its own URL
+
+Stack: React 19, TypeScript, Vite, Tailwind CSS, React Router
+
+### WatchQube
+
+Websites & email · WatchQube · 2026 · Live
+URL: https://smithmankar.co.in/projects/websites/#watchqube
+Live: https://watchqube.com
+
+A marketing site built from Figma with no breakpoints: every size interpolates linearly between the 402 px and 1920 px artboards, so both reproduce exactly.
+
+What was built:
+- One clamp() formula for every size, declared once
+- Layout reflows only where the two artboards genuinely disagree
+- Images exported from Figma and served through next/image
+
+Stack: Next.js 15, React 19, TypeScript, Tailwind CSS, Figma
+
+### Abundantia Entertainment
+
+Websites & email · Abundantia Entertainment · 2026 · Live
+URL: https://smithmankar.co.in/projects/websites/#abundantia
+Live: https://www.abundantiaentertainment.com
+
+Content updates to a film production company's site: the year-by-year movie timeline, originals, trending and contact pages.
+
+What was built:
+- Worked inside a 13-page jQuery and Bootstrap site with no build step
+- Deployed on Firebase Hosting
+
+Stack: HTML, jQuery, Bootstrap, PHP, Firebase Hosting
+
+## Claude & dev tools
+
+URL: https://smithmankar.co.in/projects/claude-tools/
+
+Analytics skills and MCP servers for Claude, and a Git extension the team works in.
+
+### Analytics skills for Claude
+
+Claude skills & MCP · Sage Sparrows · 2026 · In use
+URL: https://smithmankar.co.in/projects/claude-tools/#claude-analytics-skills
+
+Eight house skills that make Claude analyse like a careful analyst: context first, evidence before claims, bias checks before conclusions.
+
+What was built:
+- context-aware-analysis, verify-before-asserting, data-bias-checklist and analytics-laws-and-fallacies as guardrails
+- ad-performance-benchmark-diagnosis: read ads on the delivery funnel against a per-market benchmark instead of attributed ROAS
+- client-report-build: the house HTML report and one-page PDF
+- analyst-workflow and pipeline-rigor for reproducible, re-runnable analysis
+
+Stack: Claude Code, Agent Skills, Python, DuckDB
+
+### Analytics Toolkit
+
+Claude skills & MCP · Sage Sparrows · 2026 · In use
+URL: https://smithmankar.co.in/projects/claude-tools/#analytics-toolkit
+
+An on-demand library Claude searches instead of loading everything: the house skills, three outside skill libraries, a Python statistics stack and DuckDB.
+
+What was built:
+- 133 skills indexed: 8 house skills, 33 analytics methodology, 18 Anthropic document skills and 74 Trail of Bits security skills
+- Evidence scripts that re-derive every figure in a report and assert it against the finished HTML
+- A QA gate that every report passes before it ships
+
+Stack: Claude Code, Python, DuckDB, MCP
+
+### Reddit Ads MCP server
+
+Claude skills & MCP · Sage Sparrows · 2026 · In use
+URL: https://smithmankar.co.in/projects/claude-tools/#reddit-ads-mcp
+
+Reads Reddit's own ad reporting from Claude Code so its claims can be checked against GA4 and Shopify.
+
+What was built:
+- Built after Reddit's dashboard counted every site purchase, from every channel, as its own
+- All 447 report fields and 20 breakdowns from Reddit's OpenAPI spec, with microcurrency and cents handled
+- One-time OAuth sign-in and a smoke test that drives the server end to end
+
+Stack: Node.js, MCP, Zod, Reddit Ads API
+
+### Sparrow Git
+
+Platforms & internal tools · Sage Sparrows · 2026 · In use
+URL: https://smithmankar.co.in/projects/claude-tools/#sparrow-git
+
+A private VS Code extension that gives the team a visual Git workflow in the sidebar, so nobody has to fight the terminal.
+
+What was built:
+- Enforces team conventions: branch naming, commit prefixes and protected main
+- Smart Split, AI suggestions for commits, branches and PRs, and pull request review from the editor
+- Background branch health monitoring, with a lock that keeps pollers from colliding with the user's own git commands
+- Refuses commits in detached HEAD and on protected branches
+
+Stack: TypeScript, VS Code API, simple-git, GitHub CLI, esbuild
+
+## AI, video & media
+
+URL: https://smithmankar.co.in/projects/media/
+
+A photo-to-listing pipeline, local Hinglish transcription, beat-timed captions and product shoots.
+
+### AI product shoot pipeline
+
+AI & ML · Sage Sparrows clients · 2026 · In use
+URL: https://smithmankar.co.in/projects/media/#ai-product-shoot
+
+A Python suite that takes a product from raw photos to a live Shopify listing: AI model shots, AI descriptions, upscaling, resizing and upload.
+
+What was built:
+- Gemini (Nano Banana Pro) generates six lifestyle variations per product from one model photo and one product photo
+- Gemini writes SEO titles and HTML descriptions from the raw images
+- 4x upscaling locally with SwinIR and GFPGAN face restoration, or through the Topaz API
+- Resizes to 3:4, compresses to a target size and uploads through the Shopify Admin API, all from one interactive menu
+
+Stack: Python, Gemini API, Pillow, PyTorch, OpenCV, Shopify Admin API
+
+### Hinglish transcription
+
+AI & ML · Sage Sparrows client · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/media/#hinglish-transcription
+
+Fully local transcription of Hindi and English interviews for testimonial reels: 24 minutes of audio in about 2.3 minutes on a MacBook.
+
+What was built:
+- A Whisper large-v3 fine-tune prompted for mixed output: Hindi in Devanagari, English in Latin script
+- Pause-aware chunking, with weak chunks re-decoded by beam search and compared
+- Word timings for cutting reels, and every cut read back to catch dropped or invented words
+
+Stack: Python, Transformers, Whisper, PyTorch
+
+### Kinetic captions
 
 Video, photo & VFX · Sage Sparrows client · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/kinetic-captions/
+URL: https://smithmankar.co.in/projects/media/#kinetic-captions
 
 Word-timed captions for an explainer reel on how an automatic watch works, art-directed against the edit: pages snap to the music's beat grid and sit in the calmest band of each shot.
 
@@ -1322,10 +1317,24 @@ What was built:
 
 Stack: Python, whisper.cpp, libass, NumPy
 
-## EffectCraft contribution
+### Product photoshoots
+
+Video, photo & VFX · Sage Sparrows clients · 2026 · Ongoing
+URL: https://smithmankar.co.in/projects/media/#product-shoots
+
+Helping plan and run the in-person product shoots behind the brands' ads and product pages: where each shot sits, how the light falls, and how the shoot builds the brand.
+
+What was built:
+- Shoot planning and shot placement for product and model shots
+- Lighting checks on set
+- Brand building: keeping each shoot true to the brand it is for
+
+Stack: Photography, Lighting, Art direction, Brand
+
+### EffectCraft contribution
 
 Video, photo & VFX · Open source · 2026 · In progress
-URL: https://smithmankar.co.in/projects/effectcraft/
+URL: https://smithmankar.co.in/projects/media/#effectcraft
 
 A fix for ArtCraft's open-source After Effects rebuild in Rust: Key Cleaner's Reduce Chatter was a spatial blur, but After Effects defines it as temporal smoothing.
 
@@ -1336,7 +1345,13 @@ What was built:
 
 Stack: Rust
 
-## NEET-UG prep app
+## Personal & college
+
+URL: https://smithmankar.co.in/projects/personal/
+
+A NEET prep app, an iOS study companion, a work log, a home lab and a house design.
+
+### NEET-UG prep app
 
 Personal apps & home · Personal · 2026 · Built
 URL: https://smithmankar.co.in/projects/neet-prep/
@@ -1382,13 +1397,14 @@ A student preparing full time for NEET-UG 2027, with no coaching, needed one app
 - Pick the tutor by experiment. Four Claude models solved and explained the same 30 questions from a 2025 paper without seeing the key. Answers were checked against NTA's key automatically and the working was graded by hand, blind for three of the four. The finding that mattered: the right letter is not a valid explanation. One model got 29 of 30 right but only 26 with valid working. The winner got 29 of 30 on both. The whole test cost $1.73.
 - Write explanations once. Every explanation is written ahead of time and checked against the original question image, then shipped with the app. The live model only answers follow-up questions, which keeps the monthly bill under a $15 cap. The student's own feedback set the format: the formula or key NCERT fact first, then numbered working, then the trap to avoid.
 - Built for her tablet. Native Kotlin with Jetpack Compose and Room, landscape-first for a 10-inch tablet, with the scoring rules (marking, Section B's choose-ten rule, dropped questions) in a pure Kotlin module with tests.
+Chart, NEET tutor test of 30 questions (right answer, valid working): Opus 5.5 29, 29; Sonnet 5.5 29, 26; Fable 5.1 28, 28; Haiku 5.5 27, 27.
 Decision: explanations are content, not calls. Generating an explanation live for every question would cost money on every tap and could differ each time. Writing them once, checking each against the paper and shipping them made them free to read, reviewable and the same every time.
 
 ### Where it stands
 
 The tutor server is live and the app is on the student's tablet, with newer builds adding the NCERT reader, the lectures and practice navigation. Explanations are being written paper by paper, newest first, Physics first.
 
-## IITM Companion
+### IITM Companion
 
 Personal apps & home · Personal · 2026 · In use
 URL: https://smithmankar.co.in/projects/iitm-companion/
@@ -1440,10 +1456,10 @@ It had to work on a free Apple developer account, which rules out push notificat
 
 Study blocks start on time and the hours are real, not remembered. Each week's review reads actual numbers, and the plan adjusts to what is due next, on the phone and the server alike.
 
-## Minutes
+### Minutes
 
 Personal apps & home · Personal · 2026 · In use
-URL: https://smithmankar.co.in/projects/minutes/
+URL: https://smithmankar.co.in/projects/personal/#minutes
 
 A private work log for macOS: clock in and out, breaks, what you worked on, away time and git commits, exported as one HTML report.
 
@@ -1455,10 +1471,10 @@ What was built:
 
 Stack: Swift, SwiftUI, SQLCipher, XcodeGen
 
-## Home automation
+### Home automation
 
 Personal apps & home · Personal · 2026 · In use
-URL: https://smithmankar.co.in/projects/home-automation/
+URL: https://smithmankar.co.in/projects/personal/#home-automation
 
 Local smart-home control on a self-hosted Home Assistant, including an AC whose remote protocol I reverse-engineered.
 
@@ -1470,10 +1486,10 @@ What was built:
 
 Stack: Home Assistant, Python, YAML, Broadlink IR, Docker
 
-## Home server and domain
+### Home server and domain
 
 Personal apps & home · Personal · 2026 · In use
-URL: https://smithmankar.co.in/projects/home-server/
+URL: https://smithmankar.co.in/projects/personal/#home-server
 
 A Linux home server running my services in Docker, published on subdomains of my own domain through Cloudflare tunnels with nothing port-forwarded.
 
@@ -1484,10 +1500,24 @@ What was built:
 
 Stack: Linux, Docker, Cloudflare Tunnel, ufw, GitHub Pages
 
-## Satisfactory factory planner
+### Family home design
+
+3D & CAD · Personal · 2026 · In progress
+URL: https://smithmankar.co.in/projects/personal/#house-design
+
+A two-storey home with a terrace on a 30 x 50 ft plot, drafted floor by floor as code-generated plans and then modelled in Blender.
+
+What was built:
+- Plans generated as SVG by Python from coordinate tables in feet, then rendered and checked in headless Chrome
+- Each floor locked before work on the next began
+- Services designed in from the start: one extract shaft, a ceiling plenum for ducts and wiring, and an AC plan per room
+
+Stack: Python, SVG, Blender
+
+### Satisfactory factory planner
 
 Personal apps & home · Personal · 2026 · Built
-URL: https://smithmankar.co.in/projects/sf-architect/
+URL: https://smithmankar.co.in/projects/personal/#sf-architect
 
 A factory planner for the game Satisfactory that reads your save file, solves production with linear programming, and lays out the plan as a graph and on the map.
 
@@ -1498,10 +1528,58 @@ What was built:
 
 Stack: React, TypeScript, Vite, javascript-lp-solver, React Flow, Leaflet
 
-## ML lead rating
+### Novel knowledge graph
+
+AI & ML · Personal · 2026 · Delivered
+URL: https://smithmankar.co.in/projects/personal/#booktheory
+
+An LLM extraction pipeline that read all 1,431 chapters of a web novel and built a queryable record of who knows what, and when.
+
+What was built:
+- 45,549 facts, 7,304 relationships and 1,912 aliases resolved to 4,386 distinct entities
+- Runs on a local Qwen3-14B through LM Studio, or a cloud model by config
+- Alias resolution folds a character's many names into one entity
+
+Stack: Python, LM Studio, Qwen3, OpenAI-compatible API
+
+### Employee attrition predictor
+
+AI & ML · College · 2025 · Delivered
+URL: https://smithmankar.co.in/projects/personal/#attrition-predictor
+
+Classification models that predict which employees will leave, trained on IBM's 35-attribute HR dataset.
+
+What was built:
+- Logistic Regression baseline: 84% precision
+- Decision Tree with GridSearchCV tuning
+- Feature analysis on 35 HR attributes
+- Confusion matrix and classification report
+
+Stack: Python, scikit-learn, Pandas, Jupyter
+
+### Top 250 movie dataset
+
+AI & ML · College · 2025 · Delivered
+URL: https://smithmankar.co.in/projects/personal/#movie-dataset
+
+A dataset of IMDb's Top 250 films, scraped from the chart and enriched with OMDb metadata.
+
+What was built:
+- Chart scraped with BeautifulSoup, then each title fetched from the OMDb API
+- IMDb's weighted rating rebuilt from its public title and ratings files
+
+Stack: Python, BeautifulSoup, Pandas, OMDb API
+
+## Muskurahat & nonprofits
+
+URL: https://smithmankar.co.in/projects/muskurahat/
+
+Applicant rating, a fundraising bot and outreach automation for a nonprofit's internships.
+
+### ML lead rating
 
 Muskurahat & nonprofits · Muskurahat Foundation · 2025 · Delivered
-URL: https://smithmankar.co.in/projects/ml-lead-rating/
+URL: https://smithmankar.co.in/projects/muskurahat/#ml-lead-rating
 
 Rates internship applicant quality by embedding their free-text responses and comparing them against a labelled training set using cosine similarity.
 
@@ -1513,10 +1591,10 @@ What was built:
 
 Stack: Python, Ollama, DeepSeek, scikit-learn, Pandas
 
-## Fundraising leaderboard bot
+### Fundraising leaderboard bot
 
 Muskurahat & nonprofits · Muskurahat Foundation · 2025 · Delivered
-URL: https://smithmankar.co.in/projects/discord-leaderboard-bot/
+URL: https://smithmankar.co.in/projects/muskurahat/#discord-leaderboard-bot
 
 A Discord bot that runs the crowdfunding leaderboard for Muskurahat's fundraising interns from Google Sheets, giving out milestone roles that unlock perks as each intern's total grows.
 
@@ -1527,10 +1605,10 @@ What was built:
 
 Stack: Python, discord.py, gspread, Google Sheets API
 
-## WhatsApp outreach
+### WhatsApp outreach
 
 Muskurahat & nonprofits · Muskurahat Foundation · 2025 · Delivered
-URL: https://smithmankar.co.in/projects/whatsapp-automation/
+URL: https://smithmankar.co.in/projects/muskurahat/#whatsapp-automation
 
 Contact and template automation on WATI for the foundation's WhatsApp outreach.
 
@@ -1541,10 +1619,10 @@ What was built:
 
 Stack: Python, WATI API, Apps Script
 
-## Google Apps Script suite
+### Google Apps Script suite
 
 Muskurahat & nonprofits · Muskurahat Foundation · 2025 · Delivered
-URL: https://smithmankar.co.in/projects/apps-script-suite/
+URL: https://smithmankar.co.in/projects/muskurahat/#apps-script-suite
 
 Sheet automations for the internship team, run from buttons in the sheet: call logs, data updates, invite emails, ranks and contact saving.
 
@@ -1555,10 +1633,10 @@ What was built:
 
 Stack: Google Apps Script, Google Sheets, Gmail
 
-## Internshala outreach automation
+### Internshala outreach automation
 
 Muskurahat & nonprofits · Muskurahat Foundation · 2025 · Delivered
-URL: https://smithmankar.co.in/projects/internshala-outreach/
+URL: https://smithmankar.co.in/projects/muskurahat/#internshala-outreach
 
 Desktop automation that sends the foundation's internship invitation to shortlisted applicants on Internshala.
 
@@ -1568,10 +1646,10 @@ What was built:
 
 Stack: Python, PyAutoGUI, OpenCV
 
-## Fundraising internship SOP
+### Fundraising internship SOP
 
 Muskurahat & nonprofits · Muskurahat Foundation · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/fundraising-sop/
+URL: https://smithmankar.co.in/projects/muskurahat/#fundraising-sop
 
 The end-to-end operating procedure for a fundraising internship, drawn as FigJam diagrams: lead, consent, dashboard, orientation, weekly cycles and certificate.
 
@@ -1582,10 +1660,10 @@ What was built:
 
 Stack: FigJam, Figma MCP, Mermaid
 
-## CareGuru intern dashboard spec
+### CareGuru intern dashboard spec
 
 Muskurahat & nonprofits · CareGuru Foundation · 2026 · Delivered
-URL: https://smithmankar.co.in/projects/careguru-dashboard/
+URL: https://smithmankar.co.in/projects/muskurahat/#careguru-dashboard
 
 A master build reference for a fundraising-intern dashboard that pulls five source documents into one, showing every disagreement side by side instead of choosing for the team.
 

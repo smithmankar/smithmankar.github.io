@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- The SM monogram. Google Search shows the favicon beside results and wants a multiple of 48px. -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#08080a" />
     <!-- Google tag (gtag.js). It loads only on the live site, so local previews don't count as visits. -->
@@ -18,29 +21,55 @@
       gtag('js', new Date());
       gtag('config', 'G-PHP8HTEBHX');
     </script>
+    <!-- Meta Pixel, also live site only. It sends a PageView on every in-site navigation by itself. -->
+    <script>
+      if (/^(www\.)?smithmankar\.co\.in$/.test(location.hostname)) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1145105788200207');
+        fbq('track', 'PageView');
+      }
+    </script>
+    <!-- Microsoft Clarity: session recordings and heatmaps. Live site only, like the tags above. -->
+    <script>
+      if (/^(www\.)?smithmankar\.co\.in$/.test(location.hostname)) {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "z2ve82r1im");
+      }
+    </script>
     <!-- scripts/prerender.mjs replaces this block with each page's title, meta and schema.org data -->
     <title>Page not found | Smith Mankar</title>
-    <meta name="description" content="Smith Mankar is Head of Development &amp; Analytics at Sage Sparrows. 82 projects: operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work." />
+    <meta name="description" content="Smith Mankar is Head of Development &amp; Analytics at Sage Sparrows. Operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work." />
     <meta name="robots" content="noindex" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Smith Mankar" />
     <meta property="og:title" content="Page not found | Smith Mankar" />
-    <meta property="og:description" content="Smith Mankar is Head of Development &amp; Analytics at Sage Sparrows. 82 projects: operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work." />
+    <meta property="og:description" content="Smith Mankar is Head of Development &amp; Analytics at Sage Sparrows. Operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work." />
     <meta property="og:url" content="https://smithmankar.co.in/404/" />
     <meta property="og:image" content="https://smithmankar.co.in/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Page not found | Smith Mankar" />
-    <meta name="twitter:description" content="Smith Mankar is Head of Development &amp; Analytics at Sage Sparrows. 82 projects: operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work." />
+    <meta name="twitter:description" content="Smith Mankar is Head of Development &amp; Analytics at Sage Sparrows. Operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work." />
     <meta name="twitter:image" content="https://smithmankar.co.in/og.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <!-- Without JavaScript, entrance animations never run: show their content anyway. -->
     <noscript><style>[style*=opacity\:0],.rv{opacity:1!important;transform:none!important}</style></noscript>
-    <script type="module" crossorigin src="/assets/index-D8rVySrM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Cx-MO_75.css">
+    <script type="module" crossorigin src="/assets/index-DtESKxVm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-EifP5MTV.css">
   </head>
   <body class="bg-[#08080a]">
+    <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1145105788200207&ev=PageView&noscript=1" /></noscript>
     <div id="root"></div>
   </body>
 </html>
