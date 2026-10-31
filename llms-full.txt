@@ -335,7 +335,7 @@ We rebuilt the site almost from scratch. The old theme's basic code and designs 
 - 26 and 27 September 2026: Catch the numbers lying. Meta showed 12 global purchases over two days when Shopify had 3 orders. The thank-you page was firing a purchase for cancelled and declined redirect payments, and again on every reload. I fixed it the same day: the page now checks the payment's real status, fires once per order, and tells a customer whose payment failed exactly that.
 - Late September to October 2026: Explain the "alternate day" orders. Orders started dropping on some days. I checked Meta, GA4, Shopify, the checkout's own logs and Clarity: the ads and traffic were normal. On 5 of 14 days, the checkout provider's payment step stopped completing for hours. Shoppers who chose a payment method paid 30% of the time on those days against 63% on others, which cost 18 to 25 orders. The test-checkout monitor came out of this, along with a second checkout provider that uses our own buy buttons.
 - October 2026: Checkout and payments, made switchable. The India checkout moved from Shopflo to Shiprocket with our own buy buttons, then became a theme setting, so the provider can change without code. Pay-later and card EMI amounts are worked out in Liquid from each gateway's own rates and match the checkout on all 94 plans checked. Instagram's and Facebook's in-app browsers completed payment 31% of the time against Chrome's 61%, so those shoppers now get a card to reopen the store in their browser with the cart carried over, run as a 50/50 test.
-- October 2026: Search and the festive season. Google search brings 16% of the India store's sessions but 41% of its purchases, so an SEO pass went live on both sites on 7 October: brand-first titles, meta descriptions, Product structured data with shipping and returns, hreflang between the two stores and one H1 per page. For Diwali, a registration page I built from the team's design, with a sparkler that follows the cursor, collected about 150 sign-ups in its first three days at roughly ₹15 of ad spend each.
+- October 2026: Search and the festive season. Google search brings 16% of the India store's sessions but 41% of its purchases, so an SEO pass went live on both sites on 7 October: brand-first titles, meta descriptions, Product structured data with shipping and returns, hreflang between the two stores and one H1 per page. For Diwali, a registration page I built from the team's design, with a sparkler that follows the cursor, collected about 150 sign-ups in its first three days at roughly ₹15 (16 US cents) of ad spend each.
 - October 2026: A new watch, from brief to CAD. Verte's next watch is ours to design: a 38 mm titanium piece around a Ronda quartz movement. Dial directions, case styles, a 20-finish dial library and straps were decided one step at a time over eight rounds. The case is factory CAD written in Python, a STEP assembly of six named parts, and a one-file offline configurator shows each round in 3D.
 Decision: Shopify is the source of truth. Every result here is a Shopify order. Ad platforms are used for attribution only, and when Meta and Shopify disagree, the job is to find out why rather than report the bigger number.
 
@@ -364,7 +364,7 @@ What was built:
 
 Results:
 - Verte's monthly orders went from about 30 (Feb to May) to over 300 (Aug and Sep 2026) while we ran its stores and ads (Shopify)
-- About 150 Diwali sign-ups in the page's first three days, at roughly ₹15 of ad spend each
+- About 150 Diwali sign-ups in the page's first three days, at roughly ₹15 (16 US cents) of ad spend each
 
 Stack: Shopify, Liquid, JavaScript, three.js, Apps Script, Shiprocket Checkout
 
@@ -815,7 +815,7 @@ Meta ads, and reports that check their own numbers, for watch, apparel, real-est
 Case study:
 Meta ads for watch, apparel, real estate and EV brands, and the measurement behind them: reports that check their own numbers, leads that reach sales in seconds, and audits that follow the money past the click.
 Role: Ran the ad accounts with the team and owned the numbers: structure, launches, reviews, reporting, pipelines and audits. Period: 2026.
-- 1,603: Meta leads for a real estate developer, April to October, at about ₹183 each
+- 1,603: Meta leads for a real estate developer, April to October, at about ₹183 ($2) each
 - 10 to 12x: Verte's Shopify sales against Meta spend, June to August
 - 627: leads delivered straight into sales sheets since 22 July
 - 36: analytics reports delivered, each as HTML and a one-page PDF
@@ -848,8 +848,8 @@ Decision: check our own edits first. When results drop, the first suspect is our
 ### What it changed
 
 - 30 → 300+: Verte orders a month, February to May against August and September
-- ~₹183: per lead across 1,603 THS leads, April to October
-- ~₹126: per lead for Beyond Horizon's launch campaign, across 91 leads
+- ~₹183: per lead ($2) across 1,603 THS leads, April to October
+- ~₹126: per lead ($1.30) for Beyond Horizon's launch campaign, across 91 leads
 - 154: pre-launch registrations for Alexandre Christie's Cosmic watch
 Each brand's decisions now rest on numbers that reconcile with its own sales: Shopify orders for the stores, sheet rows and site visits for real estate. When the ads aren't the problem, the reports say so and point at what is.
 
@@ -868,7 +868,7 @@ What was built:
 
 Results:
 - Verte: from about 30 orders a month (Feb to May) to over 300 (Aug and Sep 2026), with Shopify sales at 10 to 12 times Meta spend from June to August
-- THS: 1,603 Meta leads from April to October 2026 at about ₹183 each
+- THS: 1,603 Meta leads from April to October 2026 at about ₹183 ($2) each
 
 Stack: Meta Ads Manager, Meta Marketing API, GA4
 
@@ -1144,7 +1144,7 @@ What was built:
 - A Playwright script that scrolls the live site smoothly and records it as video for social reels
 
 Results:
-- 91 leads from its Meta campaign, at about ₹126 each
+- 91 leads from its Meta campaign, at about ₹126 ($1.30) each
 
 Stack: React 19, TypeScript, Vite, Tailwind CSS, Motion, Playwright
 
