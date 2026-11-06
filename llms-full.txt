@@ -17,7 +17,7 @@ The operations platform a 15-person agency runs on, on the web and as a native M
 Case study:
 The operations platform a marketing agency runs on: tasks, chat, KPIs, analytics, mail and drive in one place, on the web and as a native Mac app.
 Role: Sole developer, end to end: product, backend, web app, Mac app and data pipelines. Period: March to October 2026.
-- ~70%: more productivity and progress tracking once it replaced Sheets and WhatsApp
+- ~70%: more tasks shipped a month once it replaced Sheets and WhatsApp: about 30 before, 50-55 after
 - ~15: people run their day on it across the agency
 - 16: native Mac app releases, shipped through its own updater
 - 49: actions the voice and typed assistant can take
@@ -53,7 +53,7 @@ Decision: glass on chrome, flat content. Translucency is used only for navigatio
 
 ### What it changed
 
-- ~70%: productivity and progress tracking gain after replacing Sheets and WhatsApp
+- ~70%: more tasks shipped a month after replacing Sheets and WhatsApp: about 30 before, 50-55 after
 - 1 page: of analytics instead of 21 separate dashboards
 - 9 brands: 56 campaigns, about 110 assets and 120 open tasks in the system on 2 Sep 2026
 - >30x: the error in one average order value widget before the aggregation fixes
@@ -78,7 +78,7 @@ What was built:
 
 Results:
 - In daily use: on 2 Sep 2026 it held 9 brands, 56 campaigns, about 110 assets and 120 open tasks
-- Replaced Google Sheets and WhatsApp as the way the team runs work, with productivity and progress tracking up by about 70%
+- Replaced Google Sheets and WhatsApp as the way the team runs work, taking tasks shipped from about 30 a month to 50-55
 
 Stack: React, Vite, Tailwind CSS, Radix UI, Node.js, Fastify, MySQL, WebSocket, Google APIs, Meta Graph API, Web Push
 
@@ -192,7 +192,8 @@ What was built:
 - Abandoned carts from Shiprocket Checkout captured, mapped and written per brand
 
 Results:
-- 627 Meta leads delivered into the sales team's sheets since it went live on 22 Jul 2026
+- 698 Meta leads delivered into the sales team's sheets since it went live on 22 Jul 2026
+- In the pipeline's log to 6 Nov 2026, 693 of 698 live leads reached the sheet within 30 seconds, half within 11. Two took a few minutes, and the nightly sweep caught the other three
 
 Stack: Node.js, Meta Graph API, Google Sheets API, Webhooks
 
@@ -244,6 +245,7 @@ So the model's job is deliberately narrow. It reads a request and returns which 
 - Make the number honest. I found that earlier averaged models had been picked using the same 297 cases they were then scored on, which inflated results by about 4 points. Selection moved to a separate 200-case validation set, and the test set is now read once, at the end. A power check showed 297 cases can only separate differences of about 5 points, so anything smaller is reported as not distinguishable.
 - Say no to things that looked good. A vote between three models added 1 point that wasn't statistically significant, at 3.5 times the latency. DoRA took 798 ms per command against LoRA's 330 ms. A later experiment that put the whole tool catalogue in the prompt scored 12.1 points lower and was not shipped. One corrupted run, where padding in the prompt leaked the length of the answer, was caught and quarantined. A corpus validator and 36 regression tests, each one a bug that really happened, now guard against repeats.
 - Ship it where people work. Atlas lives in the Mac app. Hold Option+Space in any app, speak or type, see what it will do, confirm. It is the first model in SparrowOS Intelligence, the family name for models trained in-house.
+Video of Atlas on a Mac, recorded on 6 November 2026 and not sped up: asked out loud what's waiting, it works out the answer in about half a second.
 Decision: the model names, code acts. The model never touches data. It returns an action name and quoted words, and the server decides whether the person may do that, asks once before a change and twice before anything client-visible or hard to undo, and can undo it. Decoding is held to a grammar generated from the action catalogue, so the model cannot name an action that does not exist. A wrong guess costs a confirmation tap, not a deleted task.
 Decision: private by default. Dictation runs with on-device recognition required, and the model runs on the Mac itself. Nothing a person says to SparrowOS leaves their machine to be understood.
 
@@ -295,16 +297,16 @@ URL: https://smithmankar.co.in/projects/verte/
 Two stores rebuilt and run end to end, launches in 3D, and Meta ads judged on Shopify orders.
 
 Case study:
-An Indian watch brand's whole digital side, rebuilt almost from scratch and run as one system: two storefronts, every page and launch, the 3D and the modelling, the checkout, the tracking and the Meta ads. Monthly orders went from about 30 to over 300.
-Role: Rebuilt and ran both stores: every page, the launches, 3D and modelling, checkout, tracking, profit analytics and the Meta ads. Period: January to October 2026.
-- 30 → 300+: orders a month: February to May, then August and September
+An Indian watch brand's whole digital side, rebuilt almost from scratch and run as one system: two storefronts, every page and launch, the 3D and the modelling, the checkout, the tracking and the Meta ads. Its best month went from 160 orders to over 300.
+Role: Rebuilt and ran both stores: every page, the launches, 3D and modelling, checkout, tracking, profit analytics and the Meta ads. Period: December 2025 to October 2026.
+- 160 → 300+: orders a month: best month before I took over, then July to September 2026
 - 10 to 12x: Shopify sales against Meta spend, June to August
 - 96: orders through the global store's own USD checkout, 19 May to 23 Oct (team orders included)
 - 41%: of the India store's purchases now come from Google search, on 16% of its sessions
 
 ### The brief
 
-Verte makes watches: URBN, the everyday line, and Project Karbon, carbon-fibre pieces on a Miyota 9015 (the Series) or a Sellita SW200-1 (the Speciale). It sells in India on verte.co.in and to the rest of the world on vertewatches.com. From February to May 2026 the brand averaged about 30 orders a month.
+Verte makes watches: URBN, the everyday line, and Project Karbon, carbon-fibre pieces on a Miyota 9015 (the Series) or a Sellita SW200-1 (the Speciale). It sells in India on verte.co.in and to the rest of the world on vertewatches.com. Before I took the store over at the end of November 2025, its best month ever was 160 orders, in May 2025.
 We rebuilt the site almost from scratch. The old theme's basic code and designs were thrown out, and every page a shopper sees was built again around the brand's launches. From there the job was the whole digital side: both stores, every page and launch, the 3D, the checkout, the tracking, the ads, and the numbers to prove what worked, measured on Shopify orders rather than on what an ad platform says it sold.
 
 ### What I built
@@ -341,7 +343,8 @@ Decision: Shopify is the source of truth. Every result here is a Shopify order. 
 
 ### What it changed
 
-Chart, Verte orders a month (Shopify): February to May about 31 a month on average, then Jun 175, Jul 275, Aug 309, Sep 307.
+Chart, Verte orders a month (Shopify): the best month before December 2025 was 160, then Dec 37, Jan 197, Feb 150, Mar 0, Apr 10, May 33, Jun 198, Jul 317, Aug 335, Sep 310, Oct 187. URBN was sold out from March to May.
+The new store went live at the end of December. January brought 197 orders against December's 37. Meta spend rose about four times that month, so the store wasn't the only change, but ad spend per order still fell by about a quarter. After that launch, Verte gave me one of the two original URBN samples. URBN sold out from March to May while we prepared Karbon, then came back in June, and July to September were the brand's best months on record: 317, 335 and 310 orders. October fell to 187. Across the 11 months since I took over, Verte took 1,774 orders, against 1,108 in the 11 months before.
 Chart, Google search on the India store: 16% of sessions, 41% of purchases.
 Chart, payments: 63% of shoppers who chose a payment method paid on normal days, 30% on the days the payment step failed; payment completion 61% in Chrome against 31% in Instagram's and Facebook's in-app browsers.
 Verte now runs on a store rebuilt around its launches, sells worldwide in its own currency through a checkout it owns, shows its watches in live 3D, and judges its ads on real orders. When something breaks, a monitor says so within 15 minutes instead of a slow week saying it later.
@@ -363,7 +366,7 @@ What was built:
 - Warranty claim page wired to SparrowOS
 
 Results:
-- Verte's monthly orders went from about 30 (Feb to May) to over 300 (Aug and Sep 2026) while we ran its stores and ads (Shopify)
+- Verte's best month went from 160 orders to over 300 (July to September 2026) while we ran its stores and ads (Shopify)
 - About 150 Diwali sign-ups in the page's first three days, at roughly ₹15 (16 US cents) of ad spend each
 
 Stack: Shopify, Liquid, JavaScript, three.js, Apps Script, Shiprocket Checkout
@@ -817,7 +820,7 @@ Meta ads for watch, apparel, real estate and EV brands, and the measurement behi
 Role: Ran the ad accounts with the team and owned the numbers: structure, launches, reviews, reporting, pipelines and audits. Period: 2026.
 - 1,603: Meta leads for a real estate developer, April to October, at about ₹183 ($2) each
 - 10 to 12x: Verte's Shopify sales against Meta spend, June to August
-- 627: leads delivered straight into sales sheets since 22 July
+- 698: leads delivered straight into sales sheets since 22 July
 - 36: analytics reports delivered, each as HTML and a one-page PDF
 
 ### The brief
@@ -840,17 +843,19 @@ The job: run the accounts, and know what is really working. That means Shopify o
 - A standard before a verdict. Ads are judged on the funnel the platform actually measures (reach, frequency, CTR, CPM, clicks, spend and days live), benchmarked per market, since US CPMs ran about 13 times India's. Attributed ROAS can confirm a call but never leads one. Ads are judged at the ad-set level, because an ad with no sales is often the first touch that makes the next one sell.
 - Structure that keeps learning. One ad set per product per market, with location as a hard rule. No verdict until days live and spend give enough evidence. Market tests are built as paused drafts for approval, so nothing goes live by accident.
 - Reports that check themselves. Orders come from Shopify, never from an ad platform. A script re-derives every figure in a report and checks it against the document before it ships, and every report goes out as HTML plus a single-page PDF.
-- Leads in seconds, not days. Meta lead ads arrive through a webhook whose signature is checked, get answered fast, then are written to the brand's sheet from a queue with retries. A daily sweep reconciles anything missed. 627 leads have gone through it since 22 July.
+- Leads in seconds, not days. Meta lead ads arrive through a webhook whose signature is checked, get answered fast, then are written to the brand's sheet from a queue with retries. A daily sweep reconciles anything missed. 698 leads have gone through it since 22 July.
 - Follow the money past the click. For THS, 90 days of leads were traced to site visits campaign by campaign. For Season Earth, a one-click checkout widget skipped the cart entirely, so add-to-cart was the wrong thing to measure; most people saw an ad only once, and broken tracking had starved the retargeting pool. For Verte's US Reddit test, three weeks of spend had produced no sales by Shopify's count or Reddit's own, and the rebuild got pass marks set in advance.
 - Fix the audiences under everything. Every brand's lookalikes turned out to be built from one shared list that was almost entirely one brand's customers. I rebuilt each brand's seed list with a spend value for value-based lookalikes, plus a deduplicated pool of 16,919 people across brands.
+Picture of one of the 36 reports as it went to Verte, with every number, name and finding taken out before the picture was made.
 Decision: check our own edits first. When results drop, the first suspect is our own change log: budget moves, rebuilds and audience edits, each lined up against the day-by-day numbers. Only then do we look at the platform or the market.
 
 ### What it changed
 
-- 30 → 300+: Verte orders a month, February to May against August and September
+- 160 → 300+: Verte orders a month: best month before, then July to September 2026
 - ~₹183: per lead ($2) across 1,603 THS leads, April to October
 - ~₹126: per lead ($1.30) for Beyond Horizon's launch campaign, across 91 leads
 - 154: pre-launch registrations for Alexandre Christie's Cosmic watch
+Chart, one dot per THS lead by day, 22 July to 6 November 2026: 693 of 698 reached the sales sheet within 30 seconds, half within 11. Of the other five, two took a few minutes and the nightly sweep caught three, hours later. Meta's own count for 23 July to 6 November is 692. The chart holds dates and counts only.
 Each brand's decisions now rest on numbers that reconcile with its own sales: Shopify orders for the stores, sheet rows and site visits for real estate. When the ads aren't the problem, the reports say so and point at what is.
 
 ### Meta ads management
@@ -867,7 +872,7 @@ What was built:
 - Lead campaigns with website pixel events, and market tests staged as paused drafts for approval
 
 Results:
-- Verte: from about 30 orders a month (Feb to May) to over 300 (Aug and Sep 2026), with Shopify sales at 10 to 12 times Meta spend from June to August
+- Verte: best month up from 160 orders to over 300 (July to September 2026), with Shopify sales at 10 to 12 times Meta spend from June to August
 - THS: 1,603 Meta leads from April to October 2026 at about ₹183 ($2) each
 
 Stack: Meta Ads Manager, Meta Marketing API, GA4
