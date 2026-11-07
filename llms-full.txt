@@ -1,6 +1,6 @@
 # Smith Mankar
 
-> Head of Development & Analytics at Sage Sparrows (https://sagesparrows.in). Builds operations platforms, client storefronts and apps, an on-device AI model, Meta ads and analytics, and 3D and video work. The work is grouped below by brand or product, with every project inside each.
+> Developer for brands and small teams, taking on projects: stores, websites, apps, platforms, AI tools and the analytics behind them. Also Head of Development & Analytics at Sage Sparrows (https://sagesparrows.in). The work is grouped below by brand or product, with every project inside each.
 
 - Email: hello@smithmankar.co.in
 - GitHub: https://github.com/smithmankar
