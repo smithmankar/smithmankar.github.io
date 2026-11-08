@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Smith Mankar: blog</title>
+    <link>https://smithmankar.co.in/blog/</link>
+    <atom:link href="https://smithmankar.co.in/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Notes from Smith Mankar on building, shipping, and automating things.</description>
+    <language>en-in</language>
+    <lastBuildDate>Sat, 07 Nov 2026 18:30:00 GMT</lastBuildDate>
+    <item>
+      <title>The ₹20,000 question</title>
+      <link>https://smithmankar.co.in/blog/the-20000-question/</link>
+      <guid isPermaLink="true">https://smithmankar.co.in/blog/the-20000-question/</guid>
+      <pubDate>Sat, 07 Nov 2026 18:30:00 GMT</pubDate>
+      <description>₹20,000 buys a website. It doesn’t buy a platform. What that budget gets you, what it doesn’t, and what to do when you need more.</description>
+      <category>Pricing</category>
+      <category>Websites</category>
+      <category>Platforms</category>
+      <category>Small Business</category>
+      <category>India</category>
+    </item>
+    <item>
+      <title>Trust isn’t a security model</title>
+      <link>https://smithmankar.co.in/blog/trust-isnt-a-security-model/</link>
+      <guid isPermaLink="true">https://smithmankar.co.in/blog/trust-isnt-a-security-model/</guid>
+      <pubDate>Sat, 31 Oct 2026 18:30:00 GMT</pubDate>
+      <description>Unused RAM isn’t waste. Unpatched code is. What Black October taught me about AI, security and who we can still trust.</description>
+      <category>Cybersecurity</category>
+      <category>Artificial Intelligence</category>
+      <category>Black October</category>
+      <category>Software Supply Chain</category>
+      <category>India</category>
+    </item>
+    <item>
+      <title>Good intentions don’t cancel out bad implementation</title>
+      <link>https://smithmankar.co.in/blog/good-intentions-dont-cancel-out-bad-implementation/</link>
+      <guid isPermaLink="true">https://smithmankar.co.in/blog/good-intentions-dont-cancel-out-bad-implementation/</guid>
+      <pubDate>Mon, 23 Feb 2026 18:30:00 GMT</pubDate>
+      <description>I don’t write posts often. I usually observe quietly. But given where the world, technology, and AI are headed, staying silent no longer feels responsible.</description>
+      <category>Artificial Intelligence</category>
+      <category>Responsible Tech</category>
+      <category>Digital Privacy</category>
+      <category>Technology Ethics</category>
+      <category>AI Engineering</category>
+    </item>
+  </channel>
+</rss>
